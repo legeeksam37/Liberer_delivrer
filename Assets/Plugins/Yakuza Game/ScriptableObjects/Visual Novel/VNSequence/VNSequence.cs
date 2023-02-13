@@ -9,4 +9,5 @@ public class VNSequence : ScriptableObject
     public int indexDialogue;
     public CharacterVN mainCharacterSequence;
     
+    public bool IsFinal => indexDialogue>=dialogueList.Count;
 }

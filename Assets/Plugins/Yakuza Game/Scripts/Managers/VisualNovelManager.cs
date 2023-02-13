@@ -15,11 +15,7 @@ using UnityEngine.UI;
 public enum CharacterVN
 {
     Null,
-    Suzui,
-    Mitsuri,
-    Kadojima,
-    Yakuza,
-    Momo,
+    Colee
 }
 
 public class VisualNovelManager : MonoBehaviour
@@ -170,7 +166,7 @@ public class VisualNovelManager : MonoBehaviour
     
     //Create button and attribute them OnClick listener from VNDialogue choice scriptable Unity Event list 
     //Then display with some fading the choice's panel
-    private void ChoiceDisplay(bool value)
+    public void ChoiceDisplay(bool value)
     {
         if (value)
         {
@@ -178,7 +174,7 @@ public class VisualNovelManager : MonoBehaviour
             //TutoManager.Instance.CreateTuto(TutoName.ChoiceVN);
             
             //Get the previous Sequence because otherwise it would have been out of index
-            VNDialogueChoice dialogueChoice = GetActualDialogue(-1) as VNDialogueChoice;
+            VNDialogueChoiceOld dialogueChoice = GetActualDialogue(-1) as VNDialogueChoiceOld;
 
             if (_panelChoice.transform.childCount == 0)
             {
@@ -441,7 +437,7 @@ public class VisualNovelManager : MonoBehaviour
             if (GetActualSequence().indexDialogue < GetActualSequence().dialogueList.Count)
             {
                 //Check the last dialogue and tell if this will trigger a choice
-                if (GetActualDialogue().GetType() == typeof(VNDialogueChoice))
+                if (GetActualDialogue().GetType() == typeof(VNDialogueChoiceOld))
                 {
                     _choiceWillHappen = true;
                 }
@@ -489,9 +485,9 @@ public class VisualNovelManager : MonoBehaviour
         {
             if (dialogue != null)
             {
-                if (dialogue.GetType() == typeof(VNDialogueChoice))
+                if (dialogue.GetType() == typeof(VNDialogueChoiceOld))
                 {
-                    VNDialogueChoice dialogueChoice = dialogue as VNDialogueChoice;
+                    VNDialogueChoiceOld dialogueChoice = dialogue as VNDialogueChoiceOld;
                     foreach (var choice in dialogueChoice.choiceVNList)
                     {
                         if (choice.postChoiceSequence != null)
@@ -515,7 +511,7 @@ public class VisualNovelManager : MonoBehaviour
             _rightCharacterEnum = characterVn;
             SetAlphaImage(_rightCharacterImage,1);
 
-            if (characterVn == CharacterVN.Yakuza)
+            if (characterVn == (CharacterVN) 1)
             {
                 Debug.Log("Yakuza");
                 _rightCharacterImage.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 1000);
@@ -541,7 +537,7 @@ public class VisualNovelManager : MonoBehaviour
                 characterImage2.GetComponent<RectTransform>().rotation = new Quaternion(0f, -180, 0f, 0f);
                 characterImage2.GetComponent<CharacterImage>().characterVn = characterVn;
 
-                if (characterImage2.GetComponent<CharacterImage>().characterVn != CharacterVN.Yakuza)
+                if (characterImage2.GetComponent<CharacterImage>().characterVn != (CharacterVN) 1)
                 {
                     characterImage2.GetComponent<RectTransform>().sizeDelta = new Vector2(683, 1000);
                 }
@@ -634,7 +630,7 @@ public class VisualNovelManager : MonoBehaviour
         }
     }
     
-    private VNDialogue GetActualDialogue(int offset = 0)
+    public VNDialogue GetActualDialogue(int offset = 0)
     {
         return GetActualSequence().dialogueList[GetActualSequence().indexDialogue + offset];
     }
