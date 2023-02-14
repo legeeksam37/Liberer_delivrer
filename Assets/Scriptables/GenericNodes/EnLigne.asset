@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efacdcb56de27794f8ed8ef99c616453, type: 3}
   m_Name: EnLigne
   m_EditorClassIdentifier: 
-  textChoiceKey: 
-  choices: 
+  _type: 2
   postChoiceSequence:
   - {fileID: 11400000, guid: 8a2da309ef5315a4a849c9f96f862939, type: 2}
   - {fileID: 11400000, guid: 55c67d7b1dd30934c8261d86d89ebc3d, type: 2}

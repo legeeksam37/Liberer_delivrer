@@ -9,6 +9,7 @@ public class MissionManager : MonoBehaviour
 {
     [SerializeField] private Mission[] _missions;
     [SerializeField, Range(0, 5)] private int _currentMissionIndex;
+    [SerializeField] private Smartphone _display;
     public Mission Mission => _missions[_currentMissionIndex];
 
     public int CurrentMissionIndex
@@ -19,16 +20,25 @@ public class MissionManager : MonoBehaviour
             Mission.Init();
         }
     }
-
-    [SerializeField]
-    private VisualNovelManager _visualNovelManager;
+    private void HandleEventRaised(int index)
+    {
+        Debug.Log("We don't operate any checks on the type on type of enum reicved, we consider we always get the correct one and process");
+        Mission.ProcessSequenceAbsolute(index);
+        Mission.Current.choice._type=Choicetypes.None;
+    }
+    private void Awake()
+    {
+        GameEvents.WithdrawalTypeSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.DelayTypeSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.TravelMethodSelected += (e) => HandleEventRaised((int)e);
+    }
     private void Start()
     {
         Mission.Init();
     }
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Mission.ProcessSequenceRandom();
             Debug.Log("Mission : " + Mission.CurrentName);

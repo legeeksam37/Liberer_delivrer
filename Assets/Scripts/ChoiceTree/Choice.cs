@@ -8,6 +8,7 @@ using System.Collections;
 [CreateAssetMenu(fileName = "New choice", menuName = "Scenarisation/Choice")]
 public class Choice : Node
 {
+    public Choicetypes _type;
     //Trigger a specific sequence after selecting 
     public List<Node> postChoiceSequence = new List<Node>();
 

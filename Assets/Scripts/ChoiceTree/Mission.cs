@@ -12,7 +12,8 @@ public class Mission : ScriptableObject
     [SerializeField]
     private RecursiveEnabledChoice _tree;
     private RecursiveEnabledChoice _current;
-    public string CurrentName => _current.choice.name;
+    public RecursiveEnabledChoice Current => _current;
+    public string CurrentName => Current.choice.name;
     [ContextMenu(nameof(GenerateTree), false)]
     public void GenerateTree()
     {   
@@ -84,4 +85,5 @@ public class Mission : ScriptableObject
             return _current._subChoices.Count == 0; /*|| (_current._subChoices.Count == 1 && _current._subChoices[0].choice is FinalNode);
         */}
     }
+
 }

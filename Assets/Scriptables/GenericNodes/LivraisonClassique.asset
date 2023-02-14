@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efacdcb56de27794f8ed8ef99c616453, type: 3}
   m_Name: LivraisonClassique
   m_EditorClassIdentifier: 
+  _type: 1
   postChoiceSequence:
   - {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
   - {fileID: 11400000, guid: ed789959835614847bb934fef900d99d, type: 2}
