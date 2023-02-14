@@ -1,6 +1,6 @@
 public enum WithdrawalType
 {
-    None,
-    PickupPoint,
-    Home,
+    None=-1,
+    Home=0,
+    PickupPoint=1,
 }

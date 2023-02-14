@@ -1,6 +1,6 @@
 public enum DelayType
 {
-    None,
-    Fast,
-    Classic,
+    None=-1,
+    Classic=0,
+    Fast=1,
 }
