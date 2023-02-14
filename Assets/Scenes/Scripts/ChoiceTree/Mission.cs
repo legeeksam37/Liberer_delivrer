@@ -17,7 +17,7 @@ public class Mission : ScriptableObject
     public void GenerateTree()
     {   
         var oldTree = _tree;    
-        _tree = new RecursiveEnabledChoice(_rootChoice, new HashSet<Node>());
+        _tree = new RecursiveEnabledChoice(_rootChoice,true);
         /*foreach(var node in oldTree)
         {
             foreach(var newNode in _tree)

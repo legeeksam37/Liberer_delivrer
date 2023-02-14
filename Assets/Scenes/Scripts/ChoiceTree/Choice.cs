@@ -28,27 +28,28 @@ public class RecursiveEnabledChoice : IEnumerable<RecursiveEnabledChoice>
     public Node choice;
     public bool enabled;
     public List<RecursiveEnabledChoice> _subChoices;
-    public RecursiveEnabledChoice(Node choice)
+    public RecursiveEnabledChoice(Node choice, bool recursive = false)
     {
         this.choice = choice;
         this.enabled = true;
         this._subChoices = new List<RecursiveEnabledChoice>();
-    }
-    public RecursiveEnabledChoice(Node choice, HashSet<Node> visited) : this(choice)
-    {
-        visited.Add(choice);
-        //Check if nodes is on the very bottom, aka 0 child or not
-        bool leaf = true;
-        foreach (var subChoice in choice.PostChoiceSequence)
+        if (recursive)
         {
-            if (!visited.Contains(subChoice))
+
+            //Check if nodes is on the very bottom, aka 0 child or not
+            bool leaf = true;
+            if (choice.PostChoiceSequence != null)
             {
-                _subChoices.Add(new RecursiveEnabledChoice(subChoice, visited));
-                leaf = false;
+                foreach (var subChoice in choice.PostChoiceSequence)
+                {
+                    Debug.Log("Adding " + subChoice.name + " from " + choice.name);
+                    _subChoices.Add(new RecursiveEnabledChoice(subChoice,true));
+                    leaf = false;
+                }
             }
+            if (leaf)
+                _subChoices.Add(new RecursiveEnabledChoice(AssetDatabase.LoadAssetAtPath<FinalNode>("Assets/Scriptables/DefaultMessage.asset")));
         }
-        if (leaf)
-            _subChoices.Add(new RecursiveEnabledChoice(AssetDatabase.LoadAssetAtPath<FinalNode>("Assets/Scriptables/DefaultMessage.asset")));
     }
 
     public IEnumerator<RecursiveEnabledChoice> GetEnumeratorAll()
