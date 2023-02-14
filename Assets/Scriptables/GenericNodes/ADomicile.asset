@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efacdcb56de27794f8ed8ef99c616453, type: 3}
-  m_Name: "V\xE9lo"
+  m_Name: ADomicile
   m_EditorClassIdentifier: 
-  textChoiceKey: 
   postChoiceSequence: []
   changeList: []

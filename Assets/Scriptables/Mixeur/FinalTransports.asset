@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13f261c8b0ab6844af8ab66b6d99b59, type: 3}
   m_Name: FinalTransports
   m_EditorClassIdentifier: 
-  textChoiceKey: 
-  postChoiceSequence: []
-  changeList: []
-  _message: 
+  _message: Bravo ! En allant acheter ton mixeur en transports en  commun, tu ne
+    pollues pas ! Tu gagnes 10colee
   _result:
+    _environmental: 5
+    _social: 5
     _positives: -1
     _negatives: 0

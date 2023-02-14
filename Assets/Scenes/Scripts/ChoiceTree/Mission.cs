@@ -10,11 +10,18 @@ public class Mission : ScriptableObject
     [SerializeField]
     private Choice _rootChoice;
     [SerializeField]
+    private RecursiveEnabledChoice _tree;
     private RecursiveEnabledChoice _current;
+    public string CurrentName => _current.choice.name;
     [ContextMenu(nameof(GenerateTree), false)]
     public void GenerateTree()
     {
-        _current = new RecursiveEnabledChoice(_rootChoice, new HashSet<Node>());
+        _tree = new RecursiveEnabledChoice(_rootChoice, new HashSet<Node>());
+        Init();
+    }
+    public void Init()
+    {
+        _current = _tree;
     }
     /// <summary>
     /// Process sequence based on absolute branche index, not considering the enabled or disabled one; you can possibly call a disabled one, but a fixed option will always have same index
@@ -32,12 +39,27 @@ public class Mission : ScriptableObject
     {
         ProcessSequence(_current._subChoices.Where(s => s.enabled).ToList(), branchIndex);
     }
+    public void ProcessSequenceRandom()
+    {
+        List<RecursiveEnabledChoice> recursiveEnabledChoices = _current._subChoices.Where(s => s.enabled).ToList();
+        ProcessSequence(recursiveEnabledChoices, UnityEngine.Random.Range(0, recursiveEnabledChoices.Count));
+    }
     private void ProcessSequence(List<RecursiveEnabledChoice> choices, int branchIndex)
     {
-        if (branchIndex < 0 || branchIndex > choices.Count || !choices[branchIndex].enabled)
-            Debug.LogError("Wrong path, existing ? : " + !(branchIndex < 0 || branchIndex > choices.Count)
-                + " choice available/enabled in current mission ? : " + choices[branchIndex].enabled
-                + " Expect weird things to happen from now, good luck my friends...");
+        if (branchIndex < 0)
+        {
+            Debug.LogError("Negative branch index, check call");
+            return;
+        }
+        if (branchIndex >= choices.Count)
+        {
+            Debug.LogError(branchIndex + "higher than list size, list being (if empty, mean we're at a leaf): " + string.Join(';', choices.Select(c => c.choice.name)));
+            return;
+        }
+        if (!choices[branchIndex].enabled)
+        {
+            Debug.LogError("Branch disabled in mission definition, weird things will happen from now, we're off track");
+        }
         _current = choices[branchIndex];
     }
     internal void OnValidate()

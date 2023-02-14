@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efacdcb56de27794f8ed8ef99c616453, type: 3}
-  m_Name: LivraisonClassique
+  m_Script: {fileID: 11500000, guid: c13f261c8b0ab6844af8ab66b6d99b59, type: 3}
+  m_Name: FinalVelo
   m_EditorClassIdentifier: 
-  postChoiceSequence:
-  - {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
-  - {fileID: 11400000, guid: ed789959835614847bb934fef900d99d, type: 2}
-  changeList: []
+  _message: "Bravo ! En allant acheter ton mixeur en v\xE9lo, tu ne  pollues pas
+    ! Tu gagnes 10colee"
+  _result:
+    _environmental: 5
+    _social: 5
+    _positives: -1
+    _negatives: 0
