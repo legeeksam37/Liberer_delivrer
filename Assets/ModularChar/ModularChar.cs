@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class ModularChar : MonoBehaviour
 {
+    
     string Commune;
     int Age;
   
@@ -43,6 +44,8 @@ public class ModularChar : MonoBehaviour
 
     public GameObject Character;
 
+    [SerializeField]
+    GameObject warning;
     private void Start()
     {
         Hat.material = materials[IndexHat];
@@ -94,10 +97,19 @@ public class ModularChar : MonoBehaviour
 
     public void Validate()
     {
-        
-        JoystickControls JC = Character.AddComponent<JoystickControls>() as JoystickControls;
         PlayerManager.Instance.Player = this.Character;
-        //SceneManager.MoveGameObjectToScene(Character, SceneManager.GetSceneByBuildIndex(1));
-        SceneManager.LoadScene(1);
+        Debug.Log("commune : "+InputCommune.text + "  " +"Age : "+InputAge.text);
+        if (InputCommune.text == "commune" || InputAge.text == "age")
+        {
+            warning.SetActive(true);
+           
+        }
+        else
+        {
+            JoystickControls JC = Character.AddComponent<JoystickControls>() as JoystickControls;
+
+            //SceneManager.MoveGameObjectToScene(Character, SceneManager.GetSceneByBuildIndex(1));
+            SceneManager.LoadScene(1);
+        }
     }
 }
