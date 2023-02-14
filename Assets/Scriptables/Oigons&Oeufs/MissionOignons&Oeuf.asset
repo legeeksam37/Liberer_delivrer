@@ -42,19 +42,19 @@ MonoBehaviour:
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: 47daa4590dfeb594594b6cd9cacc807d, type: 2}
-        enabled: 1
+        enabled: 0
         _subChoices:
         - choice: {fileID: 11400000, guid: caef2f80c2177fd4292724d30ee25828, type: 2}
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: d00326555726e6047baa9c40f65cbdf5, type: 2}
-        enabled: 1
+        enabled: 0
         _subChoices:
         - choice: {fileID: 11400000, guid: caef2f80c2177fd4292724d30ee25828, type: 2}
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: 4f4ac7a52e2bf63458fc2190c35422d4, type: 2}
-        enabled: 1
+        enabled: 0
         _subChoices:
         - choice: {fileID: 11400000, guid: caef2f80c2177fd4292724d30ee25828, type: 2}
           enabled: 1
