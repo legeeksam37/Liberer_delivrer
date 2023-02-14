@@ -2,22 +2,30 @@ using UnityEngine;
 
 public class Smartphone : MonoBehaviour
 {
+    [SerializeField] GameObject _orderSelection;
+    [SerializeField] GameObject _withdrawalSelection;
+    [SerializeField] GameObject _travelMethodSelection;
+
     public void Order()
     {
-        Debug.Log("Started online order.");
+        _orderSelection.SetActive(false);
+        _withdrawalSelection.SetActive(true);
     }
 
-    public void SetWithdrawalType(WithdrawalType withdrawalType)
+    public void SetWithdrawalType(int withdrawalType)
     {
-        Debug.Log($"Withdrawal type selected : {withdrawalType}");
-        
-        GameEvents.WithdrawalTypeSelected?.Invoke(withdrawalType);
+        _withdrawalSelection.SetActive(false);
+        _travelMethodSelection.SetActive(true);
+     
+        GameEvents.WithdrawalTypeSelected?.Invoke((WithdrawalType) withdrawalType);
     }
     
-    public void SetTravelMethod(TravelMethod travelMethod)
+    public void SetTravelMethod(int travelMethod)
     {
-        Debug.Log($"Travel method selected : {travelMethod}");
+        _travelMethodSelection.SetActive(false);
+        _orderSelection.SetActive(true);
         
-        GameEvents.TravelMethodSelected?.Invoke(travelMethod);
+        GameEvents.TravelMethodSelected?.Invoke((TravelMethod) travelMethod);
+        CutsceneManager.Instance.Play(CutsceneType.Delivery);
     }
 }
