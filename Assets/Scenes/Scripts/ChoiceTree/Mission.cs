@@ -14,7 +14,7 @@ public class Mission : ScriptableObject
     [ContextMenu(nameof(GenerateTree), false)]
     public void GenerateTree()
     {
-        _current = new RecursiveEnabledChoice(_rootChoice, new HashSet<Choice>());
+        _current = new RecursiveEnabledChoice(_rootChoice, new HashSet<Node>());
     }
 
 
@@ -43,7 +43,7 @@ public class Mission : ScriptableObject
     {
         get
         {
-            return _current._subChoices.Count == 0 || (_current._subChoices.Count == 1 && _current._subChoices[0].choice is FinalChoice);
+            return _current._subChoices.Count == 0 || (_current._subChoices.Count == 1 && _current._subChoices[0].choice is FinalNode);
         }
     }
 

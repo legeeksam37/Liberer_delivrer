@@ -5,34 +5,40 @@ using UnityEngine;
 using UnityEditor;
 
 [CreateAssetMenu(fileName = "New choice", menuName = "Scenarisation/Choice")]
-public class Choice : ScriptableObject
+public class Choice : Node
 {
     //Trigger a specific sequence after selecting 
-    public List<Choice> postChoiceSequence;
+    public List<Node> postChoiceSequence = new List<Node>();
 
     //TODO Create bonus/malus system 
     public List<UnityEvent> changeList = new List<UnityEvent>();
+
+    public override List<Node> PostChoiceSequence => postChoiceSequence;
     //each one of them will have an attributed fonction that will change VariableConfig in GM
     //Maybe use UnityEvents
+}
+public abstract class Node : ScriptableObject
+{
+    public abstract List<Node> PostChoiceSequence { get; }
 }
 [Serializable]
 public class RecursiveEnabledChoice
 {
-    public Choice choice;
+    public Node choice;
     public bool enabled;
     public List<RecursiveEnabledChoice> _subChoices;
-    public RecursiveEnabledChoice(Choice choice)
+    public RecursiveEnabledChoice(Node choice)
     {
         this.choice = choice;
         this.enabled = true;
         this._subChoices = new List<RecursiveEnabledChoice>();
     }
-    public RecursiveEnabledChoice(Choice choice, HashSet<Choice> visited) : this(choice)
+    public RecursiveEnabledChoice(Node choice, HashSet<Node> visited) : this(choice)
     {
         visited.Add(choice);
         //Check if nodes is on the very bottom, aka 0 child or not
         bool leaf = true;
-        foreach (var subChoice in choice.postChoiceSequence)
+        foreach (var subChoice in choice.PostChoiceSequence)
         {
             if (!visited.Contains(subChoice))
             {
@@ -41,7 +47,7 @@ public class RecursiveEnabledChoice
             }
         }
         if (leaf)
-            _subChoices.Add(new RecursiveEnabledChoice(AssetDatabase.LoadAssetAtPath<FinalChoice>("Assets/Scriptables/DefaultMessage.asset")));
+            _subChoices.Add(new RecursiveEnabledChoice(AssetDatabase.LoadAssetAtPath<FinalNode>("Assets/Scriptables/DefaultMessage.asset")));
     }
 
 
