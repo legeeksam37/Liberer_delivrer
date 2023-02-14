@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
+    <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="feat: Smartphone, transport cutscenes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Capture.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Capture.PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Smartphone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Smartphone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutsceneType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/CutsceneType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutsceneType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/CutsceneType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Smartphone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Smartphone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Transport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Transport.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +98,14 @@
       <workItem from="1676295830092" duration="97000" />
       <workItem from="1676295941983" duration="6138000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Smartphone, transport cutscenes">
+      <created>1676369788816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676369788816</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +127,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: Smartphone, transport cutscenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Smartphone, transport cutscenes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

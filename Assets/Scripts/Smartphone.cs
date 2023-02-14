@@ -4,6 +4,7 @@ public class Smartphone : MonoBehaviour
 {
     [SerializeField] GameObject _orderSelection;
     [SerializeField] GameObject _withdrawalSelection;
+    [SerializeField] GameObject _delayTypeSelection;
     [SerializeField] GameObject _travelMethodSelection;
 
     public void Order()
@@ -15,9 +16,17 @@ public class Smartphone : MonoBehaviour
     public void SetWithdrawalType(int withdrawalType)
     {
         _withdrawalSelection.SetActive(false);
-        _travelMethodSelection.SetActive(true);
+        _delayTypeSelection.SetActive(true);
      
         GameEvents.WithdrawalTypeSelected?.Invoke((WithdrawalType) withdrawalType);
+    }
+    
+    public void SetDelayType(int delayType)
+    {
+        _delayTypeSelection.SetActive(false);
+        _travelMethodSelection.SetActive(true);
+     
+        GameEvents.DelayTypeSelected?.Invoke((DelayType) delayType);
     }
     
     public void SetTravelMethod(int travelMethod)
