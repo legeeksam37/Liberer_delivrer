@@ -1,24 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using Unisave.Facades;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField]
-    private int score = 0 ;
-    // Start is called before the first frame update
+    [SerializeField] private int score = 0 ;
+
     void Start()
     {
         retrieve();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private int increase(){
@@ -30,7 +21,23 @@ public class ScoreManager : MonoBehaviour
     }
 
     private void persist(){
-        //send the score to the datebase
+        OnFacet<ScoreFacet>
+            .Call<ScoreEntity>(
+                nameof(ScoreFacet.PostScore),
+                score
+            )
+            .Done();
+    }
+
+    void GetPercentileRanking(Action<int> onCompleted)
+    {
+        OnFacet<ScoreFacet>
+            .Call<int>(
+                nameof(ScoreFacet.GetPercentileRanking),
+                score
+            )
+            .Then(onCompleted)
+            .Done();
     }
     
     private void retrieve(){
@@ -40,6 +47,4 @@ public class ScoreManager : MonoBehaviour
     public int getScore(){
         return score;
     }
-
-    
 }
