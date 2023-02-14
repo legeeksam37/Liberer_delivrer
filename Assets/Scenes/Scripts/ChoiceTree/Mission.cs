@@ -15,8 +15,19 @@ public class Mission : ScriptableObject
     public string CurrentName => _current.choice.name;
     [ContextMenu(nameof(GenerateTree), false)]
     public void GenerateTree()
-    {
+    {   
+        var oldTree = _tree;    
         _tree = new RecursiveEnabledChoice(_rootChoice, new HashSet<Node>());
+        /*foreach(var node in oldTree)
+        {
+            foreach(var newNode in _tree)
+            {
+                node    
+                if(node.choice.GetInstanceID() == newNode.choice.GetInstanceID())
+                    newNode.GetEnumerator
+                }
+            }
+        }*/
         Init();
     }
     public void Init()
@@ -70,7 +81,7 @@ public class Mission : ScriptableObject
     {
         get
         {
-            return _current._subChoices.Count == 0 || (_current._subChoices.Count == 1 && _current._subChoices[0].choice is FinalNode);
-        }
+            return _current._subChoices.Count == 0; /*|| (_current._subChoices.Count == 1 && _current._subChoices[0].choice is FinalNode);
+        */}
     }
 }

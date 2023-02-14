@@ -3,6 +3,7 @@ using System;
 using UnityEngine.Events;
 using UnityEngine;
 using UnityEditor;
+using System.Collections;
 
 [CreateAssetMenu(fileName = "New choice", menuName = "Scenarisation/Choice")]
 public class Choice : Node
@@ -22,7 +23,7 @@ public abstract class Node : ScriptableObject
     public abstract List<Node> PostChoiceSequence { get; }
 }
 [Serializable]
-public class RecursiveEnabledChoice
+public class RecursiveEnabledChoice : IEnumerable<RecursiveEnabledChoice>
 {
     public Node choice;
     public bool enabled;
@@ -50,5 +51,26 @@ public class RecursiveEnabledChoice
             _subChoices.Add(new RecursiveEnabledChoice(AssetDatabase.LoadAssetAtPath<FinalNode>("Assets/Scriptables/DefaultMessage.asset")));
     }
 
-
+    public IEnumerator<RecursiveEnabledChoice> GetEnumeratorAll()
+    {
+        yield return this;
+        foreach (var subChoice in _subChoices)
+            yield return subChoice;
+    }
+    /// <summary>
+    /// Leaves only
+    /// </summary>
+    /// <returns></returns>
+    public IEnumerator<RecursiveEnabledChoice> GetEnumerator()
+    {
+        if (_subChoices.Count == 0)
+            yield return this;
+        else
+            foreach (var subChoice in _subChoices)
+                yield return subChoice;
+    }
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        yield return GetEnumerator();
+    }
 }
