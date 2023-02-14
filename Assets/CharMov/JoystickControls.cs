@@ -29,14 +29,19 @@ public class JoystickControls : MonoBehaviour
         Vector3 move = new Vector3(input.x, input.y, 0);
 
         controller.Move(move * Time.deltaTime * playerSpeed);
-        if (input.x > 0.2f || input.x < -0.2f || input.y > 0.2f || input.y < -0.2f)
+        if (image != null)
         {
-            image.CrossFadeAlpha(255, 1.0f, false);
+            if (input.x > 0.2f || input.x < -0.2f || input.y > 0.2f || input.y < -0.2f)
+            {
+
+                image.CrossFadeAlpha(255, 1.0f, false);
+            }
+            else
+            {
+                image.CrossFadeAlpha(0, 0.0f, false);
+            }
         }
-        else
-        {
-            image.CrossFadeAlpha(0, 0.0f, false);
-        }
+       
         
     }
 }
