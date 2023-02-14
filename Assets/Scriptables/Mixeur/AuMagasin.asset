@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: AuMagasin
   m_EditorClassIdentifier: 
   textChoiceKey: 
-  postChoiceSequence: []
+  choices: 
+  postChoiceSequence:
+  - {fileID: 11400000, guid: 06a704835012c98449e7c1002b54c2b6, type: 2}
+  - {fileID: 11400000, guid: 47daa4590dfeb594594b6cd9cacc807d, type: 2}
+  - {fileID: 11400000, guid: d00326555726e6047baa9c40f65cbdf5, type: 2}
+  - {fileID: 11400000, guid: 4f4ac7a52e2bf63458fc2190c35422d4, type: 2}
   changeList: []

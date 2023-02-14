@@ -2,14 +2,12 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.Events;
 using UnityEngine;
+using UnityEditor;
 
 [CreateAssetMenu(fileName = "New choice", menuName = "Scenarisation/Choice")]
 public class Choice : ScriptableObject
 {
-    public (bool, string) val;
-    public string textChoiceKey;
     //Trigger a specific sequence after selecting 
-    public List<bool> choices;
     public List<Choice> postChoiceSequence;
 
     //TODO Create bonus/malus system 
@@ -17,50 +15,34 @@ public class Choice : ScriptableObject
     //each one of them will have an attributed fonction that will change VariableConfig in GM
     //Maybe use UnityEvents
 }
-[System.Serializable]
-public struct EnabledChoice
-{
-    public bool available;
-    public Choice choice;
-
-    public Choice Item2 => choice;
-
-    public EnabledChoice(bool available, Choice choice)
-    {
-        this.available = available;
-        this.choice = choice;
-    }
-
-    public override bool Equals(object obj)
-    {
-        return obj is EnabledChoice other &&
-               available == other.available &&
-               EqualityComparer<Choice>.Default.Equals(choice, other.choice);
-    }
-
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(available, choice);
-    }
-
-    public void Deconstruct(out bool available, out Choice choice)
-    {
-        available = this.available;
-        choice = this.choice;
-    }
-
-    public static implicit operator (bool available, Choice choice)(EnabledChoice value)
-    {
-        return (value.available, value.choice);
-    }
-
-    public static implicit operator EnabledChoice((bool available, Choice choice) value)
-    {
-        return new EnabledChoice(value.available, value.choice);
-    }
-}
+[Serializable]
 public class RecursiveEnabledChoice
 {
-    public bool available;
+    public Choice choice;
+    public bool enabled;
     public List<RecursiveEnabledChoice> _subChoices;
+    public RecursiveEnabledChoice(Choice choice)
+    {
+        this.choice = choice;
+        this.enabled = true;
+        this._subChoices = new List<RecursiveEnabledChoice>();
+    }
+    public RecursiveEnabledChoice(Choice choice, HashSet<Choice> visited) : this(choice)
+    {
+        visited.Add(choice);
+        //Check if nodes is on the very bottom, aka 0 child or not
+        bool leaf = true;
+        foreach (var subChoice in choice.postChoiceSequence)
+        {
+            if (!visited.Contains(subChoice))
+            {
+                _subChoices.Add(new RecursiveEnabledChoice(subChoice, visited));
+                leaf = false;
+            }
+        }
+        if (leaf)
+            _subChoices.Add(new RecursiveEnabledChoice(AssetDatabase.LoadAssetAtPath<FinalChoice>("Assets/Scriptables/DefaultMessage.asset")));
+    }
+
+
 }
