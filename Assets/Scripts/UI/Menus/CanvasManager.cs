@@ -22,9 +22,8 @@ public class CanvasManager : Singleton<CanvasManager>
         base.Awake();
         canvasControllerList = GetComponentsInChildren<CanvasController>().ToList();
         canvasControllerList.ForEach(x => x.gameObject.SetActive(false));
-        SwitchCanvas(CanvasType.Menu);
     }
-
+    
     public void SwitchCanvas(CanvasType type)
     {
         if (lastActiveCanvas != null)

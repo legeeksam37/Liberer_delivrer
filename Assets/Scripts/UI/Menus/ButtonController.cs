@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum ButtonType
 {
+    MainMenu,
     StartGame,
     EndGame
 }
@@ -28,6 +30,10 @@ public class ButtonController : MonoBehaviour
     {
         switch (buttonType)
         {
+            case ButtonType.MainMenu:
+                ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Menu);
+                CanvasManager.GetInstance().SwitchCanvas(CanvasType.Menu);
+                break;
             case ButtonType.EndGame:
                 _canvasManager.SwitchCanvas(CanvasType.Stats);
                 break;

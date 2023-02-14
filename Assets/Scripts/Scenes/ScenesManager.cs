@@ -3,19 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ScenesManager : MonoBehaviour
+public class ScenesManager : Singleton<ScenesManager>
 {
-    public static ScenesManager instance;
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        instance = this;
-    }
-
     public enum Scene
     {
         HomePage,
+        Menu,
         Game
     }
 
@@ -28,6 +21,4 @@ public class ScenesManager : MonoBehaviour
     {
         SceneManager.LoadScene(Scene.Game.ToString());
     }
-
-
 }
