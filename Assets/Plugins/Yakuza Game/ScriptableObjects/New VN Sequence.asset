@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b6b7c43c5d7b04c9f6dd807e35ee18, type: 3}
   m_Name: New VN Sequence
   m_EditorClassIdentifier: 
-  dialogueList: []
+  dialogueList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   indexDialogue: 0
   mainCharacterSequence: 0

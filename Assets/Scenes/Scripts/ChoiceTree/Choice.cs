@@ -9,7 +9,8 @@ public class Choice : ScriptableObject
     public (bool, string) val;
     public string textChoiceKey;
     //Trigger a specific sequence after selecting 
-    public List<EnabledChoice> postChoiceSequence;
+    public List<bool> choices;
+    public List<Choice> postChoiceSequence;
 
     //TODO Create bonus/malus system 
     public List<UnityEvent> changeList = new List<UnityEvent>();
@@ -21,6 +22,8 @@ public struct EnabledChoice
 {
     public bool available;
     public Choice choice;
+
+    public Choice Item2 => choice;
 
     public EnabledChoice(bool available, Choice choice)
     {
@@ -55,4 +58,9 @@ public struct EnabledChoice
     {
         return new EnabledChoice(value.available, value.choice);
     }
+}
+public class RecursiveEnabledChoice
+{
+    public bool available;
+    public List<RecursiveEnabledChoice> _subChoices;
 }

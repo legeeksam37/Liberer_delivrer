@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Oignons&Oeufs
   m_EditorClassIdentifier: 
   textChoiceKey: 
-  postChoiceSequence: []
+  postChoiceSequence:
+  - available: 0
+    choice: {fileID: 11400000, guid: 90f794b7223080346bf1bb886c47ed66, type: 2}
+  - available: 0
+    choice: {fileID: 0}
   changeList: []

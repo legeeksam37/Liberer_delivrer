@@ -16,4 +16,10 @@ MonoBehaviour:
   character: 0
   keyTextCharacter: 
   animationCharacter: {fileID: 0}
-  choiceVNList: []
+  choiceVNList:
+  - textChoiceKey: 
+    postChoiceSequence: {fileID: 0}
+    changeList: []
+  - textChoiceKey: 
+    postChoiceSequence: {fileID: 0}
+    changeList: []
