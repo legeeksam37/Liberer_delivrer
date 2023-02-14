@@ -1,12 +1,30 @@
+using System;
 using UnityEngine;
 
 public class Smartphone : MonoBehaviour
 {
+    [SerializeField] RectTransform _rectTransform;
+    
     [SerializeField] GameObject _orderSelection;
     [SerializeField] GameObject _withdrawalSelection;
     [SerializeField] GameObject _delayTypeSelection;
     [SerializeField] GameObject _travelMethodSelection;
 
+    void Start()
+    {
+        Expand();
+    }
+
+    public void Expand()
+    {
+        _rectTransform.anchoredPosition = new Vector3(280f, -90f);
+    }
+    
+    public void Collapse()
+    {
+        _rectTransform.anchoredPosition = new Vector3(280f, -350f);
+    }
+    
     public void Order()
     {
         _orderSelection.SetActive(false);
@@ -36,5 +54,7 @@ public class Smartphone : MonoBehaviour
         
         GameEvents.TravelMethodSelected?.Invoke((TravelMethod) travelMethod);
         CutsceneManager.Instance.Play(CutsceneType.Delivery);
+        
+        Collapse();
     }
 }

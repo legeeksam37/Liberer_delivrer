@@ -1244,6 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4617bf3ffe5b4f199cf5f4c3936cd3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rectTransform: {fileID: 2720820656754943045}
   _orderSelection: {fileID: 2720820657634066007}
   _withdrawalSelection: {fileID: 2720820655762209958}
   _delayTypeSelection: {fileID: 1560861609926154345}

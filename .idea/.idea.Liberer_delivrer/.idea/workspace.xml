@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="feat: Smartphone, transport cutscenes">
+    <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="feat: delay type selection">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Smartphone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Smartphone.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutsceneType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/CutsceneType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutsceneType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/CutsceneType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Smartphone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Smartphone.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676369788816</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: delay type selection">
+      <created>1676370474204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676370474204</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +135,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: Smartphone, transport cutscenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Smartphone, transport cutscenes" />
+    <MESSAGE value="feat: delay type selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: delay type selection" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
