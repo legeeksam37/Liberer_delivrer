@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Smartphone : MonoBehaviour
+public class Smartphone : MonoBehaviour, IDisplay
 {
     [SerializeField] RectTransform _rectTransform;
 
@@ -13,7 +13,7 @@ public class Smartphone : MonoBehaviour
 
     void Start()
     {
-        Expand();
+        //Expand();
     }
 
     public void Expand()
@@ -25,6 +25,7 @@ public class Smartphone : MonoBehaviour
     {
         _rectTransform.anchoredPosition = new Vector3(280f, -350f);
     }
+    public void OnlineOrLive() => ChangePanel(_orderSelection);
     public void Delay() => ChangePanel(_delayTypeSelection);
     public void Travel() => ChangePanel(_travelMethodSelection);
     public void Order() => ChangePanel(_withdrawalSelection);
@@ -51,7 +52,7 @@ public class Smartphone : MonoBehaviour
 
     private void ChangePanel(GameObject newPanel)
     {
-        _currentPanel.SetActive(false);
+        _currentPanel?.SetActive(false);
         _currentPanel = newPanel;
         _currentPanel.SetActive(true);
     }
