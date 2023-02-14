@@ -75,7 +75,7 @@ public class Mission : ScriptableObject
     }
     internal void OnValidate()
     {
-        Debug.LogWarning("Clear list of sons when disabled");
+        //Debug.LogWarning("Clear list of sons when disabled");
     }
     public bool IsFinalNode
     {
