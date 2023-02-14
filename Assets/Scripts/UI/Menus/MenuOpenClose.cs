@@ -15,6 +15,7 @@ public class MenuOpenClose : MonoBehaviour
         _animator = GetComponentInParent<Animator>();
         _button = GetComponent<Button>();
         _button.onClick.AddListener(ToggleMenu);
+        ToggleMenu();
     }
 
     void ToggleMenu()
