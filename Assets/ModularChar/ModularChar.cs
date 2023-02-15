@@ -8,94 +8,38 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
+public enum CustomizationElementType { Head, Body, Legs }
+
 public class ModularChar : MonoBehaviour
 {
     string commune;
     
-  
-    public int IndexHat = 0;
-    public int IndexBody = 0;
-    public int IndexLegs = 0;
-
-    
     public TextMeshProUGUI InputCommune;
     public TextMeshProUGUI InputAge;
 
-    //-------------Hat
-    [Space(10)]
-    public Button LeftArrowHat;
-    public Button RightArrowhat;
-    public SpriteRenderer Hat;
-    //-------------Body
-    [Space(10)]
-    public Button LeftArrowBody;
-    public Button RightArrowBody;
-    public SpriteRenderer Body;
-    //-------------Legs
-    [Space(10)]
-    public Button LeftArrowLegs;
-    public Button RightArrowLegs;
-    public SpriteRenderer Legs;
-
-    //------------tab mat
-    [Space(10)]
-    public Material[] materials;
-    int MaxMat;
-
     public GameObject Character;
-
-    [SerializeField]
-    GameObject warning;
-    private void Start()
+    
+    [SerializeField] private SO_Outfit outfit;
+    [SerializeField] GameObject warning;
+    
+    public void ChangeItem(CustomizationElementType elementType, Sprite outfitSkin)
     {
-        Hat.material = materials[IndexHat];
-        Body.material = materials[IndexBody];
-        Legs.material = materials[IndexLegs];
-        MaxMat = materials.Length;
-       
-
+        switch (elementType)
+        {
+            case CustomizationElementType.Head:
+                outfit.outfitHead = outfitSkin;
+                Debug.Log(outfitSkin.name);
+                break;
+            case CustomizationElementType.Body:
+                Debug.Log(outfitSkin.name);
+                outfit.outfitBody = outfitSkin;
+                break;
+            case CustomizationElementType.Legs:
+                outfit.outfitLegs = outfitSkin;
+                Debug.Log(outfitSkin.name);
+                break;
+        }
     }
-    public void OnclickleftArrHat()
-    {
-        if (--IndexHat == -1) { IndexHat = 2; }
-        Hat.material = materials[IndexHat];
-      
-
-    }
-    public void OnclickRightArrHat()
-    {
-        if (++IndexHat == MaxMat) { IndexHat = 0; }
-        Hat.material = materials[IndexHat];
-        
-    }
-    public void OnclickleftArrBody()
-    {
-        if (--IndexBody == -1) { IndexBody = 2; }
-        Body.material = materials[IndexBody];
-
-        
-    }
-    public void OnclickRightArrBody()
-    {
-        if (++IndexBody == MaxMat) { IndexBody = 0; }
-        Body.material = materials[IndexBody];
-       
-    }
-    public void OnclickleftArrLegs()
-    {
-        if (--IndexLegs == -1) { IndexLegs = 2; }
-        Legs.material = materials[IndexLegs];
-        
-    }
-    public void OnclickRightArrLegs()
-    {
-        if (++IndexLegs == MaxMat) { IndexLegs = 0; }
-        Legs.material = materials[IndexLegs];
-        
-    }
-   
-  
-
 
     public void Validate()
     {
