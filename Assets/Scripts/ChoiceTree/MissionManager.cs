@@ -40,13 +40,13 @@ public class MissionManager : MonoBehaviour
         var choice = Mission.Current.choice as Choice;
         switch (choice.Type)
         {
-            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.GetOptions<OnlineOrLive>()); break;
-            case Choicetypes.TravelMethod: _display.Travel(Mission.GetOptions<TravelMethod>()); break;
-            case Choicetypes.WithdrawalType: _display.WithDrawal(Mission.GetOptions<WithdrawalType>()); break;
-            case Choicetypes.DelayType: _display.Delay(Mission.GetOptions<DelayType>()); break;
+            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.Current, Mission.GetOptions<OnlineOrLive>()); break;
+            case Choicetypes.TravelMethod: _display.Travel(Mission.Current, Mission.GetOptions<TravelMethod>()); break;
+            case Choicetypes.WithdrawalType: _display.WithDrawal(Mission.Current, Mission.GetOptions<WithdrawalType>()); break;
+            case Choicetypes.DelayType: _display.Delay(Mission.Current, Mission.GetOptions<DelayType>()); break;
         }
     }
-    
+
     private void Awake()
     {
         //Find an IDisplay implementaiton in scene and use it
@@ -67,6 +67,7 @@ public class MissionManager : MonoBehaviour
     {
         Mission.Init();
         UpdateDisplayByCurrentState();
+        GameEvents.MissionStarted.Invoke(Mission);
     }
 
     private void Update()

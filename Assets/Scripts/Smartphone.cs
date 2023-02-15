@@ -27,10 +27,10 @@ public class Smartphone : MonoBehaviour, IDisplay
     {
         _rectTransform.anchoredPosition = new Vector3(280f, -350f);
     }
-    public void OnlineOrLive(List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet());
-    public void Delay(List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet());
-    public void Travel(List<TravelMethod> options = null) => ChangePanel(_travelMethodSelection, options?.Select(e => (int)e).ToHashSet());
-    public void WithDrawal(List<WithdrawalType> options = null) => ChangePanel(_withdrawalSelection, options?.Select(e => (int)e).ToHashSet());
+    public void OnlineOrLive(RecursiveEnabledChoice currentStep, List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet());
+    public void Delay(RecursiveEnabledChoice currentStep, List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet());
+    public void Travel(RecursiveEnabledChoice currentStep, List<TravelMethod> options = null) => ChangePanel(_travelMethodSelection, options?.Select(e => (int)e).ToHashSet());
+    public void WithDrawal(RecursiveEnabledChoice currentStep, List<WithdrawalType> options = null) => ChangePanel(_withdrawalSelection, options?.Select(e => (int)e).ToHashSet());
     #region ButtonCallbacks
     public void SetWithdrawalType(int withdrawalType)
     {
@@ -54,11 +54,12 @@ public class Smartphone : MonoBehaviour, IDisplay
     }
     #endregion
 
-    private void ChangePanel(GameObject newPanel, HashSet<int> options)
+    private void ChangePanel(GameObject newPanel, HashSet<int> options,RecursiveEnabledChoice currentStep)
     {
         _currentPanel?.SetActive(false);
         _currentPanel = newPanel;
         _currentPanel.SetActive(true);
+        //Debug.Log(" Infos : " + currentStep.message);
         //We only display options that we want
         Transform parent = _currentPanel.transform;
         for (int i = 0; i < parent.childCount; i++)
