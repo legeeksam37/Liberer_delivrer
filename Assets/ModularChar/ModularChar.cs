@@ -94,31 +94,29 @@ public class ModularChar : MonoBehaviour
         
     }
    
-   public void OnModifyCommune(string s)
-    {
-        commune = s; 
-        Debug.Log(s);
-    }
+  
 
 
     public void Validate()
     {
+        warning.SetActive(false);
         
-        string Age = InputAge.text.ToLower();
+        commune = InputCommune.text.Substring(0,InputCommune.text.Length - 1);
+        
         PlayerManager.Instance.Player = this.Character;
-        Debug.Log(InputAge.text.Length);
+      
 
         if (InputAge.text.Length <= 2 || InputAge.text.Length > 3 ||commune == "commune")
         {
             warning.SetActive(true);
-            Debug.Log(" ouais bien joué");
+           
 
         }
         else
         {
             JoystickControls JC = Character.AddComponent<JoystickControls>() as JoystickControls;
-            Debug.Log("putain de m*****");
-            //SceneManager.MoveGameObjectToScene(Character, SceneManager.GetSceneByBuildIndex(1));
+            
+           
             //SceneManager.LoadScene(1);
         }
     }
