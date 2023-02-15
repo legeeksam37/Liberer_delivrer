@@ -10,6 +10,8 @@ public class Mission : ScriptableObject
     [SerializeField]
     private Choice _rootChoice;
     [SerializeField]
+    private BuildingType _targetedBuilding;
+    [SerializeField]
     private Sprite _logo;
     public Sprite Logo { get => _logo; }
     [SerializeField]
@@ -17,6 +19,7 @@ public class Mission : ScriptableObject
     private RecursiveEnabledChoice _current;
     public RecursiveEnabledChoice Current => _current;
     public string CurrentName => Current.choice.name;
+    public BuildingID TargetedBuilding => FindObjectsOfType<BuildingID>().First(b => b.Type == _targetedBuilding);
     [ContextMenu(nameof(GenerateTree), false)]
     public void GenerateTree()
     {
@@ -97,8 +100,8 @@ public class Mission : ScriptableObject
         var options = new List<T>();
         int i = 0;
         foreach (var c in _current._subChoices)
-            if(c.enabled)
-                options.Add((T)Enum.ToObject(typeof(T),i++));
+            if (c.enabled)
+                options.Add((T)Enum.ToObject(typeof(T), i++));
         return options;
     }
     internal void OnValidate()
