@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13f261c8b0ab6844af8ab66b6d99b59, type: 3}
+  m_Name: FinalDomicileRapide
+  m_EditorClassIdentifier: 
+  _message: "Pas de chance, le camion qui te  livre roule \xE0 l'essence : Les  livraisons
+    \xE0 domicile entrainent  des trajets suppl\xE9mentaires pour  les livreurs qui
+    g\xE9n\xE8rent des  \xE9missions de gaz \xE0 effet de  serre...  la livraison
+    rapide peut g\xE9n\xE9rer  des trajets de camions mal  optimis\xE9s, plus nombreux
+    et donc  plus polluants. Il y a plein de magasins autour de  toi, pourquoi ne
+    pas aller y faire  un tour si tu es si press\xE9 ? Tu  perds 15colees"
+  _result:
+    _environmental: -10
+    _social: -5
+    _positives: 0
+    _negatives: -1

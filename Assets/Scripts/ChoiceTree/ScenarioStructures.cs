@@ -16,7 +16,7 @@ namespace ScenarioStructures
     [Serializable]
     public class Result
     {
-        private const int AMPLITUDE=5;
+        private const int AMPLITUDE=10;
         [SerializeField, Range(-AMPLITUDE, AMPLITUDE)]
         private int _environmental;
         [SerializeField, Range(-AMPLITUDE, AMPLITUDE)]
