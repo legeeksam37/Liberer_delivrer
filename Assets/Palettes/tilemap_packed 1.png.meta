@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -22155,6 +22155,7 @@ TextureImporter:
       tilemap_packed 1_521: -1268238223
       tilemap_packed 1_349: -2026868910
       tilemap_packed 1_265: -2146750530
+      tilemap_packed 1_492: -698112043
       tilemap_packed 1_897: -1000773494
       tilemap_packed 1_294: 758130401
       tilemap_packed 1_843: -1590309079
@@ -22178,7 +22179,6 @@ TextureImporter:
       tilemap_packed 1_395: -192818617
       tilemap_packed 1_722: -2048288241
       tilemap_packed 1_775: 1819967500
-      tilemap_packed 1_492: -698112043
       tilemap_packed 1_99: -495220940
       tilemap_packed 1_1000: 1823035179
       tilemap_packed 1_567: -1604847751
@@ -22199,17 +22199,17 @@ TextureImporter:
       tilemap_packed 1_1018: -46461298
       tilemap_packed 1_77: -1206079814
       tilemap_packed 1_381: 126213561
-      tilemap_packed 1_523: -1480645581
-      tilemap_packed 1_225: -53502352
-      tilemap_packed 1_692: 1084881806
       tilemap_packed 1_267: 451796365
+      tilemap_packed 1_225: -53502352
+      tilemap_packed 1_523: -1480645581
+      tilemap_packed 1_692: 1084881806
+      tilemap_packed 1_603: 363602667
       tilemap_packed 1_227: 1010643667
       tilemap_packed 1_916: 1521805996
-      tilemap_packed 1_603: 363602667
       tilemap_packed 1_284: -9336008
+      tilemap_packed 1_201: -1196221409
       tilemap_packed 1_628: -514675161
       tilemap_packed 1_621: -1169603193
-      tilemap_packed 1_201: -1196221409
       tilemap_packed 1_898: 1022992372
       tilemap_packed 1_912: -888859088
       tilemap_packed 1_623: 1384969888
