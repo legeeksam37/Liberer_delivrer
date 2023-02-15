@@ -22,9 +22,9 @@ public class ScoreManager : MonoBehaviour
 
     [ContextMenu("Persist")]
     void Persist(){
-        OnFacet<ScoreFacet>
+        OnFacet<LeaderboardFacet>
             .Call(
-                nameof(ScoreFacet.Persist),
+                nameof(LeaderboardFacet.Add),
                 score
             )
             .Done();
@@ -32,9 +32,9 @@ public class ScoreManager : MonoBehaviour
 
     void GetPercentileRanking(Action<int> onCompleted)
     {
-        OnFacet<ScoreFacet>
+        OnFacet<LeaderboardFacet>
             .Call<int>(
-                nameof(ScoreFacet.GetPercentileRanking),
+                nameof(LeaderboardFacet.GetPercentileRanking),
                 score
             )
             .Then(onCompleted)
