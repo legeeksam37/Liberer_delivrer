@@ -23,8 +23,8 @@ public class ScoreManager : MonoBehaviour
     [ContextMenu("Persist")]
     void Persist(){
         OnFacet<ScoreFacet>
-            .Call<ScoreEntity>(
-                nameof(ScoreFacet.PostScore),
+            .Call(
+                nameof(ScoreFacet.Persist),
                 score
             )
             .Done();
@@ -41,13 +41,13 @@ public class ScoreManager : MonoBehaviour
             .Done();
     }
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     [ContextMenu("GetPercentileRanking")]
     void Debug_GetPercentileRanking()
     {
         GetPercentileRanking(percentile => Debug.Log($"Your score is in the top {percentile}% !"));
     }
-    #endif
+#endif
     
     private void retrieve(){
         //get the score form the database

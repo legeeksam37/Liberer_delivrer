@@ -4,12 +4,12 @@ using Unisave.Facets;
 
 public class ScoreFacet : Facet
 {
-    public ScoreEntity PostScore(int score)
+    public void Persist(int score)
     {
-        var scoreEntity = new ScoreEntity();
-        scoreEntity.score = score;
+        var scoreEntity = new ScoreEntity {
+            score = score
+        };
         scoreEntity.Save();
-        return scoreEntity;
     }
     
     public int GetPercentileRanking(int score)

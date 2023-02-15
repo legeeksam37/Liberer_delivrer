@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Entities/ScoreEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Entities/ScoreEntity.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +22,23 @@
       </map>
     </option>
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8ff608aa-7d06-4df0-85a5-67ace3c5e013" />
+        <option name="url" value="https://github.com/legeeksam37/Liberer_delivrer.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
