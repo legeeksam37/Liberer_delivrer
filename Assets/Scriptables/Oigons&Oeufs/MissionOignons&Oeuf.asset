@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MissionOignons&Oeuf
   m_EditorClassIdentifier: 
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-  _message: {fileID: 0}
+  _logo: {fileID: 21300000, guid: 14278bd77e5e456448c09926f8b03a36, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
     message: Achete un mixeur gros dog
@@ -32,7 +32,7 @@ MonoBehaviour:
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: 55c67d7b1dd30934c8261d86d89ebc3d, type: 2}
-        message: 
+        message: sdgsegezrgh
         enabled: 0
         _subChoices:
         - choice: {fileID: 11400000, guid: caef2f80c2177fd4292724d30ee25828, type: 2}
