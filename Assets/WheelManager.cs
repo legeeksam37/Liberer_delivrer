@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,14 +8,15 @@ using UnityEngine.UI;
 public class WheelManager : MonoBehaviour
 {
     public GameObject Wheel;
-    public int WheelSpeed = 30;
+    int IndexButton = 0;
+    float WheelSpeed = 300;
 
-    Text TextButton;
-    public Button ButtonStart;
+    public TextMeshProUGUI TextButton;
+    
     // Start is called before the first frame update
     void Start()
     {
-        TextButton = ButtonStart.GetComponentInChildren<Text>();
+        
     }
 
     // Update is called once per frame
@@ -24,12 +26,38 @@ public class WheelManager : MonoBehaviour
     }
     public void OnClickStart()
     {
-       
+        if(IndexButton == 0)
+        {
+        TextButton.SetText("Stop");
+        StartCoroutine("RotateWheel");
+        IndexButton = 1;
+        }
+        else
+        {
+        TextButton.SetText("Faire tourner !");
+        StartCoroutine("SlowWheel");
+        //StopCoroutine("RotateWheel");
+        IndexButton = 0;
+        }
     }
     
     IEnumerator RotateWheel()
     {
-        transform.Rotate(0, 0, WheelSpeed * Time.deltaTime);
+        while (true)
+        {
+        Wheel.transform.Rotate(0, 0, WheelSpeed * Time.deltaTime);
+        }
         yield return null;
+
+        //StartCoroutine("RotateWheel");
+    }
+    IEnumerator SlowWheel() 
+    {
+        while(WheelSpeed > 0.5f) 
+        {
+            WheelSpeed /= 2 * Time.deltaTime;
+        }
+        yield return null;
+       
     }
 }
