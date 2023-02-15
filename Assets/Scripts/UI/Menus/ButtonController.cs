@@ -8,6 +8,7 @@ public enum ButtonType
 {
     MainMenu,
     StartGame,
+    ModifyCharacterSkin,
     EndGame
 }
 
@@ -33,6 +34,9 @@ public class ButtonController : MonoBehaviour
             case ButtonType.MainMenu:
                 ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Menu);
                 CanvasManager.GetInstance().SwitchCanvas(CanvasType.Menu);
+                break;
+            case ButtonType.ModifyCharacterSkin:
+                //Modification du skin du personnage.
                 break;
             case ButtonType.EndGame:
                 _canvasManager.SwitchCanvas(CanvasType.Stats);

@@ -26,14 +26,14 @@ public class MissionItem : MonoBehaviour
         _missionsButton.onClick.AddListener(LoadSceneFromManager);
     }
 
-    private void OnEnable()
+    private void Start()
     {
         onLockStateChanged += SetLockImageVisibility;
         onLockStateChanged += SetButtonInteractability;
         ToggleLockMission();
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         onLockStateChanged -= SetLockImageVisibility;
         onLockStateChanged -= SetButtonInteractability;
