@@ -254,7 +254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: _currentMissionIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5318871842542851553, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: m_RootOrder
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_margin: {x: 24.914001, y: 0, z: 20.927734, w: -6.9456177}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &90854891
@@ -4109,6 +4109,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 154431247}
     m_Modifications:
     - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
+      propertyPath: _logo1
+      value: 
+      objectReference: {fileID: 1880165314}
+    - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
+      propertyPath: _logo2
+      value: 
+      objectReference: {fileID: 1134057680}
+    - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
       propertyPath: _delayTypeSelection
       value: 
       objectReference: {fileID: 1158545366}
@@ -5193,6 +5201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ced8ec22c04da8bd0ea523d12033c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1880165314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6370229863578646197, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
+  m_PrefabInstance: {fileID: 1377136149}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1897865074 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}

@@ -14,20 +14,24 @@ public class Smartphone : MonoBehaviour, IDisplay
     [SerializeField] GameObject _delayTypeSelection;
     [SerializeField] GameObject _travelMethodSelection;
 
-    [SerializeField] GameObject _logo;
-    Image _imageLogo;
+    [SerializeField] GameObject _logo1;
+    Image _imageLogo1;
+    [SerializeField] GameObject _logo2;
+    Image _imageLogo2;
 
     TMP_Text currentText;
     private GameObject _currentPanel;
     private void Awake()
     {
-        _imageLogo = _logo.GetComponent<Image>();
+        _imageLogo1 = _logo1.GetComponent<Image>();
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
+        _imageLogo2 = _logo2.GetComponent<Image>();
     }
 
     private void ChangeIcon(Sprite logo)
     {
-        _imageLogo.sprite = logo;
+        _imageLogo1.sprite = logo;
+        _imageLogo2.sprite = logo;
     }
 
     void Start()
