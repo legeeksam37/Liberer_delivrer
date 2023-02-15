@@ -15,6 +15,13 @@ public class UIMain_Menu : MonoBehaviour
 
     private void StartNewGame()
     {
+        StartCoroutine(AnimTransition());
+    }
+
+    IEnumerator AnimTransition()
+    {
+        GetComponent<Animator>().SetTrigger("StartAnim");
+        yield return new WaitForSeconds(1.55f);
         ScenesManager.instance.LoadNewGame();
     }
 
