@@ -16,7 +16,10 @@ public class CommuneManager : MonoBehaviour
     private void Convert()
     {
         var splitted = _communes.Replace("\r\n", "\n").Split('\n');
-        _communeTab = new List<string>(splitted).ToArray();
+        var l = new List<string>();
+        l.Add("Commune");
+        l.AddRange(splitted);
+        _communeTab = l.ToArray();
     }
     [ContextMenu(nameof(FillDropdown))]
     private void FillDropdown()
