@@ -10,7 +10,7 @@ using UnityEngine;
 public class MissionManager : MonoBehaviour
 {
     [SerializeField] private Mission[] _missions;
-    [SerializeField, Range(0, 5)] private int _currentMissionIndex;
+    [SerializeField, Range(0, 7)] private int _currentMissionIndex;
     private IDisplay _display;
     public Mission Mission => _missions[_currentMissionIndex];
 

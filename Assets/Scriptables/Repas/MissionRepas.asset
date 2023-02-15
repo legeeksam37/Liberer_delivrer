@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d32848c700af8042bcd81beb14e263f, type: 3}
+  m_Name: MissionRepas
+  m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
+  _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+  _tree:
+    choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+    enabled: 1
+    _subChoices:
+    - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}
+      enabled: 1
+      _subChoices:
+      - choice: {fileID: 11400000, guid: 8a2da309ef5315a4a849c9f96f862939, type: 2}
+        enabled: 1
+        _subChoices:
+        - choice: {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
+          enabled: 1
+          _subChoices:
+          - choice: {fileID: 11400000, guid: 77c0fda85d7b1c342a6ad7c8c22a402c, type: 2}
+            enabled: 1
+            _subChoices: []
+    - choice: {fileID: 11400000, guid: 90f794b7223080346bf1bb886c47ed66, type: 2}
+      enabled: 1
+      _subChoices:
+      - choice: {fileID: 11400000, guid: 4f4ac7a52e2bf63458fc2190c35422d4, type: 2}
+        enabled: 1
+        _subChoices:
+        - choice: {fileID: 11400000, guid: ae8df0f02a513fe4aba3c849ea73cb5c, type: 2}
+          enabled: 1
+          _subChoices: []
+      - choice: {fileID: 11400000, guid: d00326555726e6047baa9c40f65cbdf5, type: 2}
+        enabled: 1
+        _subChoices:
+        - choice: {fileID: 11400000, guid: 257629e715a6389458ceb6aa2f3f9a8e, type: 2}
+          enabled: 1
+          _subChoices: []
+      - choice: {fileID: 11400000, guid: 47daa4590dfeb594594b6cd9cacc807d, type: 2}
+        enabled: 1
+        _subChoices:
+        - choice: {fileID: 11400000, guid: e0a86796d24fdeb4bab463db42d6ab1a, type: 2}
+          enabled: 1
+          _subChoices: []
+      - choice: {fileID: 11400000, guid: 06a704835012c98449e7c1002b54c2b6, type: 2}
+        enabled: 1
+        _subChoices:
+        - choice: {fileID: 11400000, guid: c8c775cbdfa996844ae28c4420241422, type: 2}
+          enabled: 1
+          _subChoices: []

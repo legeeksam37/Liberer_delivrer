@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Smartphone : MonoBehaviour, IDisplay
 {
@@ -11,25 +13,36 @@ public class Smartphone : MonoBehaviour, IDisplay
     [SerializeField] GameObject _withdrawalSelection;
     [SerializeField] GameObject _delayTypeSelection;
     [SerializeField] GameObject _travelMethodSelection;
+
+    [SerializeField] GameObject _logo1;
+    Image _imageLogo1;
+    [SerializeField] GameObject _logo2;
+    Image _imageLogo2;
+
+    TMP_Text currentText;
     private GameObject _currentPanel;
     private void Awake()
     {
+        _imageLogo1 = _logo1.GetComponent<Image>();
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
+        _imageLogo2 = _logo2.GetComponent<Image>();
     }
 
     private void ChangeIcon(Sprite logo)
     {
-        //throw new NotImplementedException("Find/add serialized ref to corresponding image object and set correct sprite, will be call on every new Mission");
+        _imageLogo1.sprite = logo;
+        _imageLogo2.sprite = logo;
     }
 
     void Start()
     {
         //Expand();
+        
     }
 
     public void Expand()
     {
-        _rectTransform.anchoredPosition = new Vector3(280f, -90f);
+        _rectTransform.anchoredPosition = new Vector3(280f, -30f);
     }
 
     public void Collapse()
@@ -63,17 +76,19 @@ public class Smartphone : MonoBehaviour, IDisplay
     }
     #endregion
 
-    private void ChangePanel(GameObject newPanel, HashSet<int> options,RecursiveEnabledChoice currentStep)
+    private void ChangePanel(GameObject newPanel, HashSet<int> options, RecursiveEnabledChoice currentStep)
     {
         _currentPanel?.SetActive(false);
         _currentPanel = newPanel;
+        TMP_Text[] allText = newPanel.GetComponentsInChildren<TMP_Text>();
+        allText[allText.Length - 1 ].text = currentStep.message;
         _currentPanel.SetActive(true);
         //Debug.Log(" Infos : " + currentStep.message);
         //We only display options that we want
-        Transform parent = _currentPanel.transform;
+        Transform parent = _currentPanel.transform.GetChild(0);
         for (int i = 0; i < parent.childCount; i++)
             //If options are null we consider we wan all options
-            _currentPanel.transform.GetChild(i).gameObject.SetActive(options==null || options.Contains(i));     
+            parent.GetChild(i).gameObject.SetActive(options==null || options.Contains(i));     
     }
 
 
