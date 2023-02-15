@@ -19,7 +19,7 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     private void ChangeIcon(Sprite logo)
     {
-        throw new NotImplementedException("Find/add serialized ref to corresponding image object and set correct sprite, will be call on every new Mission");
+        //throw new NotImplementedException("Find/add serialized ref to corresponding image object and set correct sprite, will be call on every new Mission");
     }
 
     void Start()

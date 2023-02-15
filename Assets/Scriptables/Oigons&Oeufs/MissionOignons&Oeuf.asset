@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MissionOignons&Oeuf
   m_EditorClassIdentifier: 
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-  _message: {fileID: 0}
+  _targetedBuilding: 5
+  _logo: {fileID: 0}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
     message: Achete un mixeur gros dog

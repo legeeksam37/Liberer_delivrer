@@ -11,6 +11,8 @@ public class Mission : ScriptableObject
     private Choice _rootChoice;
     [SerializeField]
     private BuildingType _targetedBuilding;
+    public BuildingID TargetedBuilding => Quest.FindBuilding(_targetedBuilding);
+
     [SerializeField]
     private Sprite _logo;
     public Sprite Logo { get => _logo; }
@@ -19,7 +21,6 @@ public class Mission : ScriptableObject
     private RecursiveEnabledChoice _current;
     public RecursiveEnabledChoice Current => _current;
     public string CurrentName => Current.choice.name;
-    public BuildingID TargetedBuilding => FindObjectsOfType<BuildingID>().First(b => b.Type == _targetedBuilding);
     [ContextMenu(nameof(GenerateTree), false)]
     public void GenerateTree()
     {
