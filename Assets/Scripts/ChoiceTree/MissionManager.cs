@@ -21,6 +21,7 @@ public class MissionManager : MonoBehaviour
             _currentMissionIndex = value;
             NewMission();
         }
+        get { return _currentMissionIndex; }
     }
     private void HandleEventRaised(int index)
     {
@@ -75,6 +76,10 @@ public class MissionManager : MonoBehaviour
         if (false && Input.GetMouseButtonDown(0))
         {
             Mission.ProcessSequenceRandom();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CurrentMissionIndex++;
         }
     }
 }

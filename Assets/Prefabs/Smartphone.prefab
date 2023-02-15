@@ -1323,7 +1323,8 @@ MonoBehaviour:
   _withdrawalSelection: {fileID: 2720820655762209958}
   _delayTypeSelection: {fileID: 1560861609926154345}
   _travelMethodSelection: {fileID: 2720820656916864148}
-  _logo: {fileID: 6370229863578646197}
+  _logo1: {fileID: 6370229863578646197}
+  _logo2: {fileID: 6370229863578646197}
 --- !u!1 &2720820656861835849
 GameObject:
   m_ObjectHideFlags: 0
