@@ -38,7 +38,7 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     public void Expand()
     {
-        _rectTransform.anchoredPosition = new Vector3(280f, -90f);
+        _rectTransform.anchoredPosition = new Vector3(280f, -30f);
     }
 
     public void Collapse()
