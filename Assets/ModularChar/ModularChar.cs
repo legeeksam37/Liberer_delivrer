@@ -6,12 +6,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class ModularChar : MonoBehaviour
 {
+    string commune;
     
-    string Commune;
-    int Age;
   
     public int IndexHat = 0;
     public int IndexBody = 0;
@@ -94,22 +94,33 @@ public class ModularChar : MonoBehaviour
         
     }
    
+   public void OnModifyCommune(string s)
+    {
+        commune = s; 
+        Debug.Log(s);
+    }
+
 
     public void Validate()
     {
+        
+        string Age = InputAge.text.ToLower();
         PlayerManager.Instance.Player = this.Character;
-        Debug.Log("commune : "+InputCommune.text + "  " +"Age : "+InputAge.text);
-        if (InputCommune.text == "commune" || InputAge.text == "age")
+        Debug.Log(InputAge.text.Length);
+
+        if (InputAge.text.Length <= 2 || InputAge.text.Length > 3 ||commune == "commune")
         {
             warning.SetActive(true);
-           
+            Debug.Log(" ouais bien joué");
+
         }
         else
         {
             JoystickControls JC = Character.AddComponent<JoystickControls>() as JoystickControls;
-
+            Debug.Log("putain de m*****");
             //SceneManager.MoveGameObjectToScene(Character, SceneManager.GetSceneByBuildIndex(1));
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
         }
     }
+
 }
