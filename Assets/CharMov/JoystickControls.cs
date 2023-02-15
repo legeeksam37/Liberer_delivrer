@@ -9,7 +9,8 @@ public class JoystickControls : MonoBehaviour
     PlayerInput playerInput;
     private CharacterController controller;
     private Vector3 playerVelocity;
-    private float playerSpeed = 10.0f;
+    [SerializeField,Range(.1f,5f)]
+    private float playerSpeed=.5f;
 
     public Image image;
 
