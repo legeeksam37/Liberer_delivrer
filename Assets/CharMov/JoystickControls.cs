@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class JoystickControls : MonoBehaviour
 {
     PlayerInput playerInput;
-    private CharacterController controller;
+    private Rigidbody2D controller;
     private Vector3 playerVelocity;
     [SerializeField,Range(.1f,5f)]
     private float playerSpeed=.5f;
@@ -18,18 +18,16 @@ public class JoystickControls : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        controller = GetComponent<CharacterController>();
-        
-        
+        controller = GetComponent<Rigidbody2D>();       
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector2 input = playerInput.actions["Move"].ReadValue<Vector2>();
-        Vector3 move = new Vector3(input.x, input.y, 0);
+        Vector2 move = new Vector3(input.x, input.y, 0);
 
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        controller.MovePosition(controller.position + playerSpeed * Time.deltaTime * move);
         if (image != null)
         {
             if (input.x > 0.2f || input.x < -0.2f || input.y > 0.2f || input.y < -0.2f)
