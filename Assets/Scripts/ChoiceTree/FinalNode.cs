@@ -11,4 +11,7 @@ public class FinalNode : Node
     private Result _result;
 
     public override List<Node> PostChoiceSequence => null;
+
+    public string Message { get => _message;  }
+    public Result Result { get => _result; }
 }

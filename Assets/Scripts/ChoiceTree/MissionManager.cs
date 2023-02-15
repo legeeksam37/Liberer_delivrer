@@ -1,3 +1,4 @@
+using DG.Tweening.Plugins.Options;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,22 +25,28 @@ public class MissionManager : MonoBehaviour
     private void HandleEventRaised(int index)
     {
         Debug.Log("We don't operate any checks on the type on type of enum reicved, we consider we always get the correct one and process");
-        Mission.ProcessSequenceAbsolute(index);
-        UpdateDisplayByCurrentState();
+        if (Mission.ProcessSequenceAbsolute(index))
+            UpdateDisplayByCurrentState();
+        else
+        {
+            var final = Mission.Current.choice as FinalNode;
+            _display.Collapse();
+            GameEvents.ScenarioEnded?.Invoke((final.Message, final.Result));
+        }
     }
 
     private void UpdateDisplayByCurrentState()
     {
         var choice = Mission.Current.choice as Choice;
-        switch (choice.type)
+        switch (choice.Type)
         {
-            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(); break;
-            case Choicetypes.TravelMethod: _display.Travel(); break;
-            case Choicetypes.WithdrawalType: _display.Order(); break;
-            case Choicetypes.DelayType: _display.Delay(); break;
+            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.GetOptions<OnlineOrLive>()); break;
+            case Choicetypes.TravelMethod: _display.Travel(Mission.GetOptions<TravelMethod>()); break;
+            case Choicetypes.WithdrawalType: _display.WithDrawal(Mission.GetOptions<WithdrawalType>()); break;
+            case Choicetypes.DelayType: _display.Delay(Mission.GetOptions<DelayType>()); break;
         }
     }
-
+    
     private void Awake()
     {
         //Find an IDisplay implementaiton in scene and use it
@@ -47,6 +54,8 @@ public class MissionManager : MonoBehaviour
         GameEvents.WithdrawalTypeSelected += (e) => HandleEventRaised((int)e);
         GameEvents.DelayTypeSelected += (e) => HandleEventRaised((int)e);
         GameEvents.TravelMethodSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.OnlineOrLiveSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.ScenarioEnded += (sr) => Debug.Log("Colee says : " + sr.message + " with result : " + sr.result);
         _display.Expand();
     }
     private void Start()
@@ -62,10 +71,9 @@ public class MissionManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (false && Input.GetMouseButtonDown(0))
         {
             Mission.ProcessSequenceRandom();
-            Debug.Log("Mission : " + Mission.CurrentName);
         }
     }
 }

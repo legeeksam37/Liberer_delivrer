@@ -46,6 +46,10 @@ namespace ScenarioStructures
             }
             return count;
         }
+        public override string ToString()
+        {
+            return base.ToString()+" : "+ _environmental+","+ _social;
+        }
     }
 }
 

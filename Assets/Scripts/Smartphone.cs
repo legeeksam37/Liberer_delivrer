@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Smartphone : MonoBehaviour, IDisplay
@@ -25,35 +27,45 @@ public class Smartphone : MonoBehaviour, IDisplay
     {
         _rectTransform.anchoredPosition = new Vector3(280f, -350f);
     }
-    public void OnlineOrLive() => ChangePanel(_orderSelection);
-    public void Delay() => ChangePanel(_delayTypeSelection);
-    public void Travel() => ChangePanel(_travelMethodSelection);
-    public void Order() => ChangePanel(_withdrawalSelection);
+    public void OnlineOrLive(List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet());
+    public void Delay(List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet());
+    public void Travel(List<TravelMethod> options = null) => ChangePanel(_travelMethodSelection, options?.Select(e => (int)e).ToHashSet());
+    public void WithDrawal(List<WithdrawalType> options = null) => ChangePanel(_withdrawalSelection, options?.Select(e => (int)e).ToHashSet());
     #region ButtonCallbacks
     public void SetWithdrawalType(int withdrawalType)
     {
-        Delay();
+        //Delay();
         GameEvents.WithdrawalTypeSelected?.Invoke((WithdrawalType)withdrawalType);
     }
 
     public void SetDelayType(int delayType)
     {
-        Travel();
+        //Travel();
         GameEvents.DelayTypeSelected?.Invoke((DelayType)delayType);
     }
     public void SetTravelMethod(int travelMethod)
     {
         GameEvents.TravelMethodSelected?.Invoke((TravelMethod)travelMethod);
         CutsceneManager.Instance.Play(CutsceneType.Delivery);
-
-        Collapse();
+    }
+    public void SetOnlineOLive(int onlineOrLive)
+    {
+        GameEvents.OnlineOrLiveSelected?.Invoke((OnlineOrLive)onlineOrLive);
     }
     #endregion
 
-    private void ChangePanel(GameObject newPanel)
+    private void ChangePanel(GameObject newPanel, HashSet<int> options)
     {
         _currentPanel?.SetActive(false);
         _currentPanel = newPanel;
         _currentPanel.SetActive(true);
+        //We only display options that we want
+        Transform parent = _currentPanel.transform;
+        for (int i = 0; i < parent.childCount; i++)
+            //If options are null we consider we wan all options
+            _currentPanel.transform.GetChild(i).gameObject.SetActive(options==null || options.Contains(i));     
     }
+
+
+    
 }

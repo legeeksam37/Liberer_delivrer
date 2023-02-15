@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efacdcb56de27794f8ed8ef99c616453, type: 3}
   m_Name: VeryFirstNode
   m_EditorClassIdentifier: 
-  _type: -1
+  type: -1
   postChoiceSequence:
   - {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}
   - {fileID: 11400000, guid: 90f794b7223080346bf1bb886c47ed66, type: 2}

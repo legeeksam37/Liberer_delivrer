@@ -8,7 +8,8 @@ using System.Collections;
 [CreateAssetMenu(fileName = "New choice", menuName = "Scenarisation/Choice")]
 public class Choice : Node
 {
-    public Choicetypes type;
+    [SerializeField]
+    private Choicetypes type;
     //Trigger a specific sequence after selecting 
     public List<Node> postChoiceSequence = new List<Node>();
 
@@ -16,8 +17,11 @@ public class Choice : Node
     public List<UnityEvent> changeList = new List<UnityEvent>();
 
     public override List<Node> PostChoiceSequence => postChoiceSequence;
+
+    public Choicetypes Type { get => type; set => type = value; }
     //each one of them will have an attributed fonction that will change VariableConfig in GM
     //Maybe use UnityEvents
+
 }
 public abstract class Node : ScriptableObject
 {

@@ -1,8 +1,11 @@
-﻿public interface IDisplay
+﻿using System.Collections.Generic;
+
+public interface IDisplay
 {
-    void Delay();
     void Expand();
-    void OnlineOrLive();
-    void Order();
-    void Travel();
+    void Collapse();
+    void Delay(List<DelayType> options = null);
+    void OnlineOrLive(List<OnlineOrLive> options = null);
+    void WithDrawal(List<WithdrawalType> options = null);
+    void Travel(List<TravelMethod> options = null);
 }
