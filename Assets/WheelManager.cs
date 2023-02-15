@@ -8,22 +8,16 @@ using UnityEngine.UI;
 public class WheelManager : MonoBehaviour
 {
     public GameObject Wheel;
+   
+    BoxCollider2D BC;
+
     int IndexButton = 0;
-    float WheelSpeed = 300;
+    [SerializeField] float WheelSpeed = 300;
 
     public TextMeshProUGUI TextButton;
+    public TextMeshProUGUI Result;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     public void OnClickStart()
     {
         if(IndexButton == 0)
@@ -36,28 +30,71 @@ public class WheelManager : MonoBehaviour
         {
         TextButton.SetText("Faire tourner !");
         StartCoroutine("SlowWheel");
-        //StopCoroutine("RotateWheel");
+        
         IndexButton = 0;
         }
     }
     
     IEnumerator RotateWheel()
     {
-        while (true)
-        {
-        Wheel.transform.Rotate(0, 0, WheelSpeed * Time.deltaTime);
-        }
+       
+        Wheel.transform.Rotate(0, 0, -WheelSpeed*Time.deltaTime,Space.World);
+        
         yield return null;
 
-        //StartCoroutine("RotateWheel");
+        StartCoroutine("RotateWheel");
     }
     IEnumerator SlowWheel() 
     {
-        while(WheelSpeed > 0.5f) 
+        TextButton.SetText("Patientez");
+        
+        while (WheelSpeed > 0.5f) 
         {
-            WheelSpeed /= 2 * Time.deltaTime;
+            WheelSpeed -= 12.5f;
+            yield return new WaitForSecondsRealtime(0.5f);
         }
+        StopCoroutine("RotateWheel");
+        end();
+        TextButton.SetText("Faire tourner !");
         yield return null;
        
+    }
+   
+    void end()
+    {
+        
+        WheelSpeed = 300;
+        float RotFinal = Wheel.transform.localRotation.eulerAngles.z;
+        Debug.Log(RotFinal);
+
+        if(RotFinal <= 45 || RotFinal >= 315)
+        {
+            Debug.Log("Grey");
+            Result.SetText("Bravo tu attends\n patiemment que le livreur\n garé en double-file devant toi\n finisse sa livraison sans t’énerver\n contre lui. \r\nTu gagnes 2 colees");
+
+
+        }
+        else if(RotFinal <= 135 && RotFinal > 45)
+        {
+            Debug.Log("light blue");
+            Result.SetText("Aïe…Tu t’énerves contre un livreur garé en double file pourtant tu es bien heureux de trouver tes produits favoris dans ton commerce. \r\nTu perds 2 colees");
+
+        }
+
+        else if (RotFinal <= 225 && RotFinal > 135)
+        {
+            Debug.Log("orange");
+            Result.SetText("Bravo tu attends patiemment que le livreur garé en double-file devant toi finisse sa livraison sans t’énerver contre lui. \r\nTu gagnes 2 colees");
+
+        }
+        else 
+        {
+            Debug.Log("dark blue");
+            Result.SetText("Aïe…Tu t’énerves contre un livreur garé en double file pourtant tu es bien heureux de trouver tes produits favoris dans ton commerce. \r\nTu perds 2 colees");
+
+
+        }
+        RotFinal = 0;
+
     }
 }
