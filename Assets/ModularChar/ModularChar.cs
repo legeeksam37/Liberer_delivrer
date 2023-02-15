@@ -6,11 +6,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class ModularChar : MonoBehaviour
 {
-    string Commune;
-    int Age;
+    string commune;
+    
   
     public int IndexHat = 0;
     public int IndexBody = 0;
@@ -43,6 +44,8 @@ public class ModularChar : MonoBehaviour
 
     public GameObject Character;
 
+    [SerializeField]
+    GameObject warning;
     private void Start()
     {
         Hat.material = materials[IndexHat];
@@ -91,13 +94,31 @@ public class ModularChar : MonoBehaviour
         
     }
    
+  
+
 
     public void Validate()
     {
+        warning.SetActive(false);
         
-        JoystickControls JC = Character.AddComponent<JoystickControls>() as JoystickControls;
+        commune = InputCommune.text.Substring(0,InputCommune.text.Length - 1);
+        
         PlayerManager.Instance.Player = this.Character;
-        //SceneManager.MoveGameObjectToScene(Character, SceneManager.GetSceneByBuildIndex(1));
-        SceneManager.LoadScene(1);
+      
+
+        if (InputAge.text.Length <= 2 || InputAge.text.Length > 3 ||commune == "commune")
+        {
+            warning.SetActive(true);
+           
+
+        }
+        else
+        {
+            JoystickControls JC = Character.AddComponent<JoystickControls>() as JoystickControls;
+            
+           
+            //SceneManager.LoadScene(1);
+        }
     }
+
 }
