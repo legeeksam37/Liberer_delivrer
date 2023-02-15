@@ -16,12 +16,13 @@ public class ScoreFacet : Facet
     {
         var scores = DB.TakeAll<ScoreEntity>().Get();
 
-        var totalScoreCount = scores.Count;
+        var totalScoresCount = scores.Count - 1; // Don't count our own score
 
-        if (totalScoreCount == 0)
+        if (totalScoresCount <= 0)
             return 0;
         
-        var worstScoreCount = scores.Count(s => s.score < score);
-        return (int) (worstScoreCount / (float) totalScoreCount * 100);
+        var worstScoresCount = scores.Count(s => s.score < score);
+        
+        return (int) ((1 - worstScoresCount / (float) totalScoresCount) * 100);
     }
 }

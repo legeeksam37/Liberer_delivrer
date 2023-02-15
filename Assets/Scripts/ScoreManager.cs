@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private int score = 0 ;
+    [SerializeField] private int score;
 
     void Start()
     {
@@ -20,7 +20,8 @@ public class ScoreManager : MonoBehaviour
         return score--;
     }
 
-    private void persist(){
+    [ContextMenu("Persist")]
+    void Persist(){
         OnFacet<ScoreFacet>
             .Call<ScoreEntity>(
                 nameof(ScoreFacet.PostScore),
@@ -39,6 +40,14 @@ public class ScoreManager : MonoBehaviour
             .Then(onCompleted)
             .Done();
     }
+
+    #if UNITY_EDITOR
+    [ContextMenu("GetPercentileRanking")]
+    void Debug_GetPercentileRanking()
+    {
+        GetPercentileRanking(percentile => Debug.Log($"Your score is in the top {percentile}% !"));
+    }
+    #endif
     
     private void retrieve(){
         //get the score form the database

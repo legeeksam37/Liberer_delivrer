@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +100,8 @@
       <workItem from="1676295830092" duration="97000" />
       <workItem from="1676295941983" duration="6138000" />
       <workItem from="1676386543708" duration="3891000" />
+      <workItem from="1676390601292" duration="55000" />
+      <workItem from="1676448225551" duration="1007000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Smartphone, transport cutscenes">
       <created>1676369788816</created>
@@ -122,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676371589661</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added unisave, added score entity and score facet">
+      <created>1676390642112</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676390642112</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +156,8 @@
     <MESSAGE value="feat: Smartphone, transport cutscenes" />
     <MESSAGE value="feat: delay type selection" />
     <MESSAGE value="feat: expand and collapse smartphone" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: expand and collapse smartphone" />
+    <MESSAGE value="Added unisave, added score entity and score facet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added unisave, added score entity and score facet" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
