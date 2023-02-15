@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Smartphone : MonoBehaviour, IDisplay
 {
@@ -13,16 +14,20 @@ public class Smartphone : MonoBehaviour, IDisplay
     [SerializeField] GameObject _delayTypeSelection;
     [SerializeField] GameObject _travelMethodSelection;
 
+    [SerializeField] GameObject _logo;
+    Image _imageLogo;
+
     TMP_Text currentText;
     private GameObject _currentPanel;
     private void Awake()
     {
+        _imageLogo = _logo.GetComponent<Image>();
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
     }
 
     private void ChangeIcon(Sprite logo)
     {
-        throw new NotImplementedException("Find/add serialized ref to corresponding image object and set correct sprite, will be call on every new Mission");
+        _imageLogo.sprite = logo;
     }
 
     void Start()
