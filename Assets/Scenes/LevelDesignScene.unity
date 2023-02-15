@@ -2652,6 +2652,14 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4944560138919696059, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1822.9813
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944560138919696059, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -803.5652
+      objectReference: {fileID: 0}
     - target: {fileID: 6029766057226679911, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_Name
       value: MovableCharacter
