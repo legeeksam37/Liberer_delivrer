@@ -70,7 +70,7 @@ public class Smartphone : MonoBehaviour, IDisplay
         _currentPanel.SetActive(true);
         //Debug.Log(" Infos : " + currentStep.message);
         //We only display options that we want
-        Transform parent = _currentPanel.transform;
+        Transform parent = _currentPanel.transform.GetChild(0);
         for (int i = 0; i < parent.childCount; i++)
             //If options are null we consider we wan all options
             _currentPanel.transform.GetChild(i).gameObject.SetActive(options==null || options.Contains(i));     
