@@ -11,6 +11,7 @@ public class Mission : ScriptableObject
     private Choice _rootChoice;
     [SerializeField]
     private Sprite _logo;
+    public Sprite Logo { get => _logo; }
     [SerializeField]
     private RecursiveEnabledChoice _tree;
     private RecursiveEnabledChoice _current;

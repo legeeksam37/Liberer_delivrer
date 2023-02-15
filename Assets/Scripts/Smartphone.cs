@@ -12,6 +12,15 @@ public class Smartphone : MonoBehaviour, IDisplay
     [SerializeField] GameObject _delayTypeSelection;
     [SerializeField] GameObject _travelMethodSelection;
     private GameObject _currentPanel;
+    private void Awake()
+    {
+        GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
+    }
+
+    private void ChangeIcon(Sprite logo)
+    {
+        throw new NotImplementedException("Find/add serialized ref to corresponding image object and set correct sprite, will be call on every new Mission");
+    }
 
     void Start()
     {
