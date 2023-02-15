@@ -27,17 +27,21 @@ MonoBehaviour:
         message: bon choix ptdr , on te l'envoit ou ?
         enabled: 1
         _subChoices:
-        - choice: {fileID: 11400000, guid: 4cc0c85f60a686141ace2a16dab29d59, type: 2}
+        - choice: {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
           message: 
           enabled: 1
-          _subChoices: []
+          _subChoices:
+          - choice: {fileID: 11400000, guid: 4cc0c85f60a686141ace2a16dab29d59, type: 2}
+            message: 
+            enabled: 1
+            _subChoices: []
       - choice: {fileID: 11400000, guid: 55c67d7b1dd30934c8261d86d89ebc3d, type: 2}
         message: sdgsegezrgh
         enabled: 0
         _subChoices:
         - choice: {fileID: 11400000, guid: caef2f80c2177fd4292724d30ee25828, type: 2}
           message: 
-          enabled: 1
+          enabled: 0
           _subChoices: []
     - choice: {fileID: 11400000, guid: 90f794b7223080346bf1bb886c47ed66, type: 2}
       message: 

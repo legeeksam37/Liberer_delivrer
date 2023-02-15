@@ -106,7 +106,7 @@ MonoBehaviour:
           _subChoices: []
       - choice: {fileID: 11400000, guid: 06a704835012c98449e7c1002b54c2b6, type: 2}
         message: 
-        enabled: 1
+        enabled: 0
         _subChoices:
         - choice: {fileID: 11400000, guid: 884cf41b9a3691b489df99ca1bee914b, type: 2}
           message: 
