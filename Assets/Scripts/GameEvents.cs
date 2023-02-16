@@ -13,4 +13,6 @@ public static class GameEvents
     public static Action<string> SequenceProcessed { get; set; }
     public static Action<(string message,Result result)> ScenarioEnded { get; set; }
     public static Action GameEnded { get; set; }
+    public static Action<TravelID> TravelReached { get; set; }
+    
 }
