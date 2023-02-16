@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2279297423725030397}
   - component: {fileID: 2279297423725030395}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerDecontractF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 309194445, guid: 7bced1ccf379d6a4790c0790b64d8be6, type: 3}
+  m_Sprite: {fileID: 1864144629, guid: bc41da03fa30f714e9b63112ffe0a4d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
