@@ -32,8 +32,13 @@ public class MissionManager : MonoBehaviour
         else
         {
             var final = Mission.Current.choice as FinalNode;
-            _display.Collapse();
-            GameEvents.ScenarioEnded?.Invoke((final.Message, final.Result));
+            if (final != null)
+            {
+                _display.Collapse();
+                GameEvents.ScenarioEnded?.Invoke((final.Message, final.Result));
+            }
+            else
+                Debug.Log("Error happend in scenario processing, check upper messages");
         }
     }
 
@@ -88,7 +93,7 @@ public class MissionManager : MonoBehaviour
         {
             Mission.ProcessSequenceRandom();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             CurrentMissionIndex++;
         }
