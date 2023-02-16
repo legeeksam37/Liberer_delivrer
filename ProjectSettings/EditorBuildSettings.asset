@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Joystick.unity
     guid: 20c04c65bbf1a9543a8b10fc8ae86d92
+  - enabled: 1
+    path: Assets/Scenes/LevelDesignScene.unity
+    guid: 2b4e29a1088c1e740b9c6a9aef7f27f4
   m_configObjects: {}
