@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         if (string.IsNullOrWhiteSpace(userId))
             throw new Exception("User has not been created.");
         
-        OnFacet<GameDataFacet>.Call(nameof(GameDataFacet.Create), userId, _playerData).Done();
+        OnFacet<GameDataFacet>.Call(nameof(GameDataFacet.Create), userId, _playerData.ScoreTotal, _playerData.MissionChoices, _playerData.MinutesPlayed).Done();
     }
 }
 

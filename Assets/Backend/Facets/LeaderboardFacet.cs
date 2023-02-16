@@ -1,6 +1,7 @@
 using System.Linq;
 using Unisave.Facades;
 using Unisave.Facets;
+using UnityEngine;
 
 public class LeaderboardFacet : Facet
 {
@@ -27,7 +28,7 @@ public class LeaderboardFacet : Facet
             return 0;
         
         var worstScoresCount = leaderboardEntryEntities.Where(le => le.score < score).Sum(le => le.count);
-        
+
         return (int) ((1 - worstScoresCount / (float) totalScoresCount) * 100);
     }
 }

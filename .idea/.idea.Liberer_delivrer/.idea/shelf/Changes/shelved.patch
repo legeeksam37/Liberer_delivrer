@@ -1,0 +1,46 @@
+Index: Assets/Scripts/ScoreManager.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\r\nusing ScenarioStructures;\r\nusing Unisave.Facades;\r\nusing UnityEngine;\r\n\r\n\r\npublic class ScoreManager : MonoBehaviour\r\n{\r\n    int _scoreEnv;\r\n    int _scoreSoc;\r\n\r\n    public int Score => _scoreEnv + _scoreSoc;\r\n    \r\n    void Start()\r\n    {\r\n        retrieve();\r\n    }\r\n\r\n    void OnEnable()\r\n    {\r\n        GameEvents.ScenarioEnded += OnScenarioEnded;\r\n    }\r\n\r\n    void OnDisable()\r\n    {\r\n        GameEvents.ScenarioEnded -= OnScenarioEnded;\r\n    }\r\n\r\n    void OnScenarioEnded((string message, Result result) tuple)\r\n    {\r\n        _scoreEnv += tuple.result.ScoreEnvironmental;\r\n        _scoreSoc += tuple.result.ScoreSocial;\r\n    }\r\n\r\n    [ContextMenu(\"Persist\")]\r\n    void Persist(){\r\n        OnFacet<LeaderboardFacet>\r\n            .Call(\r\n                nameof(LeaderboardFacet.Add),\r\n                _scoreSoc\r\n            )\r\n            .Done();\r\n    }\r\n\r\n    void GetPercentileRanking(Action<int> onCompleted)\r\n    {\r\n        OnFacet<LeaderboardFacet>\r\n            .Call<int>(\r\n                nameof(LeaderboardFacet.GetPercentileRanking),\r\n                _scoreSoc\r\n            )\r\n            .Then(onCompleted)\r\n            .Done();\r\n    }\r\n\r\n#if UNITY_EDITOR\r\n    [ContextMenu(\"GetPercentileRanking\")]\r\n    void Debug_GetPercentileRanking()\r\n    {\r\n        GetPercentileRanking(percentile => Debug.Log($\"Your score is in the top {percentile}% !\"));\r\n    }\r\n#endif\r\n    \r\n    private void retrieve(){\r\n        //get the score form the database\r\n    }\r\n\r\n    public int getScore(){\r\n        return _scoreSoc;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scripts/ScoreManager.cs b/Assets/Scripts/ScoreManager.cs
+--- a/Assets/Scripts/ScoreManager.cs	(revision ce0333d4f75e33a8da277e818d8829a0043c78f2)
++++ b/Assets/Scripts/ScoreManager.cs	(date 1676563171998)
+@@ -10,20 +10,17 @@
+     int _scoreSoc;
+ 
+     public int Score => _scoreEnv + _scoreSoc;
+-    
+-    void Start()
+-    {
+-        retrieve();
+-    }
+ 
+     void OnEnable()
+     {
+         GameEvents.ScenarioEnded += OnScenarioEnded;
++        //GameEvents.GameEnded += Persist;
+     }
+ 
+     void OnDisable()
+     {
+         GameEvents.ScenarioEnded -= OnScenarioEnded;
++        GameEvents.GameEnded -= Persist;
+     }
+ 
+     void OnScenarioEnded((string message, Result result) tuple)
+@@ -60,12 +57,4 @@
+         GetPercentileRanking(percentile => Debug.Log($"Your score is in the top {percentile}% !"));
+     }
+ #endif
+-    
+-    private void retrieve(){
+-        //get the score form the database
+-    }
+-
+-    public int getScore(){
+-        return _scoreSoc;
+-    }
+ }

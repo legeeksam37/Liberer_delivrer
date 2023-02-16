@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     int _scoreEnv;
     int _scoreSoc;
 
-    public int Score => _scoreEnv + _scoreSoc;
+    public int Score => 26;//_scoreEnv + _scoreSoc;
     
     void Start()
     {
@@ -37,17 +37,28 @@ public class ScoreManager : MonoBehaviour
         OnFacet<LeaderboardFacet>
             .Call(
                 nameof(LeaderboardFacet.Add),
-                _scoreSoc
+                Score
             )
             .Done();
     }
 
-    void GetPercentileRanking(Action<int> onCompleted)
+    public void GetPercentileRanking(int score, Action<int> onCompleted)
     {
         OnFacet<LeaderboardFacet>
             .Call<int>(
                 nameof(LeaderboardFacet.GetPercentileRanking),
-                _scoreSoc
+                score
+            )
+            .Then(onCompleted)
+            .Done();
+    }
+    
+    public void GetPercentileRanking(Action<int> onCompleted)
+    {
+        OnFacet<LeaderboardFacet>
+            .Call<int>(
+                nameof(LeaderboardFacet.GetPercentileRanking),
+                Score
             )
             .Then(onCompleted)
             .Done();
