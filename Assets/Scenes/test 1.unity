@@ -4153,6 +4153,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1134057680}
     - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
+      propertyPath: _logo3
+      value: 
+      objectReference: {fileID: 602805941}
+    - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
+      propertyPath: _logo4
+      value: 
+      objectReference: {fileID: 876088292}
+    - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
       propertyPath: _delayTypeSelection
       value: 
       objectReference: {fileID: 1158545366}
