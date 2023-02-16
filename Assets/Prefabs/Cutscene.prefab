@@ -106,7 +106,7 @@ RectTransform:
   m_GameObject: {fileID: 6542352846750629347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3762499, y: 1.3762499, z: 1.3762499}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4099083970823261964}
@@ -164,9 +164,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6542352846750629347}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &6542352846750629351
 MonoBehaviour:
@@ -182,8 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 6542352846750629350}
   _animator: {fileID: 6542352846750629349}
-  _animName: 
-  <Type>k__BackingField: 0
+  _animName: Delivery
+  <Type>k__BackingField: 5
 --- !u!95 &6542352846750629349
 Animator:
   serializedVersion: 5
@@ -192,7 +192,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6542352846750629347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c17594ff150ca6249a2176f4ba8a8ca2, type: 2}
   m_CullingMode: 0

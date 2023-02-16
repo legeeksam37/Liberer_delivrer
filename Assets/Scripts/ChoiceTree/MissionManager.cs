@@ -24,7 +24,7 @@ public class MissionManager : Singleton<MissionManager>
     
     private void OnValidate()
     {
-        if(_cutscene==null)
+        if (_cutscene == null)
             _cutscene = FindObjectOfType<CutsceneManager>();
         if (_cutscene == null)
             Debug.Log("Didn't find a CutsceneManager in scene, add one");
@@ -33,8 +33,9 @@ public class MissionManager : Singleton<MissionManager>
     private void HandleEventRaised(int index)
     {
         Debug.Log("We don't operate any checks on the type on type of enum reicved, we consider we always get the correct one and process");
-        if (mission.ProcessSequenceAbsolute(index))
+        if (mission.ProcessSequenceAbsolute(index)){
             UpdateDisplayByCurrentState();
+        }
         else
         {
             var final = mission.Current.choice as FinalNode;
@@ -78,13 +79,30 @@ public class MissionManager : Singleton<MissionManager>
         GameEvents.WithdrawalTypeSelected += (e) => HandleEventRaised((int)e);
         GameEvents.DelayTypeSelected += (e) => HandleEventRaised((int)e);
         GameEvents.TravelMethodSelected += (e) => HandleEventRaised((int)e);
-        GameEvents.OnlineOrLiveSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.OnlineOrLiveSelected += HandleOnlineOrLive;
         GameEvents.ScenarioEnded += (sr) => Debug.Log("Colee says : " + sr.message + " with result : " + sr.result);
         GameEvents.BuildingReached += HandleBuildingReached;
         GameEvents.TravelReached += HandleTravelReached;
         _display.Expand();
-        UpdateDisplayByCurrentState();
     }
+    private void HandleOnlineOrLive(OnlineOrLive e)
+    {
+        switch (e)
+        {
+            case global::OnlineOrLive.Live:
+                GameEvents.GameStarted?.Invoke();
+                _display.Collapse();
+                break;
+            default:
+                break;
+        }
+        HandleEventRaised((int)e);
+    }
+
+
+    
+
+    
     
     public void NewMission()
     {
@@ -92,6 +110,7 @@ public class MissionManager : Singleton<MissionManager>
         ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Game);
         GameEvents.MissionStarted?.Invoke(mission);
         OnMissionsStarted?.Invoke();
+        UpdateDisplayByCurrentState();
     }
 
 }
