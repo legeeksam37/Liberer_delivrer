@@ -27,6 +27,8 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     TMP_Text currentText;
     private GameObject _currentPanel;
+    private bool _isExpanded = true;
+
     private void Awake()
     {
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
@@ -54,12 +56,14 @@ public class Smartphone : MonoBehaviour, IDisplay
     {
         _rectTransform.anchoredPosition = new Vector3(280f, 250f);
         joystick.enabled = false;
+        _isExpanded = true;
     }
 
     public void Collapse()
     {
         _rectTransform.anchoredPosition = new Vector3(280f, -350f);
         joystick.enabled = true;
+        _isExpanded = false;
     }
     public void OnlineOrLive(RecursiveEnabledChoice currentStep, List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet(),currentStep);
     public void Delay(RecursiveEnabledChoice currentStep, List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet(),currentStep);
@@ -90,6 +94,8 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     private void ChangePanel(GameObject newPanel, HashSet<int> options, RecursiveEnabledChoice currentStep)
     {
+        if (!_isExpanded)
+            return;
         _currentPanel?.SetActive(false);
         _currentPanel = newPanel;
         TMP_Text[] allText = newPanel.GetComponentsInChildren<TMP_Text>();

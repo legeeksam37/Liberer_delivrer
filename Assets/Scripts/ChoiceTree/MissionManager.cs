@@ -17,7 +17,7 @@ public class MissionManager : MonoBehaviour
     public Mission Mission => _missions[_currentMissionIndex];
     private void OnValidate()
     {
-        if(_cutscene==null)
+        if (_cutscene == null)
             _cutscene = FindObjectOfType<CutsceneManager>();
         if (_cutscene == null)
             Debug.Log("Didn't find a CutsceneManager in scene, add one");
@@ -35,7 +35,9 @@ public class MissionManager : MonoBehaviour
     {
         Debug.Log("We don't operate any checks on the type on type of enum reicved, we consider we always get the correct one and process");
         if (Mission.ProcessSequenceAbsolute(index))
+        {
             UpdateDisplayByCurrentState();
+        }
         else
         {
             var final = Mission.Current.choice as FinalNode;
@@ -94,9 +96,9 @@ public class MissionManager : MonoBehaviour
                 _display.Collapse();
                 break;
             default:
-                HandleEventRaised((int)e);
                 break;
         }
+        HandleEventRaised((int)e);
     }
 
 
@@ -114,13 +116,13 @@ public class MissionManager : MonoBehaviour
 
     private void Update()
     {
-       /* if (false && Input.GetMouseButtonDown(0))
-        {
-            Mission.ProcessSequenceRandom();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            CurrentMissionIndex++;
-        }*/
+        /* if (false && Input.GetMouseButtonDown(0))
+         {
+             Mission.ProcessSequenceRandom();
+         }
+         if (Input.GetKeyDown(KeyCode.L))
+         {
+             CurrentMissionIndex++;
+         }*/
     }
 }

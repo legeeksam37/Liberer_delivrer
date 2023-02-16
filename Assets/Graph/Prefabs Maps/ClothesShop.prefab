@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091361901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.72, y: 3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1297895231399339244}
   - component: {fileID: 7693553994378811122}
   m_Layer: 0
-  m_Name: BigMarket
+  m_Name: ClothesShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf3424422110744a91a7da53752c3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 6
   _transformOverride: {fileID: 2091361902}
+  _type: 7
 --- !u!1001 &1297895231034105531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334322411265199307, guid: 1cab5f208956b0745b1548fc6d7018a5, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 10.000001
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3215398063475412423, guid: 1cab5f208956b0745b1548fc6d7018a5, type: 3}
       propertyPath: m_Name
@@ -367,6 +367,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1297895231399339245}
     m_Modifications:
+    - target: {fileID: -3509310810915272978, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 7693553994378811122}
     - target: {fileID: 3093101587072206506, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
       propertyPath: m_Name
       value: TriggerQuest

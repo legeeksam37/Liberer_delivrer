@@ -5,19 +5,20 @@ using UnityEngine;
 public class TriggerForwarder : MonoBehaviour
 {
     [SerializeField]
-    private IDBase _target;
+    private IDBase[] _target;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (!collision.gameObject.CompareTag("Player"))
             return;
-        _target.OnTriggerEnter2D(collision);
+        foreach (IDBase target in _target)
+            target.OnTriggerEnter2D(collision);
     }
     private void OnValidate()
     {
-        if (_target == null)
-            _target = GetComponentInParent<IDBase>();
+
+        _target = new List<IDBase>(GetComponentsInParent<IDBase>());
         if (!TryGetComponent<Collider2D>(out Collider2D coll) || !coll.isTrigger)
             Debug.LogError("Collider missing or not trigger on object");
     }
