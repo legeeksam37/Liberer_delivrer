@@ -68,10 +68,22 @@ public class MissionManager : MonoBehaviour
         GameEvents.WithdrawalTypeSelected += (e) => HandleEventRaised((int)e);
         GameEvents.DelayTypeSelected += (e) => HandleEventRaised((int)e);
         GameEvents.TravelMethodSelected += (e) => HandleEventRaised((int)e);
-        GameEvents.OnlineOrLiveSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.OnlineOrLiveSelected += HandleOnlineOrLive;
         GameEvents.ScenarioEnded += (sr) => Debug.Log("Colee says : " + sr.message + " with result : " + sr.result);
         GameEvents.BuildingReached += HandleBuildingReached;
         _display.Expand();
+    }
+    private void HandleOnlineOrLive(OnlineOrLive e)
+    {
+        switch (e)
+        {
+            case global::OnlineOrLive.Live:
+                _display.Collapse();
+                break;
+            default:
+                HandleEventRaised((int)e);
+                break;
+        }
     }
 
 
