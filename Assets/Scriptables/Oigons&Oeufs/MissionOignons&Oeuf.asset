@@ -26,7 +26,7 @@ MonoBehaviour:
       _subChoices:
       - choice: {fileID: 11400000, guid: 8a2da309ef5315a4a849c9f96f862939, type: 2}
         message: Merci qui ? Merci Ouistitee !
-        enabled: 0
+        enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
           message: 
