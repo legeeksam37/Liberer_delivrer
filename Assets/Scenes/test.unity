@@ -1243,6 +1243,7 @@ GameObject:
   - component: {fileID: 1065221133}
   - component: {fileID: 1065221135}
   - component: {fileID: 1065221134}
+  - component: {fileID: 1065221136}
   m_Layer: 0
   m_Name: Colee
   m_TagString: Untagged
@@ -1258,8 +1259,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065221132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -343, y: -232.22, z: 0}
-  m_LocalScale: {x: 84.41, y: 84.41, z: 84.41}
+  m_LocalPosition: {x: -403.103, y: -186.821, z: 0}
+  m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 154431247}
@@ -1337,6 +1338,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1065221136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065221132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d1fad438b955440bf97a613fc9bcfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1223110551
 GameObject:
   m_ObjectHideFlags: 0
