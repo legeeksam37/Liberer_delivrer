@@ -100,7 +100,7 @@ public class Mission : ScriptableObject
             return false;
         }
     }
-    public List<T> GetOptions<T>() where T : Enum
+        public List<T> GetOptions<T>() where T : Enum
     {
         var options = new List<T>();
         int i = 0;

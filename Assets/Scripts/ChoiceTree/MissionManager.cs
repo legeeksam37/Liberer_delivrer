@@ -58,7 +58,15 @@ public class MissionManager : MonoBehaviour
         switch (choice.Type)
         {
             case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.Current, Mission.GetOptions<OnlineOrLive>()); break;
-            case Choicetypes.TravelMethod: _display.Travel(Mission.Current, Mission.GetOptions<TravelMethod>()); break;
+            case Choicetypes.TravelMethod:
+                List<TravelMethod> options = Mission.GetOptions<TravelMethod>();
+                foreach (var travel in options.Select((o) => (TravelID)Quest.FindID(o)))
+                {
+                    travel.ChangeState(false);
+                }
+                _display.Travel(Mission.Current, options);
+
+                break;
             case Choicetypes.WithdrawalType: _display.WithDrawal(Mission.Current, Mission.GetOptions<WithdrawalType>()); break;
             case Choicetypes.DelayType: _display.Delay(Mission.Current, Mission.GetOptions<DelayType>()); break;
         }

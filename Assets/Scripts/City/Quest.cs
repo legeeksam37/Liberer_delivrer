@@ -33,12 +33,12 @@ public class Quest : MonoBehaviour
         transform.localPosition = Vector3.zero;
         //transform.position = building.TransformOverride.position;
     }
-    public void callQuest(BuildingType target) => callQuest(FindBuilding(target));
-    public static BuildingID FindBuilding(BuildingType target)
+    public void callQuest(BuildingType target) => callQuest(FindID(target));
+    public static IDBase FindID<T>(T target) where T : Enum
     {
         try
         {
-            return FindObjectsOfType<BuildingID>().First(b => b.Type == target);
+            return FindObjectsOfType<IDBase<T>>().First(b => b.Type.CompareTo(target)==0);
         }
         catch (InvalidOperationException e)
         {
@@ -46,5 +46,6 @@ public class Quest : MonoBehaviour
             return null;
         }
     }
+
 
 }
