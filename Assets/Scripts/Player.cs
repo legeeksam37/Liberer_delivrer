@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     void OnGameStarted()
     {
         _gameStartTime = Time.realtimeSinceStartup;
+        //_controls.enabled = true;
     }
 
     void OnMissionStarted(Mission mission)
@@ -70,6 +71,6 @@ public class Player : MonoBehaviour
 public class PlayerData
 {
     public int ScoreTotal { get; set; }
-    public Dictionary<string, List<string>> MissionChoices { get; set; }
+    public Dictionary<string, List<string>> MissionChoices { get; set; } = new Dictionary<string, List<string>>();
     public float MinutesPlayed { get; set; }
 }

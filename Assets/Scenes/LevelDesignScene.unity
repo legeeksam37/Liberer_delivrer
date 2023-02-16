@@ -4305,6 +4305,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 61170649626604069, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1285058446}
+    - target: {fileID: 61170649626604069, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 1285058441}
@@ -4538,6 +4542,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1285058446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3233020165595876152, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+  m_PrefabInstance: {fileID: 1285058440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285058441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226965ba90e47f345b1e544b2700a8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1286308535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26882,7 +26897,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2334322411265199307, guid: 7f3c7ad9ea87efe43a9f9df788c696a5, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 10.000001
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5389838345528229385, guid: 7f3c7ad9ea87efe43a9f9df788c696a5, type: 3}
       propertyPath: _target
@@ -27848,6 +27863,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 656703403}
     m_Modifications:
+    - target: {fileID: 880795192848750699, guid: fed49ebecc0e835448836f84d6a09ed1, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3196459875543450461, guid: fed49ebecc0e835448836f84d6a09ed1, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -90,6 +90,7 @@ public class MissionManager : MonoBehaviour
         switch (e)
         {
             case global::OnlineOrLive.Live:
+                GameEvents.GameStarted?.Invoke();
                 _display.Collapse();
                 break;
             default:
