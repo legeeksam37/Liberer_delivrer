@@ -37,7 +37,7 @@ public class JoystickControls : MonoBehaviour
             }
             else
             {
-                image.CrossFadeAlpha(0, 0.0f, false);
+                //image.CrossFadeAlpha(0, 0.0f, false);
             }
         }
        

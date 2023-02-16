@@ -254,8 +254,44 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: _currentMissionIndex
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7342f9b69a9269841aa2b864cb1cc91a, type: 2}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f1dfe345a74fcb74e985844d8d60add0, type: 2}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6de4e2f5b4a69a046b3edbb3407c4806, type: 2}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 898dd81198014534bb21741e12330a2a, type: 2}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 21096c9e41a4a1e4ba9b131a6cfe0190, type: 2}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c0783f522d0b9c4f9a43f3505640d25, type: 2}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: c01286c0715fd6d48b0b11effe1beb3a, type: 2}
+    - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: _missions.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: b9e8a00a10a0dde48b3790699853f3eb, type: 2}
     - target: {fileID: 5318871842542851553, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -4116,6 +4152,14 @@ PrefabInstance:
       propertyPath: _logo2
       value: 
       objectReference: {fileID: 1134057680}
+    - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
+      propertyPath: _logo3
+      value: 
+      objectReference: {fileID: 602805941}
+    - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
+      propertyPath: _logo4
+      value: 
+      objectReference: {fileID: 876088292}
     - target: {fileID: 61170649024060809, guid: 0da659d0857af5a41b7d14d86128e490, type: 3}
       propertyPath: _delayTypeSelection
       value: 

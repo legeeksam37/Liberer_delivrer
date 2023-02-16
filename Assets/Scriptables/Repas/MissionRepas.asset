@@ -13,46 +13,62 @@ MonoBehaviour:
   m_Name: MissionRepas
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+  _logo: {fileID: 21300000, guid: 9f1bf7cc2f9091640a6a0f81ef1fba51, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+    message: "Tentez l'exp\xE9rience et faite vous livrer vos repas \xE0 domicile
+      gr\xE2ce \xE0 Robert Eat"
     enabled: 1
     _subChoices:
     - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}
+      message: 
       enabled: 1
       _subChoices:
       - choice: {fileID: 11400000, guid: 8a2da309ef5315a4a849c9f96f862939, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
+          message: 
           enabled: 1
           _subChoices:
           - choice: {fileID: 11400000, guid: 77c0fda85d7b1c342a6ad7c8c22a402c, type: 2}
+            message: 
             enabled: 1
             _subChoices: []
     - choice: {fileID: 11400000, guid: 90f794b7223080346bf1bb886c47ed66, type: 2}
+      message: 
       enabled: 1
       _subChoices:
       - choice: {fileID: 11400000, guid: 4f4ac7a52e2bf63458fc2190c35422d4, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: ae8df0f02a513fe4aba3c849ea73cb5c, type: 2}
+          message: 
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: d00326555726e6047baa9c40f65cbdf5, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: 257629e715a6389458ceb6aa2f3f9a8e, type: 2}
+          message: 
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: 47daa4590dfeb594594b6cd9cacc807d, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: e0a86796d24fdeb4bab463db42d6ab1a, type: 2}
+          message: 
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: 06a704835012c98449e7c1002b54c2b6, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: c8c775cbdfa996844ae28c4420241422, type: 2}
+          message: 
           enabled: 1
           _subChoices: []

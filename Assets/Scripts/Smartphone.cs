@@ -18,6 +18,10 @@ public class Smartphone : MonoBehaviour, IDisplay
     Image _imageLogo1;
     [SerializeField] GameObject _logo2;
     Image _imageLogo2;
+    [SerializeField] GameObject _logo3;
+    Image _imageLogo3;
+    [SerializeField] GameObject _logo4;
+    Image _imageLogo4;
 
     TMP_Text currentText;
     private GameObject _currentPanel;
@@ -26,12 +30,16 @@ public class Smartphone : MonoBehaviour, IDisplay
         _imageLogo1 = _logo1.GetComponent<Image>();
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
         _imageLogo2 = _logo2.GetComponent<Image>();
+        _imageLogo3 = _logo3.GetComponent<Image>();
+        _imageLogo4 = _logo4.GetComponent<Image>();
     }
 
     private void ChangeIcon(Sprite logo)
     {
         _imageLogo1.sprite = logo;
         _imageLogo2.sprite = logo;
+        _imageLogo3.sprite = logo;
+        _imageLogo4.sprite = logo;
     }
 
     void Start()
