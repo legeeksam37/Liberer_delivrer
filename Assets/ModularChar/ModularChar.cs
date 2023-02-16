@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.U2D;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class ModularChar : MonoBehaviour
@@ -17,7 +15,6 @@ public class ModularChar : MonoBehaviour
 
     public GameObject Character;
     
-    [SerializeField] private SO_Outfit outfit;
     [SerializeField] GameObject warning;
     [SerializeField] private Image imagePreview;
     
@@ -25,6 +22,7 @@ public class ModularChar : MonoBehaviour
     public void ChangeItem(GameObject playerSkin)
     {
         imagePreview.sprite = playerSkin.GetComponent<SpriteRenderer>().sprite;
+        Character = playerSkin;
     }
 
     public void Validate()
