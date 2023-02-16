@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MissionLivre
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-  _targetedBuilding: 1
-  _logo: {fileID: 0}
+  _logo: {fileID: 21300000, guid: d32264b99f10cba42995889268a07635, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-    message: 
+    message: "Profitez de vos livres pr\xE9f\xE9r\xE9s livr\xE9 en moins de 24h avec
+      Alazone"
     enabled: 1
     _subChoices:
     - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}

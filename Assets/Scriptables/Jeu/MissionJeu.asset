@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MissionJeu
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-  _targetedBuilding: 2
-  _logo: {fileID: 0}
+  _logo: {fileID: 21300000, guid: ec13685852ba02e41ae12d0085e7d360, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-    message: 
+    message: "Nouvelle s\xE9rie de promotion sur une grande quantit\xE9e d'article
+      pr\xE9selectionn\xE9"
     enabled: 1
     _subChoices:
     - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}
