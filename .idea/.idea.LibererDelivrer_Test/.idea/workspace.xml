@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="275a3602-a661-4277-b748-ffb1cec6e593" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelDesignScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelDesignScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibererDelivrer_Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibererDelivrer_Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharMov/JoystickControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharMov/JoystickControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Left.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cutscene.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cutscene.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cutscene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cutscene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutsceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CutsceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676475835356</updated>
       <workItem from="1676475838383" duration="3086000" />
-      <workItem from="1676534622887" duration="6344000" />
+      <workItem from="1676534622887" duration="11202000" />
     </task>
     <servers />
   </component>

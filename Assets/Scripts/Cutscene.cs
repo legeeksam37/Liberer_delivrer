@@ -1,34 +1,17 @@
 using System;
 using System.Collections;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class Cutscene : MonoBehaviour
 {
     const float CUTSCENE_DURATION = 3f;
     
     [SerializeField] CanvasGroup _canvasGroup;
-    [SerializeField] Animator _animator;
-    [SerializeField] string _animName;
-
-    [Header("Every Anim")]
+    [SerializeField] TimelineAsset _timelineAsset;
     
-    [SerializeField] private Sprite _playerSpriteUp;
-    [SerializeField] private Sprite _playerSpriteDown;
-    [SerializeField] private Sprite _bagSpriteUp;
-    [SerializeField] private Sprite _bagSpriteDown;
-
-    [Header("Bus Anim")] 
-    [SerializeField] private Sprite _busSprite;
-    
-    [Header("Car Anim")] 
-    [SerializeField] private Sprite _carSprite;
-    
-    [Header("Shop Anim")]
-    [SerializeField] private Sprite _shopBuilding;
-    [SerializeField] private Sprite _shopDoor;
-
 
     [field: SerializeField] public CutsceneType Type { get; private set; }
     
@@ -37,6 +20,7 @@ public class Cutscene : MonoBehaviour
 
     private Player _player;
     private JoystickControls _joystickControlsPlayer;
+    private PlayableDirector _playableDirector;
 
     private void Start()
     {
@@ -45,15 +29,15 @@ public class Cutscene : MonoBehaviour
             _joystickControlsPlayer = _player.GetComponent<JoystickControls>();
         else
             Debug.LogError("No JoystickControls on player");
+        _playableDirector = GetComponent<PlayableDirector>();
     }
 
     public IEnumerator Play()
     {
         CutsceneStarted?.Invoke(this);
+        //Set up the cinematic
+        _playableDirector.playableAsset = _timelineAsset;
 
-        _animator.enabled = true;
-        _animator.Play(_animName);
-        
         var timer = 0f;
 
         while (timer < CUTSCENE_DURATION * 0.2f)
@@ -64,8 +48,9 @@ public class Cutscene : MonoBehaviour
         }
 
         _canvasGroup.alpha = 1f;
-
-        yield return new WaitForSeconds(CUTSCENE_DURATION * 0.6f);
+        _playableDirector.Play();
+        
+        yield return new WaitForSeconds((float) _timelineAsset.duration);
 
         timer = 0f;
         
@@ -77,30 +62,8 @@ public class Cutscene : MonoBehaviour
         }
 
         _canvasGroup.alpha = 0f;
-
-        _animator.enabled = false;
+        
         
         CutsceneEnded?.Invoke(this);
-    }
-
-    public void PlayAnim()
-    {
-        Sequence animationSequence = DOTween.Sequence();
-        //Disable Player Movements
-        _player.GetComponent<PlayerInput>().enabled = false;
-        animationSequence.Append(_canvasGroup.DOFade(1, CUTSCENE_DURATION * 0.2f));
-        switch (Type)
-        {
-            case CutsceneType.Bus :
-                 break;
-            case CutsceneType.Car : 
-                break;
-            case CutsceneType.Delivery :
-                break;
-            case CutsceneType.Shop : 
-                break;
-            default: 
-                break;
-        }
     }
 }

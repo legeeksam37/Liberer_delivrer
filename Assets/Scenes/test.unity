@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629347, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Name
-      value: Cutscene
+      value: CutsceneDelivery
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629349, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Enabled
@@ -234,6 +234,10 @@ PrefabInstance:
       propertyPath: _animName
       value: Delivery
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c4a95006e68263f4a8e573d127c35737, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 5
@@ -615,6 +619,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 154431247}
     m_Modifications:
+    - target: {fileID: 1081615719803838366, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: m_PlayableAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624476020452554231, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629345, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -713,7 +725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629347, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Name
-      value: Cutscene
+      value: CutsceneBus
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629349, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Enabled
@@ -731,6 +743,10 @@ PrefabInstance:
       propertyPath: _animName
       value: Bus
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfdb9da18c9365f45a8ce4aa84bbb6be, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 1
@@ -900,6 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be6b64f3da44afcb0738cb1c7756756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerBag: {fileID: 0}
 --- !u!61 &935503530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1333,7 +1350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629347, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Name
-      value: Cutscene
+      value: CutsceneShop
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629349, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Enabled
@@ -1351,6 +1368,10 @@ PrefabInstance:
       propertyPath: _animName
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfdb9da18c9365f45a8ce4aa84bbb6be, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 4
@@ -1466,7 +1487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629347, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Name
-      value: Cutscene
+      value: CutsceneBike
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629349, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Enabled
@@ -1484,6 +1505,10 @@ PrefabInstance:
       propertyPath: _animName
       value: Bike
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfdb9da18c9365f45a8ce4aa84bbb6be, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 3
@@ -1722,7 +1747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629347, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Name
-      value: Cutscene
+      value: CutsceneCar
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629349, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Enabled
@@ -1740,6 +1765,10 @@ PrefabInstance:
       propertyPath: _animName
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c4a95006e68263f4a8e573d127c35737, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 2
@@ -1862,6 +1891,10 @@ PrefabInstance:
       propertyPath: _animName
       value: Delivery
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfdb9da18c9365f45a8ce4aa84bbb6be, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 5
@@ -2060,7 +2093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629347, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Name
-      value: Cutscene
+      value: CutsceneWalk
       objectReference: {fileID: 0}
     - target: {fileID: 6542352846750629349, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: m_Enabled
@@ -2078,5 +2111,9 @@ PrefabInstance:
       propertyPath: _animName
       value: Walk
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfdb9da18c9365f45a8ce4aa84bbb6be, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
