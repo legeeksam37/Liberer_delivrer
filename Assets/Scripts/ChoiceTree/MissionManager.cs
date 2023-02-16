@@ -1,4 +1,5 @@
 using DG.Tweening.Plugins.Options;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,14 @@ public class MissionManager : MonoBehaviour
             case Choicetypes.DelayType: _display.Delay(Mission.Current, Mission.GetOptions<DelayType>()); break;
         }
     }
-
+    private void HandleBuildingReached(BuildingID obj)
+    {
+        if (Mission.TargetedBuilding == obj.Type)
+        {
+            HandleEventRaised((int)TravelMethod.Walk);
+            //Mission.ProcessSequenceAbsolute();
+        }
+    }
     private void Awake()
     {
         //Find an IDisplay implementaiton in scene and use it
@@ -57,8 +65,11 @@ public class MissionManager : MonoBehaviour
         GameEvents.TravelMethodSelected += (e) => HandleEventRaised((int)e);
         GameEvents.OnlineOrLiveSelected += (e) => HandleEventRaised((int)e);
         GameEvents.ScenarioEnded += (sr) => Debug.Log("Colee says : " + sr.message + " with result : " + sr.result);
+        GameEvents.BuildingReached += HandleBuildingReached;
         _display.Expand();
     }
+
+
     private void Start()
     {
         NewMission();

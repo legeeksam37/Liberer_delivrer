@@ -11,7 +11,7 @@ public class Mission : ScriptableObject
     private Choice _rootChoice;
     [SerializeField]
     private BuildingType _targetedBuilding;
-    public BuildingID TargetedBuilding => Quest.FindBuilding(_targetedBuilding);
+    public BuildingType TargetedBuilding { get => _targetedBuilding; }
 
     [SerializeField]
     private Sprite _logo;
