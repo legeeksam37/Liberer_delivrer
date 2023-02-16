@@ -7,6 +7,7 @@ public class BirdSpawner : MonoBehaviour
     [SerializeField] GameObject[] birds;
     private Vector2 min;
     private Vector2 max;
+    [SerializeField]
     private float spawnDelay = 1f;
     float currDelay = 0;
     // Start is called before the first frame update

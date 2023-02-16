@@ -25,6 +25,9 @@ public class Intersection : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        CarBehaviour car = collision.gameObject.GetComponent<CarBehaviour>();
+        if (!car)
+            return;
         Vector2 arrivalDir = collision.GetContact(0).normal;
         switch (Entree)
         {
@@ -42,7 +45,6 @@ public class Intersection : MonoBehaviour
                 break;
             default: return;
         }
-        CarBehaviour car = collision.gameObject.GetComponent<CarBehaviour>();
         switch(Sortie[Random.Range(0,Sortie.Length)])
         {
             case Sens.Droite:
