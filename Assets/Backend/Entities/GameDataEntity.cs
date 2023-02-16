@@ -14,10 +14,8 @@ public class GameDataEntity : Entity
 
 public class MissionResult
 {
-    public int? travelMethodIndex;
-    public int? delayTypeIndex;
-    public int? withdrawalTypeIndex;
-    public int? storeType;
+    public string missionName;
+    public List<string> choices;
 }
 
 public class QuizResult
