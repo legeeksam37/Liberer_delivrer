@@ -16,6 +16,7 @@ public class LeaderboardFacet : Facet
         leaderboardEntry.Save();
     }
     
+    /// Must call Add before this method or there might be unexpected results.
     public int GetPercentileRanking(int score)
     {
         var leaderboardEntryEntities = DB.TakeAll<LeaderboardEntryEntity>().Get();

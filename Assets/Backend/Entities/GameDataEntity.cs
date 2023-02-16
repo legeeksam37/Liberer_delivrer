@@ -3,8 +3,12 @@ using Unisave.Entities;
 
 public class GameDataEntity : Entity
 {
-    public List<QuizResult> quizResults;
+    public EntityReference<UserEntity> userEntity;
+
+    public int finalScore;
     public List<MissionResult> missionResults;
+    public List<QuizResult> quizResults;
+    public List<RoueResult> roueResult;
 }
 
 public class MissionResult
@@ -18,4 +22,9 @@ public class MissionResult
 public class QuizResult
 {
     public int answerIndex;
+}
+
+public class RoueResult
+{
+    public int roueIndex;
 }
