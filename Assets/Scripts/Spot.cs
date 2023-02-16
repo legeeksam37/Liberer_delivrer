@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Spot : MonoBehaviour
 {
-    [SerializeField]
-    private int SocialLimit = 0;
+   // [SerializeField] private int SocialLimit = 0;
     [SerializeField] private GameObject UnderLimit;
     [SerializeField] private GameObject OverLimit;
     // Start is called before the first frame update

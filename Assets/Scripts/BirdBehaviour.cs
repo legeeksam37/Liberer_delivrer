@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoDestroyNPC : MonoBehaviour
+public class BirdBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,11 +13,6 @@ public class AutoDestroyNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(collision.gameObject);
+        transform.Translate(new Vector3(Random.Range(1f, 5f), Random.Range(-3f, 4f), 0)*Time.deltaTime);
     }
 }

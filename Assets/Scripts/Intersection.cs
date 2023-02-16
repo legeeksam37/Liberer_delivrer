@@ -26,7 +26,6 @@ public class Intersection : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Vector2 arrivalDir = collision.GetContact(0).normal;
-        Debug.Log(arrivalDir + " " + Entree);
         switch (Entree)
         {
             case Sens.Haut:
@@ -47,11 +46,9 @@ public class Intersection : MonoBehaviour
         switch(Sortie[Random.Range(0,Sortie.Length)])
         {
             case Sens.Droite:
-                Debug.Log("va Droite");
                 car.TurnRight(); 
                 break;
             case Sens.Gauche:
-                Debug.Log("va Gauche");
                 car.DelayTurnLeft();
                 break;
             default: return;

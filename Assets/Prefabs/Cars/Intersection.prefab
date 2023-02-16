@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7116899236611739158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23579592, y: -0.3684422, z: -0.05594284}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44,7 +44,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[0]
@@ -53,6 +53,10 @@ PrefabInstance:
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[1]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
+      propertyPath: Sortie.Array.data[2]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340306, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: m_RootOrder
@@ -126,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[0]
@@ -135,6 +139,10 @@ PrefabInstance:
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[1]
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
+      propertyPath: Sortie.Array.data[2]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340306, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: m_RootOrder
@@ -208,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[0]
@@ -217,6 +225,10 @@ PrefabInstance:
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[1]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
+      propertyPath: Sortie.Array.data[2]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340306, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: m_RootOrder
@@ -290,7 +302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[0]
@@ -302,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340304, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: Sortie.Array.data[2]
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2732678168603340306, guid: 3e14948785cc5924c933f2b7bfe6b019, type: 3}
       propertyPath: m_RootOrder

@@ -7,7 +7,7 @@ public class CarBehaviour : MonoBehaviour
     [SerializeField]
     private Vector2 dir = Vector2.zero;
     private float speed = 1f;
-    static float TurnDelay = 0.6f;
+    static float TurnDelay = 0.5f;
     [SerializeField]
     private GameObject[] carFacing = new GameObject[4];
     private int currentCarFace = 0;
