@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6675786767491702776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6675786767491702783}
+  - component: {fileID: 6675786767491702782}
+  - component: {fileID: 6675786767491702777}
+  m_Layer: 5
+  m_Name: VisualNovelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6675786767491702783
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675786767491702776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 960, y: 540}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6675786767491702782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675786767491702776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40cbe5c38acda3f41a766183a0d2a29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstDay: 1
+  _panelVN: {fileID: 0}
+  _canGoNext: 0
+  _panelDialogue: {fileID: 0}
+  _panelName: {fileID: 0}
+  _textName: {fileID: 0}
+  _textDialogue: {fileID: 0}
+  _timerCanContinueMax: 1
+  _imageCanContinueNextDialogue: {fileID: 0}
+  _transparentSprite: {fileID: 21300000, guid: f3360104684317b4f9f9f12646f2075e, type: 3}
+  _rightCharacterImage: {fileID: 0}
+  _rightCharacterEnum: 0
+  _leftCharaTransformParent: {fileID: 0}
+  _leftCharacterImagePrefab: {fileID: 607722208544018307, guid: 5a4bb0a19cb8cea4799842f4c94e9e96, type: 3}
+  _leftCharacterImageList: []
+  _sequencesList:
+  - {fileID: 11400000, guid: 5a8fc638951701b47afe0f56c93a1634, type: 2}
+  - {fileID: 11400000, guid: f18e9cc11aec0224ca7c5a4cb0fb020e, type: 2}
+  - {fileID: 11400000, guid: cd638d14d2463a941b761f1e61645d67, type: 2}
+  - {fileID: 11400000, guid: 334cb1a304601894facda865dbec881f, type: 2}
+  - {fileID: 11400000, guid: 5bf2bf7d22512b64eb031dae403ff921, type: 2}
+  - {fileID: 11400000, guid: 3be04fc0290c6ab488c69ca7d0ea758e, type: 2}
+  - {fileID: 11400000, guid: b52311837a136764a96d58a718afb644, type: 2}
+  - {fileID: 11400000, guid: 3c56a9fb8d9fa0c428b18952dc5a6b51, type: 2}
+  - {fileID: 11400000, guid: 65ebaf1237080ab40b3db179792c4fbb, type: 2}
+  - {fileID: 11400000, guid: 2ad81494934209d49b8c0659bd24518f, type: 2}
+  - {fileID: 11400000, guid: 644548d3144d66a41b5b61c73e702eef, type: 2}
+  - {fileID: 11400000, guid: bd1a12572ec2acf49aed0ea6eb45d75e, type: 2}
+  - {fileID: 11400000, guid: d0b64b11fc1cbf14795c3d7908ef6cb9, type: 2}
+  - {fileID: 11400000, guid: 33a3a61e39bcd414387719a99604a900, type: 2}
+  - {fileID: 11400000, guid: 9eeab43258ef21742a32799453ee71d4, type: 2}
+  - {fileID: 11400000, guid: f921cdfded3c4ef4f80adbab6171ede7, type: 2}
+  - {fileID: 11400000, guid: 66e958d9a99042041bd9901f8d5d7ee2, type: 2}
+  - {fileID: 11400000, guid: ac316d779db15b7489212958ba848942, type: 2}
+  - {fileID: 11400000, guid: b944471aaf72e0c4b96c1630b5b00cf2, type: 2}
+  indexSequence: 0
+  _dialogueIsFinished: 0
+  _timerPerCharacterDialogueMax: 0.025
+  _speedUpText: 50
+  _panelChoice: {fileID: 0}
+  _buttonChoice: {fileID: 1339694119949213760, guid: 9f48550d7e0359e45bf064a429db7e43, type: 3}
+  _choiceWillHappen: 0
+  _sequencePostChoice: {fileID: 0}
+  _choiceString: 
+  sequenceChoiceIsFinished: 0
+--- !u!222 &6675786767491702777
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675786767491702776}
+  m_CullTransparentMesh: 1

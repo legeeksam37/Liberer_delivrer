@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13f261c8b0ab6844af8ab66b6d99b59, type: 3}
+  m_Name: FinalLivraison
+  m_EditorClassIdentifier: 
+  _message: "Malheureusement, tu t'es fait livrer tes  courses par un darkstore,
+    un entrep\xF4t  qui participe \xE0 la r\xE9duction des  commerces dans les centre-villes
+    et qui  r\xE9duit le lien social avec les  commercants de ta ville. Tu aurais
+    mis  autant de temps \xE0 te rendre chez ton  \xE9picier !  tu perds 10 colees"
+  _result:
+    _environmental: -5
+    _social: -5
+    _positives: 0
+    _negatives: -1
