@@ -9,7 +9,7 @@ using System.Collections;
 public class Choice : Node
 {
     [SerializeField]
-    private Choicetypes type;
+    private Choicetypes type;   
     //Trigger a specific sequence after selecting 
     public List<Node> postChoiceSequence = new List<Node>();
 
@@ -31,6 +31,7 @@ public abstract class Node : ScriptableObject
 public class RecursiveEnabledChoice : IEnumerable<RecursiveEnabledChoice>
 {
     public Node choice;
+    public string message;
     public bool enabled;
     public List<RecursiveEnabledChoice> _subChoices;
     public RecursiveEnabledChoice(Node choice, bool recursive = false)

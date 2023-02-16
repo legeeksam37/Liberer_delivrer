@@ -10,6 +10,13 @@ public class Mission : ScriptableObject
     [SerializeField]
     private Choice _rootChoice;
     [SerializeField]
+    private BuildingType _targetedBuilding;
+    public BuildingType TargetedBuilding { get => _targetedBuilding; }
+
+    [SerializeField]
+    private Sprite _logo;
+    public Sprite Logo { get => _logo; }
+    [SerializeField]
     private RecursiveEnabledChoice _tree;
     private RecursiveEnabledChoice _current;
     public RecursiveEnabledChoice Current => _current;
@@ -94,8 +101,8 @@ public class Mission : ScriptableObject
         var options = new List<T>();
         int i = 0;
         foreach (var c in _current._subChoices)
-            if(c.enabled)
-                options.Add((T)Enum.ToObject(typeof(T),i++));
+            if (c.enabled)
+                options.Add((T)Enum.ToObject(typeof(T), i++));
         return options;
     }
     internal void OnValidate()
