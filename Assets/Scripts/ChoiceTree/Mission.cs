@@ -75,13 +75,14 @@ public class Mission : ScriptableObject
         {
             Debug.LogError("Negative branch index, check call");
             return false;
-        }
-        if (branchIndex >= choices.Count)
+        }else if (branchIndex >= choices.Count)
         {
-            Debug.LogError(branchIndex + "higher than list size, list being (if empty, mean we're at a leaf): " + string.Join(';', choices.Select(c => c.choice.name)));
+            if (choices.Count==0)
+                Debug.Log("We 're at a leaf");
+            else
+                Debug.LogError(branchIndex + "higher than list size, list being : " + string.Join(';', choices.Select(c => c.choice.name)));
             return false;
-        }
-        if (!choices[branchIndex].enabled)
+        }else if (!choices[branchIndex].enabled)
         {
             Debug.LogError("Branch disabled in mission definition, weird things will happen from now, we're off track");
             return false;

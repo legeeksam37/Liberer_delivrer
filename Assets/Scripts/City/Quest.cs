@@ -12,7 +12,7 @@ public class Quest : MonoBehaviour
     {
         if (_autoFollowNextObjective)
             GameEvents.MissionStarted += (m) => callQuest(m.TargetedBuilding);
-        GameEvents.BuildingReached += (b) => Debug.Log("Building reached : " + b.Type);
+        //GameEvents.BuildingReached += (b) => Debug.Log("Building reached : " + b.Type);
         _sr = GetComponentInChildren<SpriteRenderer>();
         hide();
     }

@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8005558091355672524, guid: c3b15f8e4ab1a6c4b95dcf6e453d9f0d, type: 3}
       propertyPath: m_Name
-      value: JoystickCanvas
+      value: PlayerCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3b15f8e4ab1a6c4b95dcf6e453d9f0d, type: 3}
@@ -254,11 +254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8276883274234282942, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.05
+      value: 6.46
       objectReference: {fileID: 0}
     - target: {fileID: 8276883274234282942, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.45
+      value: -6.62
       objectReference: {fileID: 0}
     - target: {fileID: 8276883274234282942, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
       propertyPath: m_LocalPosition.z

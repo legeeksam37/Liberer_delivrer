@@ -45,6 +45,7 @@ public class MissionManager : MonoBehaviour
             {
                 _display.Collapse();
                 GameEvents.ScenarioEnded?.Invoke((final.Message, final.Result));
+                GameEvents.GameEnded?.Invoke();
             }
             else
                 Debug.Log("Error happend in scenario processing, check upper messages");
@@ -68,7 +69,9 @@ public class MissionManager : MonoBehaviour
         {
             HandleEventRaised((int)TravelMethod.Walk);
             _cutscene.TravelCutscene(TravelMethod.Walk);
+            GameEvents.BuildingReached -= HandleBuildingReached;
         }
+
     }
     private void HandleTravelReached(TravelID obj)
     {
