@@ -548,10 +548,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputCommune: {fileID: 467604393}
   InputAge: {fileID: 1586389065}
-  Character: {fileID: 0}
-  outfit: {fileID: 11400000, guid: a6e2169b61e47d64d8216bfeb901c65e, type: 2}
+  character: {fileID: 0}
   warning: {fileID: 0}
   imagePreview: {fileID: 81237773}
+  validateButton: {fileID: 644525483}
 --- !u!1 &177171187
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +787,10 @@ PrefabInstance:
       propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: missionToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c0783f522d0b9c4f9a43f3505640d25, type: 2}
     - target: {fileID: 2992836528850296787, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: m_Name
       value: Jeu
@@ -1451,9 +1455,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9716009515348172, guid: c31a08cbd5b5253499155c4f1b88b224, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9716009874427162, guid: c31a08cbd5b5253499155c4f1b88b224, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 9716009888249584, guid: c31a08cbd5b5253499155c4f1b88b224, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1485,6 +1493,7 @@ GameObject:
   - component: {fileID: 365836154}
   - component: {fileID: 365836153}
   - component: {fileID: 365836152}
+  - component: {fileID: 365836155}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1594,6 +1603,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365836150}
   m_CullTransparentMesh: 1
+--- !u!114 &365836155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365836150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0df1d9541c51b449a8e2ea01da93919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 1
 --- !u!1 &366183559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,6 +1799,10 @@ PrefabInstance:
       propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: missionToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 898dd81198014534bb21741e12330a2a, type: 2}
     - target: {fileID: 2992836528850296787, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: m_Name
       value: Pantalon
@@ -3156,7 +3182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755158460
@@ -3312,6 +3338,53 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &902520107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902520109}
+  - component: {fileID: 902520108}
+  m_Layer: 0
+  m_Name: MissionsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &902520108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902520107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5152c8a072e99f4e9f92c91a73df391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission: {fileID: 0}
+  _cutscene: {fileID: 0}
+  movableCharacter: {fileID: 6029766057226679911, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+--- !u!4 &902520109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902520107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 286.29184, y: 254.8071, z: 6.6731567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1008984308 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9716008888873055, guid: c31a08cbd5b5253499155c4f1b88b224, type: 3}
@@ -3815,6 +3888,10 @@ PrefabInstance:
       propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: missionToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: f1dfe345a74fcb74e985844d8d60add0, type: 2}
     - target: {fileID: 2992836528850296787, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: m_Name
       value: PetiteCourse
@@ -4307,6 +4384,10 @@ PrefabInstance:
       propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: missionToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 6de4e2f5b4a69a046b3edbb3407c4806, type: 2}
     - target: {fileID: 2992836528850296787, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: m_Name
       value: Mixer
@@ -6325,6 +6406,10 @@ PrefabInstance:
       propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: missionToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 21096c9e41a4a1e4ba9b131a6cfe0190, type: 2}
     - target: {fileID: 2992836528850296787, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: m_Name
       value: Livre
@@ -7306,6 +7391,18 @@ PrefabInstance:
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isLocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: sceneToLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: missionToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 7342f9b69a9269841aa2b864cb1cc91a, type: 2}
+    - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
+      propertyPath: isFirstMission
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2992836528850296787, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: m_Name

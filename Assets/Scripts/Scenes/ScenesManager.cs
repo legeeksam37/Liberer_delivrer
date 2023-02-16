@@ -15,6 +15,7 @@ public class ScenesManager : Singleton<ScenesManager>
     public void LoadScene(Scene scene)
     {
         SceneManager.LoadScene(scene.ToString());
+        CanvasManager.GetInstance().SwitchCanvas(CanvasType.Menu);
     }
 
     public void LoadNewGame()

@@ -3,11 +3,75 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Entities/ScoreEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Entities/ScoreEntity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/ScoreFacet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharMov/JoystickControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharMov/JoystickControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Frames/tilemap_character_player_basique_9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Down.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Down.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleDown.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleDown.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleLeft.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleLeft.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleRight.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleRight.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleUp.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_IdleUp.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Left.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Left.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Right.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Right.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Up.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/Player_Walk_Up.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/PlayerTenuClasse_M.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/PlayerTenuClasse_M.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse_F.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse_F.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract_F.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract_F.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ModularChar/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ModularChar/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ModularChar/ModularChar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ModularChar/ModularChar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerClasseF.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerClasseF.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerClasseM.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerClasseM.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerDecontractF.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerDecontractF.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerDecontractM.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerDecontractM.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerVanilla.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerVanilla.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/ScenesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/ScenesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MissionItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MissionItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OutfitSelection/SelectPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OutfitSelection/SelectPart.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +86,11 @@
       </map>
     </option>
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -37,8 +101,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,9 +126,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\ccouasnon\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\ccouasnon\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\ccouasnon\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\lbriot\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\lbriot\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\lbriot\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -121,6 +183,8 @@
       <workItem from="1676386543708" duration="3891000" />
       <workItem from="1676390601292" duration="55000" />
       <workItem from="1676448225551" duration="1007000" />
+      <workItem from="1676543748719" duration="6731000" />
+      <workItem from="1676563213678" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Smartphone, transport cutscenes">
       <created>1676369788816</created>
