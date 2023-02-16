@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1297895231399339245}
   - component: {fileID: 1297895231399339244}
   - component: {fileID: 7693553994378811122}
+  - component: {fileID: 2478174088218192843}
   m_Layer: 0
   m_Name: BigMarket
   m_TagString: Untagged
@@ -108,6 +109,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 6
   _transformOverride: {fileID: 2091361902}
+--- !u!114 &2478174088218192843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297895231399339242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5ee8ee490af514280bf2dc39e0cd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SocialLimit: 0
+  UnderLimit: {fileID: 6963624000536903841}
+  OverLimit: {fileID: 6963624000204868024}
 --- !u!1001 &1297895231034105531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334322411265199307, guid: 1cab5f208956b0745b1548fc6d7018a5, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 10.000001
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3215398063475412423, guid: 1cab5f208956b0745b1548fc6d7018a5, type: 3}
       propertyPath: m_Name
@@ -185,6 +201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cab5f208956b0745b1548fc6d7018a5, type: 3}
+--- !u!1 &6963624000536903841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8259830364484476442, guid: 1cab5f208956b0745b1548fc6d7018a5, type: 3}
+  m_PrefabInstance: {fileID: 1297895231034105531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8426735347328800438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7418215771520944141, guid: 1cab5f208956b0745b1548fc6d7018a5, type: 3}
@@ -355,6 +376,11 @@ PrefabInstance:
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0c65d0716608104d9101b6ef49d129e, type: 3}
+--- !u!1 &6963624000204868024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8259830364484476442, guid: c0c65d0716608104d9101b6ef49d129e, type: 3}
+  m_PrefabInstance: {fileID: 1297895231371188130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8426735347118464943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7418215771520944141, guid: c0c65d0716608104d9101b6ef49d129e, type: 3}
@@ -367,6 +393,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1297895231399339245}
     m_Modifications:
+    - target: {fileID: -3509310810915272978, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 7693553994378811122}
     - target: {fileID: 3093101587072206506, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
       propertyPath: m_Name
       value: TriggerQuest

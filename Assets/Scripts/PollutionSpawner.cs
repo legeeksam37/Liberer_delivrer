@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdSpawner : MonoBehaviour
+public class PollutionSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject[] birds;
+    [SerializeField] GameObject[] clouds;
     [SerializeField] private float spawnDelay = 1f;
     private Vector2 min;
     private Vector2 max;
@@ -14,9 +14,9 @@ public class BirdSpawner : MonoBehaviour
     {
         Collider2D c = GetComponent<Collider2D>();
         min = c.bounds.min;
-        max = c.bounds.max;
+        max = c.bounds.max; 
         RefreshSpawnRate();
-        SpawnBird();
+        SpawnPollution();
     }
 
     // Update is called once per frame
@@ -25,25 +25,26 @@ public class BirdSpawner : MonoBehaviour
         currDelay -= Time.deltaTime;
         if (currDelay <= 0)
         {
-            SpawnBird();
+            SpawnPollution();
             currDelay += spawnDelay;
         }
     }
 
-    public void SpawnBird()
+    public void SpawnPollution()
     {
         float xrand = Random.Range(min.x, max.x);
         float yrand = Random.Range(min.y, max.y);
-        GameObject b = Instantiate(birds[Random.Range(0, birds.Length)]); 
+        GameObject b = Instantiate(clouds[Random.Range(0, clouds.Length)]);
         b.transform.position = new Vector3(xrand, yrand, 0);
     }
 
     public void RefreshSpawnRate()
     {
-        float score = 10;
-        if (score <= 0)
+        float score = -30;
+        if (score >= 0)
             spawnDelay = float.MaxValue;
         else
-            spawnDelay = 10 / score;
+            spawnDelay = 10 / -score;
+        currDelay = spawnDelay;
     }
 }
