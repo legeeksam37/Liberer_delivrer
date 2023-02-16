@@ -9,6 +9,6 @@ public static class GameEvents
     public static Action<DelayType> DelayTypeSelected { get; set; }
     public static Action<(string message,Result result)> ScenarioEnded { get; set; }
     public static Action<Mission> MissionStarted { get; set; }
-    public static Action<BuildingID> BuildingReached { get; set;}
-        
+    public static Action<BuildingID> BuildingReached { get; set;}        
+    public static Action<TravelID> TravelReached { get; set;}        
 }
