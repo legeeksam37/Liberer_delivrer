@@ -25,6 +25,10 @@ namespace ScenarioStructures
         private Results _positives;
         [SerializeField]
         private Results _negatives;
+
+        public int ScoreEnvironmental => _environmental;
+        public int ScoreSocial => _social;
+        
         /// <summary>
         /// Nb of positive outcomes - nb of positives, to get the "global" impact of the choices
         /// </summary>

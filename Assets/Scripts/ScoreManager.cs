@@ -1,41 +1,53 @@
 using System;
+using ScenarioStructures;
 using Unisave.Facades;
 using UnityEngine;
 
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private int score;
+    int _scoreEnv;
+    int _scoreSoc;
 
+    public int Score => _scoreEnv + _scoreSoc;
+    
     void Start()
     {
         retrieve();
     }
 
-    private int increase(){
-        return score++;
+    void OnEnable()
+    {
+        GameEvents.ScenarioEnded += OnScenarioEnded;
     }
 
-    private int decrease(){
-        return score--;
+    void OnDisable()
+    {
+        GameEvents.ScenarioEnded -= OnScenarioEnded;
+    }
+
+    void OnScenarioEnded((string message, Result result) tuple)
+    {
+        _scoreEnv += tuple.result.ScoreEnvironmental;
+        _scoreSoc += tuple.result.ScoreSocial;
     }
 
     [ContextMenu("Persist")]
     void Persist(){
-        OnFacet<ScoreFacet>
+        OnFacet<LeaderboardFacet>
             .Call(
-                nameof(ScoreFacet.Persist),
-                score
+                nameof(LeaderboardFacet.Add),
+                _scoreSoc
             )
             .Done();
     }
 
     void GetPercentileRanking(Action<int> onCompleted)
     {
-        OnFacet<ScoreFacet>
+        OnFacet<LeaderboardFacet>
             .Call<int>(
-                nameof(ScoreFacet.GetPercentileRanking),
-                score
+                nameof(LeaderboardFacet.GetPercentileRanking),
+                _scoreSoc
             )
             .Then(onCompleted)
             .Done();
@@ -54,6 +66,6 @@ public class ScoreManager : MonoBehaviour
     }
 
     public int getScore(){
-        return score;
+        return _scoreSoc;
     }
 }
