@@ -55,5 +55,9 @@ public class DialogueManager : MonoBehaviour
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
+        else
+        {
+            gameObject.SetActive(false);
+       }
     }
 }
