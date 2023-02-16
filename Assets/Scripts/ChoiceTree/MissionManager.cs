@@ -12,16 +12,9 @@ public class MissionManager : MonoBehaviour
 {
     [SerializeField] private Mission[] _missions;
     [SerializeField, Range(0, 7)] private int _currentMissionIndex;
-    [SerializeField] private CutsceneManager _cutscene;
     private IDisplay _display;
     public Mission Mission => _missions[_currentMissionIndex];
-    private void OnValidate()
-    {
-        if(_cutscene==null)
-            _cutscene = FindObjectOfType<CutsceneManager>();
-        if (_cutscene == null)
-            Debug.Log("Didn't find a CutsceneManager in scene, add one");
-    }
+
     public int CurrentMissionIndex
     {
         set
@@ -65,12 +58,8 @@ public class MissionManager : MonoBehaviour
         if (Mission.TargetedBuilding == obj.Type)
         {
             HandleEventRaised((int)TravelMethod.Walk);
-            _cutscene.TravelCutscene(TravelMethod.Walk);
+            //Mission.ProcessSequenceAbsolute();
         }
-    }
-    private void HandleTravelReached(TravelID obj)
-    {
-        HandleEventRaised((int)obj.Type);
     }
     private void Awake()
     {
@@ -82,7 +71,6 @@ public class MissionManager : MonoBehaviour
         GameEvents.OnlineOrLiveSelected += (e) => HandleEventRaised((int)e);
         GameEvents.ScenarioEnded += (sr) => Debug.Log("Colee says : " + sr.message + " with result : " + sr.result);
         GameEvents.BuildingReached += HandleBuildingReached;
-        GameEvents.TravelReached += HandleTravelReached;
         _display.Expand();
     }
 
