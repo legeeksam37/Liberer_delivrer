@@ -31,11 +31,18 @@ public class Quest : MonoBehaviour
         gameObject.SetActive(true);
         transform.parent = building.TransformOverride;
         transform.localPosition = Vector3.zero;
-        //transform.position = building.TransformOverride.position;
+        transform.position = building.TransformOverride.position;
     }
-    public void callQuest(BuildingType target) => callQuest(FindBuilding(target));
+    public void callQuest(BuildingType target)
+    {
+        BuildingID building = BuildingsManager.GetInstance().Buildings.First(b => b.Type == target);
+        callQuest(building);
+
+    }
+        
     public static BuildingID FindBuilding(BuildingType target)
     {
+        Debug.Log(FindObjectsOfType<BuildingID>());
         try
         {
             return FindObjectsOfType<BuildingID>().First(b => b.Type == target);

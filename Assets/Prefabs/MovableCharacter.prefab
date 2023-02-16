@@ -357,3 +357,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefabSkin: {fileID: 2279297423725030399, guid: 24f30a2a27fc3d04d9f28dd5ebc66de4, type: 3}
+--- !u!114 &4756473566636789337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910248468500442109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be6b64f3da44afcb0738cb1c7756756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -48,8 +48,13 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     void Start()
     {
-        //Expand();
-        
+        MissionManager.GetInstance().OnMissionsStarted += Expand;
+
+    }
+
+    private void OnDestroy()
+    {
+        MissionManager.GetInstance().OnMissionsStarted -= Expand;
     }
 
     public void Expand()
@@ -108,7 +113,5 @@ public class Smartphone : MonoBehaviour, IDisplay
             //If options are null we consider we wan all options
             parent.GetChild(i).gameObject.SetActive(options==null || options.Contains(i));     
     }
-
-
-    
+  
 }

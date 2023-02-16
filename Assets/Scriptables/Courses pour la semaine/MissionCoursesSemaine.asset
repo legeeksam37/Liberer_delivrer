@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MissionCoursesSemaine
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+  _targetedBuilding: 5
   _logo: {fileID: 21300000, guid: 9cbc8471205c50d4ab518d77918c4508, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}

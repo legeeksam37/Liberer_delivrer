@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerForwarder : MonoBehaviour
 {
     [SerializeField]
-    private IDBase[] _target;
+    private List<IDBase> _target = new List<IDBase>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

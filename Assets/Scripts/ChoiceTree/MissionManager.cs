@@ -108,9 +108,9 @@ public class MissionManager : Singleton<MissionManager>
     {
         mission.Init();
         ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Game);
-        GameEvents.MissionStarted?.Invoke(mission);
         OnMissionsStarted?.Invoke();
-        UpdateDisplayByCurrentState();
+        GameEvents.MissionStarted?.Invoke(mission);
+        //UpdateDisplayByCurrentState();
     }
 
 }
