@@ -87,6 +87,9 @@ public class Mission : ScriptableObject
             return false;
         }
         _current = choices[branchIndex];
+        
+        GameEvents.SequenceProcessed?.Invoke(_current.choice.name);
+        
         Debug.Log("Mission state : " + CurrentName);
         if (!NextIsFinal)
             return true;

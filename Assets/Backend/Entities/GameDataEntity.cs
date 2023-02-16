@@ -9,6 +9,7 @@ public class GameDataEntity : Entity
     public List<MissionResult> missionResults;
     public List<QuizResult> quizResults;
     public List<RoueResult> roueResult;
+    public float minutesPlayed;
 }
 
 public class MissionResult
