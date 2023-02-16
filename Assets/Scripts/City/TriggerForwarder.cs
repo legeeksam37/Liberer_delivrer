@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerForwarder : MonoBehaviour
 {
     [SerializeField]
-    private BuildingID _target;
+    private IDBase _target;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,7 +17,7 @@ public class TriggerForwarder : MonoBehaviour
     private void OnValidate()
     {
         if (_target == null)
-            _target = GetComponentInParent<BuildingID>();
+            _target = GetComponentInParent<IDBase>();
         if (!TryGetComponent<Collider2D>(out Collider2D coll) || !coll.isTrigger)
             Debug.LogError("Collider missing or not trigger on object");
     }
