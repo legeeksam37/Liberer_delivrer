@@ -1,7 +1,6 @@
 ﻿using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 public abstract class IDBase<T> : IDBase where T : Enum
 {
 

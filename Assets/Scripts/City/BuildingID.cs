@@ -6,6 +6,7 @@ public class BuildingID : IDBase<BuildingType>
 {
     public override void OnTriggerEnter2D(Collider2D collision)
     {
+        //Debug.Log("Collidd by ; " + collision.gameObject.name);
         GameEvents.BuildingReached.Invoke(this);
     }
 }
