@@ -125,6 +125,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -22154,7 +22166,7 @@ TextureImporter:
       tilemap_packed 1_838: -402532167
       tilemap_packed 1_521: -1268238223
       tilemap_packed 1_349: -2026868910
-      tilemap_packed 1_265: -2146750530
+      tilemap_packed 1_492: -698112043
       tilemap_packed 1_897: -1000773494
       tilemap_packed 1_294: 758130401
       tilemap_packed 1_843: -1590309079
@@ -22178,7 +22190,7 @@ TextureImporter:
       tilemap_packed 1_395: -192818617
       tilemap_packed 1_722: -2048288241
       tilemap_packed 1_775: 1819967500
-      tilemap_packed 1_492: -698112043
+      tilemap_packed 1_265: -2146750530
       tilemap_packed 1_99: -495220940
       tilemap_packed 1_1000: 1823035179
       tilemap_packed 1_567: -1604847751
