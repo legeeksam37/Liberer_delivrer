@@ -17,19 +17,19 @@ public class DialogueManager : MonoBehaviour
     {
         textComponent.text = string.Empty;
         startDialogue();
-
+        NextLine();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(textComponent.text == lines[index]){
+        /*if(textComponent.text == lines[index]){
             NextLine();
         }else 
         {
             StopAllCoroutines();
             textComponent.text = lines[index];
-        }
+        }*/
     }
 
     void startDialogue(){
@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
 
 
     void NextLine(){
-        if(index < lines.Length - 2){
+        if(index < lines.Length - 1){
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
