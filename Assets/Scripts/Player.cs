@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using ScenarioStructures;
 using Unisave.Facades;
 using UnityEngine;
 
@@ -20,7 +19,6 @@ public class Player : MonoBehaviour
         GameEvents.GameStarted += OnGameStarted;
         GameEvents.MissionStarted += OnMissionStarted;
         GameEvents.SequenceProcessed += OnSequenceProcessed;
-        GameEvents.ScenarioEnded += OnScenarioEnded;
         GameEvents.GameEnded += OnGameEnded;
     }
 
@@ -29,7 +27,6 @@ public class Player : MonoBehaviour
         GameEvents.GameStarted -= OnGameStarted;
         GameEvents.MissionStarted -= OnMissionStarted;
         GameEvents.SequenceProcessed -= OnSequenceProcessed;
-        GameEvents.ScenarioEnded -= OnScenarioEnded;
         GameEvents.GameEnded -= OnGameEnded;
     }
 
@@ -55,13 +52,10 @@ public class Player : MonoBehaviour
         _playerData.MissionChoices[_currentMission.name].Add(choiceName);
     }
 
-    void OnScenarioEnded((string message, Result result) tuple)
-    {
-        _playerData.GlobalValue += tuple.result.GlobalValue;
-    }
-
     void OnGameEnded()
     {
+        _playerData.ScoreTotal = FindObjectOfType<ScoreManager>().Score;
+        
         _playerData.MinutesPlayed = Time.realtimeSinceStartup - _gameStartTime;
         
         var userId = PlayerPrefs.GetString("userEntityId");
@@ -75,9 +69,7 @@ public class Player : MonoBehaviour
 
 public class PlayerData
 {
-    public int GlobalValue { get; set; }
-    
+    public int ScoreTotal { get; set; }
     public Dictionary<string, List<string>> MissionChoices { get; set; }
-
     public float MinutesPlayed { get; set; }
 }

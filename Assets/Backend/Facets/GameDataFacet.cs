@@ -8,7 +8,7 @@ public class GameDataFacet : Facet
     {
         var gameDataEntity = new GameDataEntity {
             userEntity = DB.Find<UserEntity>(userEntityId),
-            finalScore = playerData.GlobalValue,
+            finalScore = playerData.ScoreTotal,
             minutesPlayed = playerData.MinutesPlayed,
             missionResults = playerData.MissionChoices.Select(kvp => new MissionResult {
                 missionName = kvp.Key,
