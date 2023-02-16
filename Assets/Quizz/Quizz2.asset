@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6805e5378aa434db24131d205071de, type: 3}
+  m_Name: Quizz2
+  m_EditorClassIdentifier: 
+  question: "\xC0 ton avis, quelle est la part de retour des produits command\xE9s
+    sur internet par les Fran\xE7ais en 2022 ?"
+  reponseUn: 87%
+  reponseDeux: 39%
+  reponseTrois: 12%
+  solutionWinner: "Bravo tu as trouv\xE9 la bonne r\xE9ponse : selon une \xE9tude
+    \xAB Global Consumer Survey \xBB de Statista,  39% des commandes r\xE9alis\xE9es
+    sur internet sont retourn\xE9es ! Cela repr\xE9sente de nombreux trajets  suppl\xE9mentaires
+    et donc des \xE9missions de gaz \xE0 effet de serre dont on pourrait bien se
+    passer..."
+  solutionLooser: "Malheureusement tu n\u2019as pas la bonne r\xE9ponse : figure-toi
+    que selon une \xE9tude Global  Consumer Survey de Statista, 39% des commandes
+    r\xE9alis\xE9es sur internet sont retourn\xE9es ! Cela repr\xE9sente de nombreux
+    trajets suppl\xE9mentaires et donc des \xE9missions de gaz \xE0 effet de serre
+    dont  on pourrait bien se passer..."
+  resultat: 1

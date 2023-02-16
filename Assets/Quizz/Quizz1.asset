@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6805e5378aa434db24131d205071de, type: 3}
+  m_Name: Quizz1
+  m_EditorClassIdentifier: 
+  question: "\xC0 ton avis, pami les marchandises qui transitent par voie terrestre,
+    quel est le pourcentage de  marchandises qui voyagent en train en France en 2019
+    ?"
+  reponseUn: 73%
+  reponseDeux: 43%
+  reponseTrois: 9%
+  solutionWinner: "Bravo, tu as tout juste : la part modale du transport ferroviaire
+    repr\xE9sente seulement  9% en France en 2019 2019 selon les statistiques du
+    Minist\xE8re de la transition \xE9cologique alors que  pour le transport routier
+    elle s\u2019\xE9l\xE8ve \xE0 89% ! Tu gagnes 1 Colees !"
+  solutionLooser: "Et non ! Figure-toi que la part modale du transport ferroviaire
+    dans le transport  int\xE9rieur terrestre de marchandises repr\xE9sente seulement
+    9% en France en 2019 selon les  statistiques du Minist\xE8re de la transition
+    \xE9cologique alors que pour le transport routier elle s\u2019\xE9l\xE8ve \xE0 
+    89% !"
+  resultat: 2
