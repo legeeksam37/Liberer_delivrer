@@ -14,11 +14,17 @@ public class JoystickControls : MonoBehaviour
 
     public Image image;
 
+    private Animator playerAnimator;
+    private float lastXJoystick = 0;
+    private float lastYJoystick = 0;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        controller = GetComponent<Rigidbody2D>();       
+        controller = GetComponent<CharacterController>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,17 +36,36 @@ public class JoystickControls : MonoBehaviour
         controller.MovePosition(controller.position + playerSpeed * Time.deltaTime * move);
         if (image != null)
         {
-            if (input.x > 0.2f || input.x < -0.2f || input.y > 0.2f || input.y < -0.2f)
+            if (input.x > 0.1f || input.x < -0.1f || input.y > 0.1f || input.y < -0.1f)
             {
-
                 image.CrossFadeAlpha(255, 1.0f, false);
+                //Save the last pos of the player before reaching null point
+                lastXJoystick = input.x;
+                lastYJoystick = input.y;
+                
+                if (playerAnimator)
+                {
+                    playerAnimator.SetFloat("MoveX",input.x);
+                    playerAnimator.SetFloat("MoveY",input.y);
+                }
             }
             else
             {
-                //image.CrossFadeAlpha(0, 0.0f, false);
+                image.CrossFadeAlpha(0, 0.0f, false);
+                if (playerAnimator)
+                {
+                    playerAnimator.SetFloat("MoveX",0);
+                    playerAnimator.SetFloat("MoveY",0);
+                }
+                //Save the value 
+                if (playerAnimator)
+                {
+                    playerAnimator.SetFloat("LastMoveX",lastXJoystick);
+                    playerAnimator.SetFloat("LastMoveY",lastYJoystick);
+                }
             }
+            
+
         }
-       
-        
     }
 }
