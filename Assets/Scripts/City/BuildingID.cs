@@ -11,7 +11,7 @@ public class BuildingID : MonoBehaviour
     public Transform TransformOverride => _transformOverride==null ? transform : _transformOverride;
 
     public BuildingType Type { get => _type; }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         GameEvents.BuildingReached.Invoke(this);
     }
