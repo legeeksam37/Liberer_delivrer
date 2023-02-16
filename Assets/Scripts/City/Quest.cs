@@ -20,7 +20,7 @@ public class Quest : MonoBehaviour
         transform.localPosition = Vector3.zero;
         //transform.position = building.TransformOverride.position;
     }
-
+    public void callQuest(BuildingType target) => callQuest(FindBuilding(target));
     public static BuildingID FindBuilding(BuildingType target) => FindObjectsOfType<BuildingID>().First(b => b.Type == target);
 
 }
