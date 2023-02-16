@@ -37,29 +37,34 @@ public class JoystickControls : MonoBehaviour
         {
             if (input.x > 0.1f || input.x < -0.1f || input.y > 0.1f || input.y < -0.1f)
             {
-                Debug.LogError(input);
                 image.CrossFadeAlpha(255, 1.0f, false);
                 //Save the last pos of the player before reaching null point
                 lastXJoystick = input.x;
                 lastYJoystick = input.y;
                 
+                if (playerAnimator)
+                {
+                    playerAnimator.SetFloat("MoveX",input.x);
+                    playerAnimator.SetFloat("MoveY",input.y);
+                }
             }
             else
             {
                 image.CrossFadeAlpha(0, 0.0f, false);
+                if (playerAnimator)
+                {
+                    playerAnimator.SetFloat("MoveX",0);
+                    playerAnimator.SetFloat("MoveY",0);
+                }
                 //Save the value 
                 if (playerAnimator)
                 {
-                    //playerAnimator.SetFloat("MoveX",lastXJoystick);
-                    //playerAnimator.SetFloat("MoveY",lastYJoystick);
+                    playerAnimator.SetFloat("LastMoveX",lastXJoystick);
+                    playerAnimator.SetFloat("LastMoveY",lastYJoystick);
                 }
             }
             
-            if (playerAnimator)
-            {
-                playerAnimator.SetFloat("MoveX",input.x);
-                playerAnimator.SetFloat("MoveY",input.y);
-            }
+
         }
     }
 }
