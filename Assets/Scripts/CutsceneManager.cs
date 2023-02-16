@@ -19,31 +19,9 @@ public class CutsceneManager : MonoBehaviour
             Destroy(this);
             return;
         }
-        GameEvents.TravelReached += (t)=>TravelCutscene(t.Type);
+
         Instance = this;
         DontDestroyOnLoad(this);
-    }
-
-    public void TravelCutscene(TravelMethod type)
-    {
-        switch (type)
-        {
-            case TravelMethod.None:
-                break;
-            case TravelMethod.Bus: 
-                Play(CutsceneType.Bus);
-                break;
-            case TravelMethod.Car:
-                Play(CutsceneType.Car);
-                break;
-            case TravelMethod.Bike:
-                Play(CutsceneType.Bike);
-                break;
-            case TravelMethod.Walk:
-                break;
-            default:
-                break;
-        }
     }
 
     public void Play(CutsceneType cutsceneType)
