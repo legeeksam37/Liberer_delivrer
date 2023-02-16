@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_TileSpriteArray.Array.data[5].m_Data
       value: 
       objectReference: {fileID: 1859194307, guid: 6fea635a2dcb0fd4d8ac1cbac555cc8e, type: 3}
+    - target: {fileID: 1413956142387281030, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1426052620364749704, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -98,6 +102,14 @@ PrefabInstance:
     - target: {fileID: 1426052620364749704, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781856363775841381, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313621196076722986, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2335916533547244805, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
       propertyPath: m_TileAssetArray.Array.data[0].m_Data
@@ -147,9 +159,17 @@ PrefabInstance:
       propertyPath: m_TileSpriteArray.Array.data[5].m_Data
       value: 
       objectReference: {fileID: 2002954574, guid: 6fea635a2dcb0fd4d8ac1cbac555cc8e, type: 3}
+    - target: {fileID: 4933474862467499268, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5852377660227170203, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
       propertyPath: m_Name
       value: Gray
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852377660227170203, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7893458670060655494, guid: 5c7d9990b8224e341a7b2ca1b7a7540b, type: 3}
       propertyPath: m_TileAssetArray.Array.data[2].m_Data

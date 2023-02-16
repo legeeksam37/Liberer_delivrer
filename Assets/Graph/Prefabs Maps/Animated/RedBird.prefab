@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6608556887840180}
   - component: {fileID: 2697583075073290952}
   - component: {fileID: 1963515220731130444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: birdred_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7467266104177255406}
   - component: {fileID: 8284828398557353688}
   - component: {fileID: 1031782674295534912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedBird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e6d11d6aebcd84b924131b7259589d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!61 &8284828398557353688
 BoxCollider2D:
   m_ObjectHideFlags: 0
