@@ -697,8 +697,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1803302892}
   lines:
-  - Hello I am Colee
-  - What doi you want stupid Ass ?
+  - Hello I am Colee, tap the screen or click the left button of your mouse to know
+    what I want to tell you.
+  - 'How can I help you '
 --- !u!1001 &574793863
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI textComponent;
     public string[] lines;
-    private float textSpeed = 0.2f;
+    private float textSpeed = 0.1f;
     private int index;
     
         // Start is called before the first frame update
@@ -17,19 +17,23 @@ public class DialogueManager : MonoBehaviour
     {
         textComponent.text = string.Empty;
         startDialogue();
-        NextLine();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if(textComponent.text == lines[index]){
-            NextLine();
-        }else 
+        if (Input.GetMouseButtonDown(0))
         {
-            StopAllCoroutines();
-            textComponent.text = lines[index];
-        }*/
+            if(textComponent.text == lines[index]){
+                NextLine();
+            }else 
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
+
     }
 
     void startDialogue(){
