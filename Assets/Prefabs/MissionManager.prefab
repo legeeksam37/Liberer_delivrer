@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5318871842542851553}
   - component: {fileID: 5318871842542851552}
+  - component: {fileID: 3517531080162337859}
   m_Layer: 0
   m_Name: MissionManager
   m_TagString: Untagged
@@ -47,11 +48,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _missions:
   - {fileID: 11400000, guid: 7342f9b69a9269841aa2b864cb1cc91a, type: 2}
-  - {fileID: 11400000, guid: 1c0783f522d0b9c4f9a43f3505640d25, type: 2}
-  - {fileID: 11400000, guid: 21096c9e41a4a1e4ba9b131a6cfe0190, type: 2}
+  - {fileID: 11400000, guid: f1dfe345a74fcb74e985844d8d60add0, type: 2}
   - {fileID: 11400000, guid: 6de4e2f5b4a69a046b3edbb3407c4806, type: 2}
-  _currentMissionIndex: 0
-  _cutscene: {fileID: 0}
+  - {fileID: 11400000, guid: 898dd81198014534bb21741e12330a2a, type: 2}
+  - {fileID: 11400000, guid: 21096c9e41a4a1e4ba9b131a6cfe0190, type: 2}
+  - {fileID: 11400000, guid: 1c0783f522d0b9c4f9a43f3505640d25, type: 2}
+  - {fileID: 11400000, guid: c01286c0715fd6d48b0b11effe1beb3a, type: 2}
+  - {fileID: 11400000, guid: b9e8a00a10a0dde48b3790699853f3eb, type: 2}
+  _currentMissionIndex: 7
+  _cutscene: {fileID: 3517531080162337859}
+--- !u!114 &3517531080162337859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318871842542851555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7130c1e609534ae4aff58604c2d751dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bikeCutscene: {fileID: 0}
+  _busCutscene: {fileID: 0}
+  _shopCutscene: {fileID: 0}
+  _walkCutscene: {fileID: 0}
+  _carCutscene: {fileID: 0}
+  _deliveryCutscene: {fileID: 0}
 --- !u!1001 &878606749
 PrefabInstance:
   m_ObjectHideFlags: 0

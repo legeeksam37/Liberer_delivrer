@@ -27,8 +27,8 @@ public class Smartphone : MonoBehaviour, IDisplay
     private GameObject _currentPanel;
     private void Awake()
     {
-        _imageLogo1 = _logo1.GetComponent<Image>();
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
+        _imageLogo1 = _logo1.GetComponent<Image>();
         _imageLogo2 = _logo2.GetComponent<Image>();
         _imageLogo3 = _logo3.GetComponent<Image>();
         _imageLogo4 = _logo4.GetComponent<Image>();
