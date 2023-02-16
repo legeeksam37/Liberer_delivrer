@@ -254,7 +254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: _currentMissionIndex
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5318871842542851552, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: _missions.Array.size

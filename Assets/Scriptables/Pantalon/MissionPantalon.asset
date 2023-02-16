@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: MissionPantalon
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-  _logo: {fileID: 0}
+  _logo: {fileID: 21300000, guid: 6b28059d18878d940a3ec8d9d8c08e22, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-    message: 
+    message: "Profitez des derniers jeans Stein \xE0 15 \u20AC avec retour gratuit"
     enabled: 1
     _subChoices:
     - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}

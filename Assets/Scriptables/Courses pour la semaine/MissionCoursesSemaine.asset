@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: MissionCoursesSemaine
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-  _logo: {fileID: 0}
+  _logo: {fileID: 21300000, guid: 9cbc8471205c50d4ab518d77918c4508, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-    message: 
+    message: Commandez vos courses pour la semaine sans efforts !
     enabled: 1
     _subChoices:
     - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}
-      message: 
+      message: Choisissez vos options de livraisons
       enabled: 1
       _subChoices:
       - choice: {fileID: 11400000, guid: 8a2da309ef5315a4a849c9f96f862939, type: 2}
-        message: 
+        message: "Choisissez le lieu d'exp\xE9dition"
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}

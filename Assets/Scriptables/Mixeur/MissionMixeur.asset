@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MissionMixeur
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-  _logo: {fileID: 21300000, guid: d32264b99f10cba42995889268a07635, type: 3}
+  _logo: {fileID: 21300000, guid: 25dcf482824d82c46bc279c5d6d006fb, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
-    message: Avec Oustitee vous pouvre vous faire livrer les courses chez vous en
-      moins de 10 minutes !
+    message: En ce moment sur TDiscroutte, de grosses promotions sur les mixeurs,
+      profitez en avant que l'offre ne prenne fin !
     enabled: 1
     _subChoices:
     - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}

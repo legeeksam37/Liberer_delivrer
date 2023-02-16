@@ -13,70 +13,94 @@ MonoBehaviour:
   m_Name: MissionLivre
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+  _logo: {fileID: 21300000, guid: d32264b99f10cba42995889268a07635, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+    message: "Profitez de vos livres pr\xE9f\xE9r\xE9s livr\xE9 en moins de 24h avec
+      Alazone"
     enabled: 1
     _subChoices:
     - choice: {fileID: 11400000, guid: dc80b963ec907de40a7785779ee2a2af, type: 2}
+      message: 
       enabled: 1
       _subChoices:
       - choice: {fileID: 11400000, guid: 8a2da309ef5315a4a849c9f96f862939, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
+          message: 
           enabled: 1
           _subChoices:
           - choice: {fileID: 11400000, guid: 331c8407ab7497640a72319219db7368, type: 2}
+            message: 
             enabled: 1
             _subChoices: []
         - choice: {fileID: 11400000, guid: ed789959835614847bb934fef900d99d, type: 2}
+          message: 
           enabled: 1
           _subChoices:
           - choice: {fileID: 11400000, guid: 4f4ac7a52e2bf63458fc2190c35422d4, type: 2}
+            message: 
             enabled: 1
             _subChoices:
             - choice: {fileID: 11400000, guid: 05597fdd0d3f1cb45831b278214e2bab, type: 2}
+              message: 
               enabled: 1
               _subChoices: []
           - choice: {fileID: 11400000, guid: d00326555726e6047baa9c40f65cbdf5, type: 2}
+            message: 
             enabled: 1
             _subChoices:
             - choice: {fileID: 11400000, guid: 95d6e3acb5ca22740b28282a80419392, type: 2}
+              message: 
               enabled: 1
               _subChoices: []
           - choice: {fileID: 11400000, guid: 47daa4590dfeb594594b6cd9cacc807d, type: 2}
+            message: 
             enabled: 1
             _subChoices:
             - choice: {fileID: 11400000, guid: 91bd7ac22634937448479cddedb11ecb, type: 2}
+              message: 
               enabled: 1
               _subChoices: []
       - choice: {fileID: 11400000, guid: 55c67d7b1dd30934c8261d86d89ebc3d, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: 3be257dfbd53c3a449d384804730e105, type: 2}
+          message: 
           enabled: 1
           _subChoices:
           - choice: {fileID: 11400000, guid: 8dd88aa2ff3fc664487d093b50b86092, type: 2}
+            message: 
             enabled: 1
             _subChoices: []
     - choice: {fileID: 11400000, guid: 90f794b7223080346bf1bb886c47ed66, type: 2}
+      message: 
       enabled: 1
       _subChoices:
       - choice: {fileID: 11400000, guid: 4f4ac7a52e2bf63458fc2190c35422d4, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: b876556111918674893c0003aeeee924, type: 2}
+          message: 
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: d00326555726e6047baa9c40f65cbdf5, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: 7cdbc4eacc6a2c44f81699548942a2c8, type: 2}
+          message: 
           enabled: 1
           _subChoices: []
       - choice: {fileID: 11400000, guid: 47daa4590dfeb594594b6cd9cacc807d, type: 2}
+        message: 
         enabled: 1
         _subChoices:
         - choice: {fileID: 11400000, guid: caef2f80c2177fd4292724d30ee25828, type: 2}
+          message: 
           enabled: 1
           _subChoices: []
