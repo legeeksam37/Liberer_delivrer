@@ -56,6 +56,9 @@ public class Smartphone : MonoBehaviour, IDisplay
     public void Collapse()
     {
         _rectTransform.anchoredPosition = new Vector3(280f, -350f);
+        _withdrawalSelection.SetActive(false);
+        _delayTypeSelection.SetActive(false);
+        _travelMethodSelection.SetActive(false);
     }
     public void OnlineOrLive(RecursiveEnabledChoice currentStep, List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet(),currentStep);
     public void Delay(RecursiveEnabledChoice currentStep, List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet(),currentStep);
