@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="41ce0f3f-dade-40fb-9cbd-274a6736c7bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/Entities/ScoreEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Entities/LeaderboardEntryEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/Entities/ScoreEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Entities/LeaderboardEntryEntity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/LeaderboardFacet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Backend/Facets/ScoreFacet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/LeaderboardFacet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backend/Facets/GameDataFacet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/GameDataFacet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backend/Facets/LeaderboardFacet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Backend/Facets/LeaderboardFacet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" afterDir="false" />
     </list>
@@ -37,7 +36,43 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d9e8050c8adb4d0e835e6b2b59e9565c2c800/ef/f31a2d60/Entity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Backend/Entities/GameDataEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Backend/Entities/GameDataEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Backend/Entities/UserEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Backend/Facets/GameDataFacet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Backend/Facets/LeaderboardFacet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Backend/Facets/UserFacet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Scripts/ScoreManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Scripts/ScoreManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Scripts/ScoreManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Scripts/Smartphone.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Scripts/Smartphone.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Scripts/UI/AlazoneManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/Assets/Unisave/Resources/UnisavePreferencesFile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ccouasnon/RiderProjects/Liberer_delivrer/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
