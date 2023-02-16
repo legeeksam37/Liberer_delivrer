@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class Smartphone : MonoBehaviour, IDisplay
 {
+    [SerializeField] GameObject character;
+    JoystickControls joeystick;
+
     [SerializeField] RectTransform _rectTransform;
 
     [SerializeField] GameObject _orderSelection;
@@ -32,6 +35,7 @@ public class Smartphone : MonoBehaviour, IDisplay
         _imageLogo2 = _logo2.GetComponent<Image>();
         _imageLogo3 = _logo3.GetComponent<Image>();
         _imageLogo4 = _logo4.GetComponent<Image>();
+        joeystick = character.GetComponent<JoystickControls>();
     }
 
     private void ChangeIcon(Sprite logo)
@@ -50,12 +54,14 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     public void Expand()
     {
-        _rectTransform.anchoredPosition = new Vector3(280f, -30f);
+        _rectTransform.anchoredPosition = new Vector3(280f, 250f);
+        joeystick.enabled = false;
     }
 
     public void Collapse()
     {
         _rectTransform.anchoredPosition = new Vector3(280f, -350f);
+        joeystick.enabled = true;
     }
     public void OnlineOrLive(RecursiveEnabledChoice currentStep, List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet(),currentStep);
     public void Delay(RecursiveEnabledChoice currentStep, List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet(),currentStep);
