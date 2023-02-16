@@ -1024,7 +1024,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 656703403}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &117700125
 TilemapRenderer:
@@ -2073,21 +2073,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1471504421}
+  - {fileID: 117700124}
+  - {fileID: 1099214144}
   - {fileID: 89113562}
   - {fileID: 2046433866}
   - {fileID: 1475117076}
   - {fileID: 590157581}
-  - {fileID: 1471504421}
-  - {fileID: 117700124}
-  - {fileID: 1099214144}
+  - {fileID: 1286308536}
+  - {fileID: 1545889471}
   - {fileID: 1220329632}
+  - {fileID: 1657250852}
   - {fileID: 7418215770822980494}
+  - {fileID: 1108892992}
   - {fileID: 1828476152}
   - {fileID: 320000446}
-  - {fileID: 1286308536}
-  - {fileID: 1108892992}
-  - {fileID: 1545889471}
-  - {fileID: 1657250852}
   - {fileID: 267532808}
   m_Father: {fileID: 376595632}
   m_RootOrder: 2
@@ -2639,7 +2639,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 656703403}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1099214145
 TilemapRenderer:
@@ -3257,6 +3257,14 @@ PrefabInstance:
       propertyPath: playerSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3910248467360965485, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910248467801548169, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3910248468500442105, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.229
@@ -3267,7 +3275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3910248468500442105, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910248468500442106, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_Height
@@ -3276,6 +3284,10 @@ PrefabInstance:
     - target: {fileID: 3910248468500442106, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_Radius
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910248469217859708, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4944560138919696059, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3287,11 +3299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4944560138919696059, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4944560138919696059, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4944560138919696059, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3311,11 +3323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6818384505557216450, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8174583
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 6818384505557216450, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16645789
+      value: 3.602
       objectReference: {fileID: 0}
     - target: {fileID: 6818384505557216450, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9088,7 +9100,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 656703403}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1471504422
 TilemapRenderer:

@@ -89,13 +89,13 @@ public class MissionManager : MonoBehaviour
 
     private void Update()
     {
-        if (false && Input.GetMouseButtonDown(0))
+       /* if (false && Input.GetMouseButtonDown(0))
         {
             Mission.ProcessSequenceRandom();
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
             CurrentMissionIndex++;
-        }
+        }*/
     }
 }
