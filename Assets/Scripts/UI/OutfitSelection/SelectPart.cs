@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class SelectPart : MonoBehaviour
 {
-    [SerializeField] private CustomizationElementType elementType;
-    [SerializeField] private List<Sprite> sprites = new List<Sprite>();
+    [SerializeField] private List<GameObject> PlayerSkin = new List<GameObject>();
     
     private ModularChar modularChar;
     
@@ -18,10 +17,15 @@ public class SelectPart : MonoBehaviour
         modularChar = GetComponentInParent<ModularChar>();
     }
 
+    private void OnEnable()
+    {
+        modularChar.ChangeItem(PlayerSkin[0]);
+    }
+
     public void NextItem()
     {
-        Debug.Log("Before     : " + _currentItem + "   " + sprites.Count);
-        if(_currentItem + 1 > sprites.Count)
+        Debug.Log("Before     : " + _currentItem + "   " + PlayerSkin.Count);
+        if(_currentItem + 1 > PlayerSkin.Count)
         {
             _currentItem = 1;
         }
@@ -30,23 +34,23 @@ public class SelectPart : MonoBehaviour
             _currentItem++;
         }
         
-        Debug.Log(_currentItem + "   " + sprites.Count);
-        modularChar.ChangeItem(elementType, sprites[_currentItem - 1]);
+        Debug.Log(_currentItem + "   " + PlayerSkin.Count);
+        modularChar.ChangeItem(PlayerSkin[_currentItem - 1]);
     }
 
     public void PreviousItem()
     {
-        Debug.Log("after     : " + _currentItem + "   " + sprites.Count);
+        Debug.Log("after     : " + _currentItem + "   " + PlayerSkin.Count);
         if(_currentItem - 1 < 1)
         {
-            _currentItem = sprites.Count;
+            _currentItem = PlayerSkin.Count;
         }
         else
         {
             _currentItem--;
         }
-        Debug.Log(_currentItem + "   " + sprites.Count);
-        modularChar.ChangeItem(elementType, sprites[_currentItem - 1]);
+        Debug.Log(_currentItem + "   " + PlayerSkin.Count);
+        modularChar.ChangeItem(PlayerSkin[_currentItem - 1]);
         
     }
     

@@ -8,8 +8,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public enum CustomizationElementType { Head, Body, Legs }
-
 public class ModularChar : MonoBehaviour
 {
     string commune;
@@ -21,24 +19,12 @@ public class ModularChar : MonoBehaviour
     
     [SerializeField] private SO_Outfit outfit;
     [SerializeField] GameObject warning;
+    [SerializeField] private Image imagePreview;
     
-    public void ChangeItem(CustomizationElementType elementType, Sprite outfitSkin)
+    
+    public void ChangeItem(GameObject playerSkin)
     {
-        switch (elementType)
-        {
-            case CustomizationElementType.Head:
-                outfit.outfitHead = outfitSkin;
-                Debug.Log(outfitSkin.name);
-                break;
-            case CustomizationElementType.Body:
-                Debug.Log(outfitSkin.name);
-                outfit.outfitBody = outfitSkin;
-                break;
-            case CustomizationElementType.Legs:
-                outfit.outfitLegs = outfitSkin;
-                Debug.Log(outfitSkin.name);
-                break;
-        }
+        imagePreview.sprite = playerSkin.GetComponent<SpriteRenderer>().sprite;
     }
 
     public void Validate()
