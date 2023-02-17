@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BuildingSpot : MonoBehaviour
 {
-    [SerializeField] private int SocialLimit = 0;
+    [SerializeField] private int SocialLimit;
     [SerializeField] private GameObject UnderLimit;
     [SerializeField] private GameObject OverLimit;
     // Start is called before the first frame update

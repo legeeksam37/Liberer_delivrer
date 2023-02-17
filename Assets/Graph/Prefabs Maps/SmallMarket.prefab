@@ -834,6 +834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallMarket
       objectReference: {fileID: 0}
+    - target: {fileID: 8259830364484476442, guid: 9e7f9f6c6b15daf41bb25509545c441c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7f9f6c6b15daf41bb25509545c441c, type: 3}
 --- !u!4 &3211154113043372932 stripped

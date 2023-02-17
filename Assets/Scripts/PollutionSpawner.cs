@@ -6,7 +6,7 @@ using UnityEngine;
 public class PollutionSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] clouds;
-    [SerializeField] private float spawnDelay = 1f;
+    private float spawnDelay = 1f;
     private Vector2 min;
     private Vector2 max;
     float currDelay = 0;
@@ -16,8 +16,8 @@ public class PollutionSpawner : MonoBehaviour
         Collider2D c = GetComponent<Collider2D>();
         min = c.bounds.min;
         max = c.bounds.max; 
-        RefreshSpawnRate();
         GameEvents.ScenarioEnded += RefreshSpawnRate;
+        RefreshSpawnRate();
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class PollutionSpawner : MonoBehaviour
         if (score >= 0)
             spawnDelay = float.MaxValue;
         else
-            spawnDelay = 10 / (float)-score;
+            spawnDelay = 10 /-(float)score;
         currDelay = spawnDelay;
     }
 
