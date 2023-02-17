@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class Smartphone : MonoBehaviour, IDisplay
 {
     [SerializeField] private CutsceneManager _cutscene;
-    
+
     [SerializeField] JoystickControls joystick;
 
     [SerializeField] RectTransform _rectTransform;
@@ -27,15 +27,15 @@ public class Smartphone : MonoBehaviour, IDisplay
     Image _imageLogo3;
     [SerializeField] GameObject _logo4;
     Image _imageLogo4;
-    
+
     private IDisplay _display;
-    
+
     TMP_Text currentText;
     private GameObject _currentPanel;
     private bool _isExpanded = true;
 
     private MissionManager _missionManager;
-    
+
     private void Awake()
     {
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
@@ -70,7 +70,7 @@ public class Smartphone : MonoBehaviour, IDisplay
         SetupPhoneDisplay();
         Expand();
     }
-    
+
     public void Expand()
     {
         _rectTransform.anchoredPosition = new Vector3(280f, 250f);
@@ -84,10 +84,10 @@ public class Smartphone : MonoBehaviour, IDisplay
         joystick.enabled = true;
         _isExpanded = false;
     }
-    public void OnlineOrLive(RecursiveEnabledChoice currentStep, List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet(),currentStep);
-    public void Delay(RecursiveEnabledChoice currentStep, List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet(),currentStep);
-    public void Travel(RecursiveEnabledChoice currentStep, List<TravelMethod> options = null) => ChangePanel(_travelMethodSelection, options?.Select(e => (int)e).ToHashSet(),currentStep);
-    public void WithDrawal(RecursiveEnabledChoice currentStep, List<WithdrawalType> options = null) => ChangePanel(_withdrawalSelection, options?.Select(e => (int)e).ToHashSet(),currentStep);
+    public void OnlineOrLive(RecursiveEnabledChoice currentStep, List<OnlineOrLive> options = null) => ChangePanel(_orderSelection, options?.Select(e => (int)e).ToHashSet(), currentStep);
+    public void Delay(RecursiveEnabledChoice currentStep, List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet(), currentStep);
+    public void Travel(RecursiveEnabledChoice currentStep, List<TravelMethod> options = null) => ChangePanel(_travelMethodSelection, options?.Select(e => (int)e).ToHashSet(), currentStep);
+    public void WithDrawal(RecursiveEnabledChoice currentStep, List<WithdrawalType> options = null) => ChangePanel(_withdrawalSelection, options?.Select(e => (int)e).ToHashSet(), currentStep);
     #region ButtonCallbacks
     public void SetWithdrawalType(int withdrawalType)
     {
@@ -155,13 +155,29 @@ public class Smartphone : MonoBehaviour, IDisplay
         switch (choice.Type)
         {
             case Choicetypes.OnlineOrLive: _display.OnlineOrLive(_missionManager.mission.Current, _missionManager.mission.GetOptions<OnlineOrLive>()); break;
-            case Choicetypes.TravelMethod: _display.Travel(_missionManager.mission.Current, _missionManager.mission.GetOptions<TravelMethod>()); break;
+            case Choicetypes.TravelMethod:
+                List<TravelMethod> options = _missionManager.mission.GetOptions<TravelMethod>();
+                foreach (var o in Enum.GetValues(typeof(TravelMethod)))
+                {
+                    var travel = Quest.FindID((TravelMethod)o) as TravelID;
+                    //We skip travel options that are not on map, tipically "walk" which is bu indirectly
+                    if (travel != null)
+                    {
+                        bool state = options.Contains(travel.Type);
+                        travel.ChangeState(state);
+                        if(state)
+                            travel.OnMissionStart();
+                    }
+                }
+                _display.Travel(_missionManager.mission.Current, options);
+
+                break;
             case Choicetypes.WithdrawalType: _display.WithDrawal(_missionManager.mission.Current, _missionManager.mission.GetOptions<WithdrawalType>()); break;
             case Choicetypes.DelayType: _display.Delay(_missionManager.mission.Current, _missionManager.mission.GetOptions<DelayType>()); break;
         }
     }
 
-    
+
     private void HandleEventRaised(int index)
     {
         Debug.Log("We don't operate any checks on the type on type of enum reicved, we consider we always get the correct one and process");
@@ -186,14 +202,14 @@ public class Smartphone : MonoBehaviour, IDisplay
         _currentPanel?.SetActive(false);
         _currentPanel = newPanel;
         TMP_Text[] allText = newPanel.GetComponentsInChildren<TMP_Text>();
-        allText[allText.Length - 1 ].text = currentStep.message;
+        allText[allText.Length - 1].text = currentStep.message;
         _currentPanel.SetActive(true);
         //Debug.Log(" Infos : " + currentStep.message);
         //We only display options that we want
         Transform parent = _currentPanel.transform.GetChild(0);
         for (int i = 0; i < parent.childCount; i++)
             //If options are null we consider we wan all options
-            parent.GetChild(i).gameObject.SetActive(options==null || options.Contains(i));     
+            parent.GetChild(i).gameObject.SetActive(options == null || options.Contains(i));
     }
-  
+
 }

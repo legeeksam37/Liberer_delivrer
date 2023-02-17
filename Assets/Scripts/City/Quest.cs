@@ -13,13 +13,16 @@ public class Quest : MonoBehaviour
     private void Start()
     {
         if (_autoFollowNextObjective)
+        {
             GameEvents.MissionStarted += (m) => callQuest(m.TargetedBuilding);
+            hide();
+        }
         //GameEvents.BuildingReached += (b) => Debug.Log("Building reached : " + b.Type);
         _sr = GetComponentInChildren<SpriteRenderer>();
-        hide();
     }
     public void Custom(Color color, Vector3 scale)
     {
+        _sr = GetComponentInChildren<SpriteRenderer>();
         _sr.color = color;
         transform.localScale = scale;
     }
@@ -47,11 +50,11 @@ public class Quest : MonoBehaviour
         Debug.Log(FindObjectsOfType<BuildingID>());
         try
         {
-            return FindObjectsOfType<IDBase<T>>().First(b => b.Type.CompareTo(target)==0);
+            return FindObjectsOfType<IDBase<T>>().First(b => b.Type.CompareTo(target) == 0);
         }
         catch (InvalidOperationException e)
         {
-            Debug.Log("With target : " + target + "not found, returning null thrown "+e.Message);
+            Debug.Log("With target : " + target + "not found, returning null thrown " + e.Message);
             return null;
         }
     }
