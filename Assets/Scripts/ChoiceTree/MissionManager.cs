@@ -43,6 +43,7 @@ public class MissionManager : Singleton<MissionManager>
             {
                 _display.Collapse();
                 GameEvents.ScenarioEnded?.Invoke((final.Message, final.Result));
+                GameEvents.GameEnded?.Invoke();
             }
             else
                 Debug.Log("Error happend in scenario processing, check upper messages");
@@ -58,18 +59,37 @@ public class MissionManager : Singleton<MissionManager>
             case Choicetypes.TravelMethod: _display.Travel(mission.Current, mission.GetOptions<TravelMethod>()); break;
             case Choicetypes.WithdrawalType: _display.WithDrawal(mission.Current, mission.GetOptions<WithdrawalType>()); break;
             case Choicetypes.DelayType: _display.Delay(mission.Current, mission.GetOptions<DelayType>()); break;
+            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.Current, Mission.GetOptions<OnlineOrLive>()); break;
+            case Choicetypes.TravelMethod:
+                List<TravelMethod> options = Mission.GetOptions<TravelMethod>();
+                foreach (var o in Enum.GetValues(typeof(TravelMethod)))
+                {
+                    var travel = Quest.FindID((TravelMethod)o) as TravelID;
+                    //We skip travel options that are not on map, tipically "walk" which is bu indirectly
+                    if (travel != null)
+                    {
+                        travel.ChangeState(options.Contains(travel.Type));
+                        travel.OnMissionStart();
+                    }
+                }
+                _display.Travel(Mission.Current, options);
+
+                break;
         }
     }
     private void HandleBuildingReached(BuildingID obj)
     {
         if (mission.TargetedBuilding == obj.Type)
         {
+            GameEvents.BuildingReached -= HandleBuildingReached;
             HandleEventRaised((int)TravelMethod.Walk);
             _cutscene.TravelCutscene(TravelMethod.Walk);
         }
+
     }
     private void HandleTravelReached(TravelID obj)
     {
+        GameEvents.TravelReached -= HandleTravelReached;
         HandleEventRaised((int)obj.Type);
     }
     void SetupPhoneDisplay()
