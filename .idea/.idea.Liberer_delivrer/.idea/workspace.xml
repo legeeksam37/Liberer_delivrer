@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
