@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     void OnGameEnded()
     {
-        _playerData.ScoreTotal = FindObjectOfType<ScoreManager>().Score;
+        _playerData.ScoreTotal = ScoreManager.GetInstance().Score;
         
         _playerData.MinutesPlayed = Time.realtimeSinceStartup - _gameStartTime;
         
