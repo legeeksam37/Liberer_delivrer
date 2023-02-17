@@ -81,14 +81,15 @@ public class MissionManager : MonoBehaviour
     {
         if (Mission.TargetedBuilding == obj.Type)
         {
+            GameEvents.BuildingReached -= HandleBuildingReached;
             HandleEventRaised((int)TravelMethod.Walk);
             _cutscene.TravelCutscene(TravelMethod.Walk);
-            GameEvents.BuildingReached -= HandleBuildingReached;
         }
 
     }
     private void HandleTravelReached(TravelID obj)
     {
+        GameEvents.TravelReached -= HandleTravelReached;
         HandleEventRaised((int)obj.Type);
     }
     private void Awake()
