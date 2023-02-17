@@ -48,6 +48,7 @@ public class CutsceneManager : MonoBehaviour
 
     public void Play(CutsceneType cutsceneType)
     {
+        Debug.LogError("Play cutscene " + cutsceneType);
         switch (cutsceneType)
         {
             case CutsceneType.Walk:

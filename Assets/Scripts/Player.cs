@@ -73,4 +73,10 @@ public class PlayerData
     public int ScoreTotal { get; set; }
     public Dictionary<string, List<string>> MissionChoices { get; set; } = new Dictionary<string, List<string>>();
     public float MinutesPlayed { get; set; }
+    [SerializeField] private GameObject _playerBag;
+ 
+     public void DisplayFurnitures(bool value)
+    {
+        _playerBag.SetActive(_playerBag);
+    }
 }
