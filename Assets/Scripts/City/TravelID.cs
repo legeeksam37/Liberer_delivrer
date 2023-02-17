@@ -17,9 +17,12 @@ public class TravelID : IDBase<TravelMethod>
     {
         GameEvents.TravelReached.Invoke(this);
     }
+
     private void OnValidate()
     {
+#if UNITY_EDITOR
         _markerPrefab = AssetDatabase.LoadAssetAtPath<Quest>("Assets/Prefabs/Quest.prefab");
-
+#endif
     }
+
 }

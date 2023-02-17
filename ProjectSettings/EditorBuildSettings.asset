@@ -13,14 +13,5 @@ EditorBuildSettings:
     guid: 1bca246bcc186a0419a0d1e2e21bb162
   - enabled: 1
     path: Assets/Scenes/Game.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Modular_Character_UI.unity
-    guid: 2cc3e848e61dc7b4eaf69c2d3ff272f7
-  - enabled: 1
-    path: Assets/Scenes/Joystick.unity
-    guid: 20c04c65bbf1a9543a8b10fc8ae86d92
-  - enabled: 1
-    path: Assets/Scenes/LevelDesignScene.unity
-    guid: 2b4e29a1088c1e740b9c6a9aef7f27f4
+    guid: 0723480a0c85b1147a36ae7adbc4c2ba
   m_configObjects: {}
