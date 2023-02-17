@@ -3,25 +3,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 /// <summary>
 /// Monobehaviour having references to all the mission, especially current one that you can get and cal AdvanceMission
 /// </summary>
-public class MissionManager : Singleton<MissionManager>
+public class MissionManager : MonoBehaviour
 {
-    public Mission mission; 
-    private IDisplay _display;
-    
+    [SerializeField] private Mission[] _missions;
+    [SerializeField, Range(0, 7)] private int _currentMissionIndex;
     [SerializeField] private CutsceneManager _cutscene;
-    public GameObject movableCharacter;
-
-    public delegate void MissionStarted();
-
-    public event MissionStarted OnMissionsStarted;
-    
+    private IDisplay _display;
+    public Mission Mission => _missions[_currentMissionIndex];
     private void OnValidate()
     {
         if (_cutscene == null)
@@ -29,20 +22,30 @@ public class MissionManager : Singleton<MissionManager>
         if (_cutscene == null)
             Debug.Log("Didn't find a CutsceneManager in scene, add one");
     }
-    
+    public int CurrentMissionIndex
+    {
+        set
+        {
+            _currentMissionIndex = value;
+            NewMission();
+        }
+        get { return _currentMissionIndex; }
+    }
     private void HandleEventRaised(int index)
     {
         Debug.Log("We don't operate any checks on the type on type of enum reicved, we consider we always get the correct one and process");
-        if (mission.ProcessSequenceAbsolute(index)){
+        if (Mission.ProcessSequenceAbsolute(index))
+        {
             UpdateDisplayByCurrentState();
         }
         else
         {
-            var final = mission.Current.choice as FinalNode;
+            var final = Mission.Current.choice as FinalNode;
             if (final != null)
             {
                 _display.Collapse();
                 GameEvents.ScenarioEnded?.Invoke((final.Message, final.Result));
+                GameEvents.GameEnded?.Invoke();
             }
             else
                 Debug.Log("Error happend in scenario processing, check upper messages");
@@ -51,28 +54,45 @@ public class MissionManager : Singleton<MissionManager>
 
     private void UpdateDisplayByCurrentState()
     {
-        var choice = mission.Current.choice as Choice;
+        var choice = Mission.Current.choice as Choice;
         switch (choice.Type)
         {
-            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(mission.Current, mission.GetOptions<OnlineOrLive>()); break;
-            case Choicetypes.TravelMethod: _display.Travel(mission.Current, mission.GetOptions<TravelMethod>()); break;
-            case Choicetypes.WithdrawalType: _display.WithDrawal(mission.Current, mission.GetOptions<WithdrawalType>()); break;
-            case Choicetypes.DelayType: _display.Delay(mission.Current, mission.GetOptions<DelayType>()); break;
+            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.Current, Mission.GetOptions<OnlineOrLive>()); break;
+            case Choicetypes.TravelMethod:
+                List<TravelMethod> options = Mission.GetOptions<TravelMethod>();
+                foreach (var o in Enum.GetValues(typeof(TravelMethod)))
+                {
+                    var travel = Quest.FindID((TravelMethod)o) as TravelID;
+                    //We skip travel options that are not on map, tipically "walk" which is bu indirectly
+                    if (travel != null)
+                    {
+                        travel.ChangeState(options.Contains(travel.Type));
+                        travel.OnMissionStart();
+                    }
+                }
+                _display.Travel(Mission.Current, options);
+
+                break;
+            case Choicetypes.WithdrawalType: _display.WithDrawal(Mission.Current, Mission.GetOptions<WithdrawalType>()); break;
+            case Choicetypes.DelayType: _display.Delay(Mission.Current, Mission.GetOptions<DelayType>()); break;
         }
     }
     private void HandleBuildingReached(BuildingID obj)
     {
-        if (mission.TargetedBuilding == obj.Type)
+        if (Mission.TargetedBuilding == obj.Type)
         {
+            GameEvents.BuildingReached -= HandleBuildingReached;
             HandleEventRaised((int)TravelMethod.Walk);
             _cutscene.TravelCutscene(TravelMethod.Walk);
         }
+
     }
     private void HandleTravelReached(TravelID obj)
     {
+        GameEvents.TravelReached -= HandleTravelReached;
         HandleEventRaised((int)obj.Type);
     }
-    void SetupPhoneDisplay()
+    private void Awake()
     {
         //Find an IDisplay implementaiton in scene and use it
         FindObjectsOfType<MonoBehaviour>().FirstOrDefault(go => go.TryGetComponent<IDisplay>(out _display));
@@ -100,17 +120,27 @@ public class MissionManager : Singleton<MissionManager>
     }
 
 
-    
-
-    
-    
-    public void NewMission()
+    private void Start()
     {
-        mission.Init();
-        ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Game);
-        OnMissionsStarted?.Invoke();
-        GameEvents.MissionStarted?.Invoke(mission);
-        //UpdateDisplayByCurrentState();
+        NewMission();
     }
 
+    private void NewMission()
+    {
+        Mission.Init();
+        UpdateDisplayByCurrentState();
+        GameEvents.MissionStarted.Invoke(Mission);
+    }
+
+    private void Update()
+    {
+        /* if (false && Input.GetMouseButtonDown(0))
+         {
+             Mission.ProcessSequenceRandom();
+         }
+         if (Input.GetKeyDown(KeyCode.L))
+         {
+             CurrentMissionIndex++;
+         }*/
+    }
 }

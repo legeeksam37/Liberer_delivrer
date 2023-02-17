@@ -15,5 +15,5 @@ public abstract class IDBase : MonoBehaviour
     [SerializeField]
     private Transform _transformOverride;
     public Transform TransformOverride => _transformOverride == null ? transform : _transformOverride;
-    public abstract void OnTriggerEnter2D(Collider2D collision);
+    public abstract void OnTrigger();
 }
