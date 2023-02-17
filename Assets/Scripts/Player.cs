@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         var userId = PlayerPrefs.GetString("userEntityId");
 
         if (string.IsNullOrWhiteSpace(userId))
-            Debug.LogError("Online user has not been created.");
+            throw new Exception("User has not been created.");
         
         OnFacet<GameDataFacet>.Call(nameof(GameDataFacet.Create), userId, _playerData.ScoreTotal, _playerData.MissionChoices, _playerData.MinutesPlayed).Done();
     }
@@ -73,10 +73,4 @@ public class PlayerData
     public int ScoreTotal { get; set; }
     public Dictionary<string, List<string>> MissionChoices { get; set; } = new Dictionary<string, List<string>>();
     public float MinutesPlayed { get; set; }
-    [SerializeField] private GameObject _playerBag;
- 
-     public void DisplayFurnitures(bool value)
-    {
-        _playerBag.SetActive(_playerBag);
-    }
 }

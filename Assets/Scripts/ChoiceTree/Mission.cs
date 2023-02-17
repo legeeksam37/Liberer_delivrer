@@ -75,14 +75,13 @@ public class Mission : ScriptableObject
         {
             Debug.LogError("Negative branch index, check call");
             return false;
-        }else if (branchIndex >= choices.Count)
+        }
+        if (branchIndex >= choices.Count)
         {
-            if (choices.Count==0)
-                Debug.Log("We 're at a leaf");
-            else
-                Debug.LogError(branchIndex + "higher than list size, list being : " + string.Join(';', choices.Select(c => c.choice.name)));
+            Debug.LogError(branchIndex + "higher than list size, list being (if empty, mean we're at a leaf): " + string.Join(';', choices.Select(c => c.choice.name)));
             return false;
-        }else if (!choices[branchIndex].enabled)
+        }
+        if (!choices[branchIndex].enabled)
         {
             Debug.LogError("Branch disabled in mission definition, weird things will happen from now, we're off track");
             return false;
@@ -100,7 +99,7 @@ public class Mission : ScriptableObject
             return false;
         }
     }
-        public List<T> GetOptions<T>() where T : Enum
+    public List<T> GetOptions<T>() where T : Enum
     {
         var options = new List<T>();
         int i = 0;

@@ -1,44 +1,27 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
 
 public class Cutscene : MonoBehaviour
 {
     const float CUTSCENE_DURATION = 3f;
     
     [SerializeField] CanvasGroup _canvasGroup;
-    [SerializeField] TimelineAsset _timelineAsset;
+    [SerializeField] Animator _animator;
+    [SerializeField] string _animName;
     
-
     [field: SerializeField] public CutsceneType Type { get; private set; }
     
     public static Action<Cutscene> CutsceneStarted;
     public static Action<Cutscene> CutsceneEnded;
 
-    private Player _player;
-    private JoystickControls _joystickControlsPlayer;
-    private PlayableDirector _playableDirector;
-
-    private void Start()
-    {
-        _player = FindObjectOfType<Player>();
-        if(_player)
-            _joystickControlsPlayer = _player.GetComponent<JoystickControls>();
-        else
-            Debug.LogError("No JoystickControls on player");
-        _playableDirector = GetComponent<PlayableDirector>();
-        _canvasGroup.alpha = 0f;
-    }
-
     public IEnumerator Play()
     {
         CutsceneStarted?.Invoke(this);
-        //Set up the cinematic
-        _playableDirector.playableAsset = _timelineAsset;
 
+        _animator.enabled = true;
+        _animator.Play(_animName);
+        
         var timer = 0f;
 
         while (timer < CUTSCENE_DURATION * 0.2f)
@@ -49,9 +32,8 @@ public class Cutscene : MonoBehaviour
         }
 
         _canvasGroup.alpha = 1f;
-        _playableDirector.Play();
-        
-        yield return new WaitForSeconds((float) _timelineAsset.duration);
+
+        yield return new WaitForSeconds(CUTSCENE_DURATION * 0.6f);
 
         timer = 0f;
         
@@ -63,7 +45,8 @@ public class Cutscene : MonoBehaviour
         }
 
         _canvasGroup.alpha = 0f;
-        
+
+        _animator.enabled = false;
         
         CutsceneEnded?.Invoke(this);
     }

@@ -13,12 +13,12 @@ public class TriggerForwarder : MonoBehaviour
         if (!collision.gameObject.CompareTag("Player"))
             return;
         foreach (IDBase target in _target)
-            target.OnTrigger();
+            target.OnTriggerEnter2D(collision);
     }
     private void OnValidate()
     {
 
-        _target = new List<IDBase>(GetComponentsInParent<IDBase>()).ToArray();
+        _target = new List<IDBase>(GetComponentsInParent<IDBase>());
         if (!TryGetComponent<Collider2D>(out Collider2D coll) || !coll.isTrigger)
             Debug.LogError("Collider missing or not trigger on object");
     }
