@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/shelf/Changes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BuildingsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BuildingsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MissionManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MissionManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Courses pour la semaine/MissionCoursesSemaine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Courses pour la semaine/MissionCoursesSemaine.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/City/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/City/Quest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/City/TravelID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/City/TravelID.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Backend/Facets/LeaderboardFacet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ZoomInOut.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -125,7 +117,7 @@
       <workItem from="1676386543708" duration="3891000" />
       <workItem from="1676390601292" duration="55000" />
       <workItem from="1676448225551" duration="1007000" />
-      <workItem from="1676619230943" duration="7328000" />
+      <workItem from="1676619230943" duration="9735000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Smartphone, transport cutscenes">
       <created>1676369788816</created>
