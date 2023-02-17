@@ -3,8 +3,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 /// <summary>
@@ -21,7 +23,12 @@ public class MissionManager : Singleton<MissionManager>
     public delegate void MissionStarted();
 
     public event MissionStarted OnMissionsStarted;
-    
+
+    private void Start()
+    {
+        SceneManager.sceneLoaded += (scene, mode) => StartMission();
+    }
+
     private void OnValidate()
     {
         if(_cutscene==null)
@@ -88,11 +95,17 @@ public class MissionManager : Singleton<MissionManager>
     
     public void NewMission()
     {
-        mission.Init();
+
         ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Game);
         CanvasManager.GetInstance().SwitchCanvas(CanvasType.InGameMenu);
-        GameEvents.MissionStarted?.Invoke(mission);
+        //SetupPhoneDisplay();
+        mission.Init();
         OnMissionsStarted?.Invoke();
+    }
+
+    private void StartMission()
+    {
+        GameEvents.MissionStarted?.Invoke(mission);
     }
 
 }

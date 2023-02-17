@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class BuildingsManager : Singleton<BuildingsManager>
 {
-    public List<BuildingID> Buildings;
+    public BuildingID[] buildings;
 }

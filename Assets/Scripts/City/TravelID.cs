@@ -7,8 +7,9 @@ public class TravelID : IDBase<TravelMethod>
 {
     [SerializeField]
     private Quest _markerPrefab;
-    private void Awake()
+    private void OnEnable()
     {
+        Debug.Log("fdbinfnoisvdxf");
         _markerPrefab = Instantiate(_markerPrefab, transform);
         _markerPrefab.Custom(Quest.secondaryColor, .5f * Vector3.one);
         GameEvents.MissionStarted += (m) => _markerPrefab.callQuest(this);

@@ -2,59 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/shelf/Changes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharMov/JoystickControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharMov/JoystickControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_10.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_10.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_11.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_11.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_6.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_6.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_7.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_7.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_8.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_8.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_9.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/Frames/Tilemap-TenueClasse_9.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Down.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Down.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Up.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Idle_Up.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Down.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Down.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Up.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerClasseM/PlayerCM_Walk_Up.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerVanilla/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerVanilla/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerVanilla/Player_Walk_Down.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Animation/Player/PlayerVanilla/Player_Walk_Down.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse_F.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueClasse_F.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract_F.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Palettes/Tilemap-TenueDecontract_F.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BuildingsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BuildingsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MissionManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MissionManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerClasseF.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerClasseF.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerClasseM.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerClasseM.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDecontractF.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDecontractF.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDecontractM.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDecontractM.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerVanilla.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerVanilla.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HomePage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Courses pour la semaine/MissionCoursesSemaine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Courses pour la semaine/MissionCoursesSemaine.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/CanvasManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/MenuOpenClose.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/MenuOpenClose.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/City/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/City/Quest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/City/TravelID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/City/TravelID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unisave/Resources/UnisavePreferencesFile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +125,7 @@
       <workItem from="1676386543708" duration="3891000" />
       <workItem from="1676390601292" duration="55000" />
       <workItem from="1676448225551" duration="1007000" />
-      <workItem from="1676619230943" duration="1070000" />
+      <workItem from="1676619230943" duration="7328000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Smartphone, transport cutscenes">
       <created>1676369788816</created>

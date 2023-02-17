@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Quest : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class Quest : MonoBehaviour
     private bool _autoFollowNextObjective;
     private SpriteRenderer _sr;
     public static Color secondaryColor = new Color(35 / 255f, 241 / 255f, 0f);
-    private void Awake()
+    private void Start()
     {
         if (_autoFollowNextObjective)
             GameEvents.MissionStarted += (m) => callQuest(m.TargetedBuilding);
@@ -29,13 +31,14 @@ public class Quest : MonoBehaviour
     public void callQuest(IDBase building)
     {
         gameObject.SetActive(true);
+        Debug.Log("NIQUE");
         transform.parent = building.TransformOverride;
         transform.localPosition = Vector3.zero;
         transform.position = building.TransformOverride.position;
     }
     public void callQuest(BuildingType target)
     {
-        BuildingID building = BuildingsManager.GetInstance().Buildings.First(b => b.Type == target);
+        BuildingID building = BuildingsManager.GetInstance().buildings.First(b => b.Type == target);
         callQuest(building);
 
     }
