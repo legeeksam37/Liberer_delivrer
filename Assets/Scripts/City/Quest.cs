@@ -12,7 +12,7 @@ public class Quest : MonoBehaviour
     public static Color secondaryColor = new Color(35 / 255f, 241 / 255f, 0f);
     private void Start()
     {
-        if (_autoFollowNextObjective)
+        if (_autoFollowNextObjective && SceneManager.GetActiveScene().name == "Game")
             GameEvents.MissionStarted += (m) => callQuest(m.TargetedBuilding);
         GameEvents.BuildingReached += (b) => Debug.Log("Building reached : " + b.Type);
         _sr = GetComponentInChildren<SpriteRenderer>();

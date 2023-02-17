@@ -49,7 +49,6 @@ public class Smartphone : MonoBehaviour, IDisplay
     void Start()
     {
         MissionManager.GetInstance().OnMissionsStarted += Expand;
-
     }
 
     private void OnDestroy()

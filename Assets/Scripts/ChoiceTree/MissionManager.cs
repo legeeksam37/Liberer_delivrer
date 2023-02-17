@@ -26,7 +26,7 @@ public class MissionManager : Singleton<MissionManager>
 
     private void Start()
     {
-        SceneManager.sceneLoaded += (scene, mode) => StartMission();
+        SceneManager.sceneLoaded += (scene, mode) => StartMission(SceneManager.GetActiveScene());
     }
 
     private void OnValidate()
@@ -103,9 +103,11 @@ public class MissionManager : Singleton<MissionManager>
         OnMissionsStarted?.Invoke();
     }
 
-    private void StartMission()
+    private void StartMission(Scene scene)
     {
-        GameEvents.MissionStarted?.Invoke(mission);
+        if(scene.name == "Game")
+        {
+            GameEvents.MissionStarted?.Invoke(mission);
+        } 
     }
-
 }
