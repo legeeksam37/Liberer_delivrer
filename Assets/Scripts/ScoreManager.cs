@@ -12,6 +12,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Singleton;
     public int Score => _scoreEnv + _scoreSoc;
     
+    public Action<int> ScoreUpdated { get; set; }
+    
     void Start()
     {
         if (!Singleton)
@@ -36,6 +38,8 @@ public class ScoreManager : MonoBehaviour
     {
         _scoreEnv += tuple.result.ScoreEnvironmental;
         _scoreSoc += tuple.result.ScoreSocial;
+
+        ScoreUpdated?.Invoke(Score);
     }
 
     [ContextMenu("Persist")]

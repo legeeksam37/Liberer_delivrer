@@ -16,7 +16,7 @@ public class BirdSpawner : MonoBehaviour
         Collider2D c = GetComponent<Collider2D>();
         min = c.bounds.min;
         max = c.bounds.max;
-        GameEvents.ScenarioEnded += RefreshSpawnRate;
+        ScoreManager.Singleton.ScoreUpdated += OnScoreUpdated;
         RefreshSpawnRate();
     }
 
@@ -48,7 +48,7 @@ public class BirdSpawner : MonoBehaviour
             spawnDelay = 10 / (float)score;
         currDelay = spawnDelay;
     }
-    public void RefreshSpawnRate((string message, Result result) tuple)
+    void OnScoreUpdated(int newScore)
     {
         RefreshSpawnRate();
     }

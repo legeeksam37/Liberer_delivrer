@@ -17,7 +17,7 @@ public class PollutionSpawner : MonoBehaviour
         min = c.bounds.min;
         max = c.bounds.max; 
         RefreshSpawnRate();
-        GameEvents.ScenarioEnded += RefreshSpawnRate;
+        ScoreManager.Singleton.ScoreUpdated += OnScoreUpdated;
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class PollutionSpawner : MonoBehaviour
         currDelay = spawnDelay;
     }
 
-    public void RefreshSpawnRate((string message, Result result) tuple)
+    void OnScoreUpdated(int newScore)
     {
         RefreshSpawnRate();
     }

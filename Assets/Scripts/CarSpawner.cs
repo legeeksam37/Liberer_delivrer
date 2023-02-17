@@ -17,7 +17,7 @@ public class CarSpawner : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
             spawnPoint[i] = transform.GetChild(i);
         RefreshSpawnRate();
-        GameEvents.ScenarioEnded += RefreshSpawnRate;
+        ScoreManager.Singleton.ScoreUpdated += OnScoreUpdated;
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class CarSpawner : MonoBehaviour
     }
 
 
-    public void RefreshSpawnRate((string message, Result result) tuple)
+    void OnScoreUpdated(int newScore)
     {
         RefreshSpawnRate();
     }

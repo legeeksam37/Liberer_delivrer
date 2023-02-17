@@ -8,24 +8,19 @@ public class BuildingSpot : MonoBehaviour
     [SerializeField] private int SocialLimit = 0;
     [SerializeField] private GameObject UnderLimit;
     [SerializeField] private GameObject OverLimit;
-    // Start is called before the first frame update
+
     void Start()
     {
         CheckScore();
-        GameEvents.ScenarioEnded += CheckScore;
+        ScoreManager.Singleton.ScoreUpdated += OnScoreUpdated;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void CheckScore((string message, Result result) tuple)
+    void OnScoreUpdated(int newScore)
     {
         CheckScore();
     }
 
-    public void CheckScore()
+    void CheckScore()
     {
         if(ScoreManager.Singleton._scoreSoc<SocialLimit)
         {
