@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
+using ScenarioStructures;
 using TMPro;
 
 
@@ -19,6 +21,18 @@ public class DialogueManager : MonoBehaviour
         startDialogue();
 
     }
+
+    private void Awake()
+    {
+        GameEvents.ScenarioEnded += dialogue;
+    }
+
+    public void dialogue((string message, Result) t)
+    {
+        textComponent.text = string.Empty;
+        startDialogue();
+    }
+
 
     // Update is called once per frame
     void Update()
