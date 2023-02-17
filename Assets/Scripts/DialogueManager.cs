@@ -13,22 +13,23 @@ public class DialogueManager : MonoBehaviour
     public string[] lines;
     private float textSpeed = 0.1f;
     private int index;
-    
-        // Start is called before the first frame update
+
+    // Start is called before the first frame update
     void Start()
     {
-        textComponent.text = string.Empty;
-        startDialogue();
+        //startDialogue();
 
     }
 
     private void Awake()
     {
         GameEvents.ScenarioEnded += dialogue;
+        gameObject.SetActive(false);
     }
 
-    public void dialogue((string message, Result) t)
+    public void dialogue((string message, Result) tuple)
     {
+        lines = tuple.message.Split('\n');
         textComponent.text = string.Empty;
         startDialogue();
     }
@@ -37,34 +38,46 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
-            if(textComponent.text == lines[index]){
+            if (textComponent.text == lines[index])
+            {
                 NextLine();
-            }else 
+            }
+            else
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
-        }
-
+        }*/
     }
 
-    void startDialogue(){
+    void startDialogue()
+    {
+        gameObject.SetActive(true);
+        textComponent.text = string.Empty;
         index = 0;
         StartCoroutine(TypeLine());
     }
 
-    IEnumerator TypeLine(){
-        foreach(char c in lines[index].ToCharArray()){
-            textComponent.text +=c;
-            yield return new WaitForSeconds(textSpeed);
+    IEnumerator TypeLine()
+    {
+        for (int index = 0; index < lines.Length; index++)
+        {
+            foreach (char c in lines[index].ToCharArray())
+            {
+                textComponent.text += c;
+                yield return new WaitForSeconds(textSpeed);
+            }
+            yield return new WaitForSeconds(.5f);
         }
     }
 
 
-    void NextLine(){
-        if(index < lines.Length - 1){
+    void NextLine()
+    {
+        if (index < lines.Length - 1)
+        {
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
@@ -72,6 +85,6 @@ public class DialogueManager : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-       }
+        }
     }
 }

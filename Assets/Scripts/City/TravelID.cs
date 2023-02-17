@@ -21,7 +21,7 @@ public class TravelID : IDBase<TravelMethod>
         _markerPrefab.gameObject.SetActive(state);
         GetComponentInChildren<Collider2D>().enabled = state;
     }
-    public override void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTrigger()
     {
         GameEvents.TravelReached.Invoke(this);
     }

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEditor.Build.Content;
 using UnityEngine;
 
-public class Test_ColeeAnim : MonoBehaviour
+public class ColeeManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Animator>().SetTrigger("AnimStart");
+        //GetComponent<Animator>().SetTrigger("AnimStart");
     }
 
     private void Awake()
@@ -20,12 +20,5 @@ public class Test_ColeeAnim : MonoBehaviour
     public void colee((string message,Result) t)
     {
          GetComponent<Animator>().SetTrigger("AnimStart");
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

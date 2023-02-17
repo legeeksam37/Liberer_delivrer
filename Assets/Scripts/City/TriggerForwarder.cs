@@ -13,7 +13,7 @@ public class TriggerForwarder : MonoBehaviour
         if (!collision.gameObject.CompareTag("Player"))
             return;
         foreach (IDBase target in _target)
-            target.OnTriggerEnter2D(collision);
+            target.OnTrigger();
     }
     private void OnValidate()
     {

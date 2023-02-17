@@ -1808,6 +1808,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744005731960864863, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 74.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 744005731960864863, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.73
+      objectReference: {fileID: 0}
     - target: {fileID: 3517531080162337859, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: _busCutscene
       value: 
@@ -1832,6 +1840,14 @@ PrefabInstance:
       propertyPath: _deliveryCutscene
       value: 
       objectReference: {fileID: 936162371}
+    - target: {fileID: 3766577534897406032, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766577534897406032, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1735702755
+      objectReference: {fileID: 0}
     - target: {fileID: 5318871842542851553, guid: 2bbc7842d040b194a9e3eedf8a4c6426, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -25482,6 +25498,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 656703403}
     m_Modifications:
+    - target: {fileID: 880795192848750699, guid: fed49ebecc0e835448836f84d6a09ed1, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3196459875543450461, guid: fed49ebecc0e835448836f84d6a09ed1, type: 3}
       propertyPath: m_RootOrder
       value: 3
