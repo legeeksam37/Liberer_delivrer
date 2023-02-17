@@ -41,7 +41,7 @@ public class PollutionSpawner : MonoBehaviour
 
     public void RefreshSpawnRate()
     {
-        int score = ScoreManager.Singleton._scoreEnv;
+        int score = ScoreManager.GetInstance()._scoreEnv;
         if (score >= 0)
             spawnDelay = float.MaxValue;
         else

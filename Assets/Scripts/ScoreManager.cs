@@ -4,27 +4,19 @@ using Unisave.Facades;
 using UnityEngine;
 
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : Singleton<ScoreManager>
 {
     [SerializeField] bool update = false;
     public int _scoreEnv;
     public int _scoreSoc;
 
-    public static ScoreManager Singleton;
     public int Score => _scoreEnv + _scoreSoc;
     
-    void Awake()
-    {
-        if (!Singleton)
-            Singleton = this;
-        else
-            Destroy(this);
-        DontDestroyOnLoad(this);
-        retrieve();
-    }
+
 
     void OnEnable()
     {
+        retrieve();
         GameEvents.ScenarioEnded += OnScenarioEnded;
     }
 

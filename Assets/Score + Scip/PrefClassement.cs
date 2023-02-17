@@ -21,7 +21,7 @@ public class PrefClassement : MonoBehaviour
         name.text = names;
         score.text = "score : " + scoring;
 
-        FindObjectOfType<ScoreManager>().GetPercentileRanking(int.Parse(scoring), percentile =>
+        ScoreManager.GetInstance().GetPercentileRanking(int.Parse(scoring), percentile =>
         {
             pourcentage.enabled = true;
             pourcentage.text = $"{percentile}%";

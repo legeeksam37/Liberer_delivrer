@@ -27,7 +27,7 @@ public class BuildingSpot : MonoBehaviour
 
     public void CheckScore()
     {
-        if(ScoreManager.Singleton._scoreSoc<SocialLimit)
+        if(ScoreManager.GetInstance()._scoreSoc<SocialLimit)
         {
             UnderLimit.SetActive(true);
             OverLimit.SetActive(false);

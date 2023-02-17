@@ -41,11 +41,11 @@ public class BirdSpawner : MonoBehaviour
 
     public void RefreshSpawnRate()
     {
-        int score = ScoreManager.Singleton._scoreEnv;
-        if (score <= 0)
+        int score = ScoreManager.GetInstance()._scoreEnv;
+        if (score >= 10)
             spawnDelay = float.MaxValue;
         else
-            spawnDelay = 10 / (float)score;
+            spawnDelay = Mathf.Clamp(Mathf.Exp(score / 10), 0.4f, 4);
         currDelay = spawnDelay;
     }
 
