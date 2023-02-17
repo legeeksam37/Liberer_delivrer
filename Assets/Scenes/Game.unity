@@ -4300,6 +4300,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10.586482
       objectReference: {fileID: 0}
+    - target: {fileID: 3233020165595876152, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: playerSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4114582053349650997, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -43.54309
