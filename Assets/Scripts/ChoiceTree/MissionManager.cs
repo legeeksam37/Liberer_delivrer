@@ -56,12 +56,10 @@ public class MissionManager : Singleton<MissionManager>
         switch (choice.Type)
         {
             case Choicetypes.OnlineOrLive: _display.OnlineOrLive(mission.Current, mission.GetOptions<OnlineOrLive>()); break;
-            case Choicetypes.TravelMethod: _display.Travel(mission.Current, mission.GetOptions<TravelMethod>()); break;
             case Choicetypes.WithdrawalType: _display.WithDrawal(mission.Current, mission.GetOptions<WithdrawalType>()); break;
             case Choicetypes.DelayType: _display.Delay(mission.Current, mission.GetOptions<DelayType>()); break;
-            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.Current, Mission.GetOptions<OnlineOrLive>()); break;
             case Choicetypes.TravelMethod:
-                List<TravelMethod> options = Mission.GetOptions<TravelMethod>();
+                List<TravelMethod> options = mission.GetOptions<TravelMethod>();
                 foreach (var o in Enum.GetValues(typeof(TravelMethod)))
                 {
                     var travel = Quest.FindID((TravelMethod)o) as TravelID;
@@ -72,7 +70,7 @@ public class MissionManager : Singleton<MissionManager>
                         travel.OnMissionStart();
                     }
                 }
-                _display.Travel(Mission.Current, options);
+                _display.Travel(mission.Current, options);
 
                 break;
         }

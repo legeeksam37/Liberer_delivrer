@@ -18,7 +18,7 @@ public class TriggerForwarder : MonoBehaviour
     private void OnValidate()
     {
 
-        _target = new List<IDBase>(GetComponentsInParent<IDBase>()).ToArray();
+        _target = new List<IDBase>(GetComponentsInParent<IDBase>());
         if (!TryGetComponent<Collider2D>(out Collider2D coll) || !coll.isTrigger)
             Debug.LogError("Collider missing or not trigger on object");
     }

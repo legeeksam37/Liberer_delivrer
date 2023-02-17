@@ -25,7 +25,6 @@ public class JoystickControls : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        controller = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
 
         playerRgbd = GetComponent<Rigidbody2D>();
@@ -38,7 +37,7 @@ public class JoystickControls : MonoBehaviour
         Vector2 input = playerInput.actions["Move"].ReadValue<Vector2>();
         Vector2 move = new Vector3(input.x, input.y, 0);
         
-        controller.MovePosition(controller.position + playerSpeed * Time.deltaTime * move);
+        playerRgbd.MovePosition(playerRgbd.position + playerSpeed * Time.deltaTime * move);
 
         if (input.x != 0f)
         {
