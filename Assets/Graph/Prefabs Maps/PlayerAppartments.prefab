@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1061578572236639516}
   - component: {fileID: 1061578572236639517}
   - component: {fileID: 1061578572236639518}
+  - component: {fileID: 8471419593121038138}
   m_Layer: 0
   m_Name: PlayerAppartments
   m_TagString: Untagged
@@ -107,6 +108,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: -1
   _transformOverride: {fileID: 576649275}
+--- !u!114 &8471419593121038138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061578572236639515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5ee8ee490af514280bf2dc39e0cd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SocialLimit: -3
+  UnderLimit: {fileID: 4619560978650460104}
+  OverLimit: {fileID: 7965365144595239472}
 --- !u!1 &4619560978606864640
 GameObject:
   m_ObjectHideFlags: 0

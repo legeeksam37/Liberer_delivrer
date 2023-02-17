@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScenarioStructures;
 using UnityEngine;
 
 public class CarSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] toSpawn;
+    [SerializeField] private float spawnDelay = 1f;
+    [SerializeField] private GameObject[] toSpawn;
     private Transform[] spawnPoint;
+    float currDelay = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -14,13 +16,19 @@ public class CarSpawner : MonoBehaviour
         spawnPoint= new Transform[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
             spawnPoint[i] = transform.GetChild(i);
-        Invoke("SpawnCar",0);
+        RefreshSpawnRate();
+        GameEvents.ScenarioEnded += RefreshSpawnRate;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        currDelay -= Time.deltaTime;
+        if (currDelay <= 0)
+        {
+            SpawnCar();
+            currDelay += spawnDelay;
+        }
     }
 
     public void SpawnCar()
@@ -29,7 +37,22 @@ public class CarSpawner : MonoBehaviour
         GameObject g = Instantiate(toSpawn[Random.Range(0, toSpawn.Length)], spawnPoint[rand]);
         CarBehaviour c = g.GetComponent<CarBehaviour>();
         c.ChangeDir(spawnPoint[rand].GetComponent<CarSpawnPoint>().dir);
-
-        Invoke("SpawnCar",1);
     }
+
+    public void RefreshSpawnRate()
+    {
+        int score = ScoreManager.Singleton._scoreEnv;
+        if (score >= 0)
+            spawnDelay = float.MaxValue;
+        else
+            spawnDelay = 10 / (float)-score;
+        currDelay = spawnDelay;
+    }
+
+
+    public void RefreshSpawnRate((string message, Result result) tuple)
+    {
+        RefreshSpawnRate();
+    }
+
 }
