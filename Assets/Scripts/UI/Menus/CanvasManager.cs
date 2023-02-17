@@ -8,7 +8,8 @@ public enum CanvasType
     Menu,
     Personalize,
     Stats,
-    Missions
+    Missions,
+    InGameMenu
     //...
 }
 

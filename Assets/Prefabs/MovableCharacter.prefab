@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 4944560138919696058}
     - target: {fileID: 7512960246468633471, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
       propertyPath: playerSpeed
-      value: 0.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8276883273886363706, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -356,3 +356,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868dc805e74bbd44ea0b39715f0cb45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefabSkin: {fileID: 0}

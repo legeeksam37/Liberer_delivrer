@@ -44,8 +44,6 @@ public class JoystickControls : MonoBehaviour
         _animator.SetFloat("MoveX", input.x);
         _animator.SetFloat("MoveY", input.y);
         
-        _animator.SetFloat("Speed", move.magnitude);
-        
         if (image != null)
         {
             if (input.x > 0.2f || input.x < -0.2f || input.y > 0.2f || input.y < -0.2f)

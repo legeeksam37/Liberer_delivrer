@@ -90,6 +90,7 @@ public class MissionManager : Singleton<MissionManager>
     {
         mission.Init();
         ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Game);
+        CanvasManager.GetInstance().SwitchCanvas(CanvasType.InGameMenu);
         GameEvents.MissionStarted?.Invoke(mission);
         OnMissionsStarted?.Invoke();
     }
