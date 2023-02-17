@@ -12,7 +12,7 @@ public class Quest : MonoBehaviour
     public static Color secondaryColor = new Color(35 / 255f, 241 / 255f, 0f);
     private void Start()
     {
-        if (_autoFollowNextObjective && SceneManager.GetActiveScene().name == "Game")
+        if (_autoFollowNextObjective)
             GameEvents.MissionStarted += (m) => callQuest(m.TargetedBuilding);
         GameEvents.BuildingReached += (b) => Debug.Log("Building reached : " + b.Type);
         _sr = GetComponentInChildren<SpriteRenderer>();
@@ -31,7 +31,6 @@ public class Quest : MonoBehaviour
     public void callQuest(IDBase building)
     {
         gameObject.SetActive(true);
-        Debug.Log("NIQUE");
         transform.parent = building.TransformOverride;
         transform.localPosition = Vector3.zero;
         transform.position = building.TransformOverride.position;

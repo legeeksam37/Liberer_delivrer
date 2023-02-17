@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1d5bf4-e41a-47e6-8540-77e382a0d465" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Liberer_delivrer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graph/Prefabs Maps/Animated/Cloud.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graph/Prefabs Maps/Animated/Cloud.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MovableCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChoiceTree/MissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/City/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/City/Quest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/City/TravelID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/City/TravelID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Smartphone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Smartphone.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +121,7 @@
       <workItem from="1676386543708" duration="3891000" />
       <workItem from="1676390601292" duration="55000" />
       <workItem from="1676448225551" duration="1007000" />
-      <workItem from="1676619230943" duration="9735000" />
+      <workItem from="1676619230943" duration="11969000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Smartphone, transport cutscenes">
       <created>1676369788816</created>

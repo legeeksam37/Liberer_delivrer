@@ -9,7 +9,6 @@ public class TravelID : IDBase<TravelMethod>
     private Quest _markerPrefab;
     private void OnEnable()
     {
-        Debug.Log("fdbinfnoisvdxf");
         _markerPrefab = Instantiate(_markerPrefab, transform);
         Debug.Log(_markerPrefab);
         //_markerPrefab.Custom(Quest.secondaryColor, .5f * Vector3.one);
