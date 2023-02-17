@@ -9,6 +9,8 @@ public class JoystickControls : MonoBehaviour
     PlayerInput playerInput;
     private Rigidbody2D playerRgbd;
     private Vector3 playerVelocity;
+    private Animator playerAnimator;
+    private Rigidbody2D controller;
     [SerializeField,Range(.1f,5f)]
     private float playerSpeed=.5f;
 
