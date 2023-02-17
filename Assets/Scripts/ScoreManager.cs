@@ -6,10 +6,20 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    int _scoreEnv;
-    int _scoreSoc;
+    public int _scoreEnv;
+    public int _scoreSoc;
 
+    public static ScoreManager Singleton;
     public int Score => _scoreEnv + _scoreSoc;
+    
+    void Start()
+    {
+        if (!Singleton)
+            Singleton = this;
+        else
+            Destroy(this);
+        DontDestroyOnLoad(this);
+    }
 
     void OnEnable()
     {
@@ -37,7 +47,18 @@ public class ScoreManager : MonoBehaviour
             .Done();
     }
 
-    void GetPercentileRanking(Action<int> onCompleted)
+    public void GetPercentileRanking(int score, Action<int> onCompleted)
+    {
+        OnFacet<LeaderboardFacet>
+            .Call<int>(
+                nameof(LeaderboardFacet.GetPercentileRanking),
+                score
+            )
+            .Then(onCompleted)
+            .Done();
+    }
+    
+    public void GetPercentileRanking(Action<int> onCompleted)
     {
         OnFacet<LeaderboardFacet>
             .Call<int>(

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1958374426699823749}
   - component: {fileID: 1958374426699823750}
   - component: {fileID: -1572315266504811110}
+  - component: {fileID: 9028400395901001371}
   m_Layer: 0
   m_Name: BigLibrary 1
   m_TagString: Untagged
@@ -115,6 +116,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _transformOverride: {fileID: 838038650}
+--- !u!114 &9028400395901001371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958374426699823748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5ee8ee490af514280bf2dc39e0cd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SocialLimit: 6
+  UnderLimit: {fileID: 7855352827829369843}
+  OverLimit: {fileID: 1958374426625940258}
 --- !u!1001 &2039881409789217798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4488,6 +4504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac0bebb3e4104b408016a0b76379be4, type: 3}
+--- !u!1 &1958374426625940258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 532153181851309860, guid: 0ac0bebb3e4104b408016a0b76379be4, type: 3}
+  m_PrefabInstance: {fileID: 2039881409789217798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1958374426625940259 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 532153181851309861, guid: 0ac0bebb3e4104b408016a0b76379be4, type: 3}
@@ -9119,6 +9140,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4128913632785889752, guid: d218863a376b57c45a156c8b4a2ca320, type: 3}
   m_PrefabInstance: {fileID: 6075084136460665386}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7855352827829369843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4128913632785889753, guid: d218863a376b57c45a156c8b4a2ca320, type: 3}
+  m_PrefabInstance: {fileID: 6075084136460665386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7733390575874103020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9126,6 +9152,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1958374426699823749}
     m_Modifications:
+    - target: {fileID: -3509310810915272978, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: -1572315266504811110}
     - target: {fileID: 3093101587072206506, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
       propertyPath: m_Name
       value: TriggerQuest

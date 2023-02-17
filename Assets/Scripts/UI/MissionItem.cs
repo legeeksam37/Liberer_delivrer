@@ -3,22 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
 public class MissionItem : MonoBehaviour
 {
+    public bool isFirstMission = false;
     public bool isLocked = false;
     [SerializeField] private Image lockImage;
-    
-    private Button _missionsButton;
+    [SerializeField] private Mission missionToLoad;
 
+    private Button _missionsButton;
     private delegate void LockStateChanged();
 
     private event LockStateChanged onLockStateChanged;
 
-    [SerializeField]
-    private ScenesManager.Scene sceneToLoad = ScenesManager.Scene.Game;
     
     private void Awake()
     {
@@ -30,6 +30,7 @@ public class MissionItem : MonoBehaviour
     {
         onLockStateChanged += SetLockImageVisibility;
         onLockStateChanged += SetButtonInteractability;
+        if (isFirstMission) return;
         ToggleLockMission();
     }
 
@@ -69,7 +70,8 @@ public class MissionItem : MonoBehaviour
 
     private void LoadSceneFromManager()
     {
-        ScenesManager.GetInstance().LoadScene(sceneToLoad);
+        MissionManager.GetInstance().mission = missionToLoad;
+        MissionManager.GetInstance().NewMission();
     }
     
 }

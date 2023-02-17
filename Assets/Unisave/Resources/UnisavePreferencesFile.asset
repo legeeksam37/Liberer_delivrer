@@ -16,6 +16,6 @@ MonoBehaviour:
   gameToken: 8e0L60MzcT8U21MV0eRPXX6W
   backendFolder: Backend
   automaticBackendUploading: 1
-  backendHash: 3d1b0ff550860d2a6566887b9467e669
+  backendHash: ede0a10f253b6803ddc0bcd95ed9416e
   developmentEnv: {fileID: 0}
   testingEnv: {fileID: 0}

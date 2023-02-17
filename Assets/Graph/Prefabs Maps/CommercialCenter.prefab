@@ -2569,6 +2569,7 @@ GameObject:
   - component: {fileID: 8227188125490381299}
   - component: {fileID: 8227188125490381298}
   - component: {fileID: 8227188125490381300}
+  - component: {fileID: 1108892996}
   m_Layer: 0
   m_Name: CommercialCenter
   m_TagString: Untagged
@@ -2671,8 +2672,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf3424422110744a91a7da53752c3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 7
   _transformOverride: {fileID: 5736768123332826993}
+  _type: 6
+--- !u!114 &1108892996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370274895389788263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3424422110744a91a7da53752c3b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transformOverride: {fileID: 5736768123332826993}
+  _type: 4
 --- !u!1001 &6231456004919303728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2680,6 +2695,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8222022553021046384}
     m_Modifications:
+    - target: {fileID: -3509310810915272978, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 8227188125490381300}
     - target: {fileID: 3093101587072206506, guid: fb8c284c81901b5478bc7659fc2e580a, type: 3}
       propertyPath: m_Name
       value: TriggerQuest

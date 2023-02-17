@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MissionSmartphone
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+  _targetedBuilding: 6
   _logo: {fileID: 21300000, guid: dcfcdf9bb7f77d24c95882e5c4e43743, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}

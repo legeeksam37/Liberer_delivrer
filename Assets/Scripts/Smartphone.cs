@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Smartphone : MonoBehaviour, IDisplay
 {
+    [SerializeField] JoystickControls joystick;
+
     [SerializeField] RectTransform _rectTransform;
 
     [SerializeField] GameObject _orderSelection;
@@ -25,10 +27,12 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     TMP_Text currentText;
     private GameObject _currentPanel;
+    private bool _isExpanded = true;
+
     private void Awake()
     {
-        _imageLogo1 = _logo1.GetComponent<Image>();
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
+        _imageLogo1 = _logo1.GetComponent<Image>();
         _imageLogo2 = _logo2.GetComponent<Image>();
         _imageLogo3 = _logo3.GetComponent<Image>();
         _imageLogo4 = _logo4.GetComponent<Image>();
@@ -44,18 +48,27 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     void Start()
     {
-        //Expand();
-        
+        MissionManager.GetInstance().OnMissionsStarted += Expand;
+
+    }
+
+    private void OnDestroy()
+    {
+        MissionManager.GetInstance().OnMissionsStarted -= Expand;
     }
 
     public void Expand()
     {
-        _rectTransform.anchoredPosition = new Vector3(280f, -30f);
+        _rectTransform.anchoredPosition = new Vector3(280f, 250f);
+        joystick.enabled = false;
+        _isExpanded = true;
     }
 
     public void Collapse()
     {
         _rectTransform.anchoredPosition = new Vector3(280f, -350f);
+        joystick.enabled = true;
+        _isExpanded = false;
     }
     public void OnlineOrLive(RecursiveEnabledChoice currentStep, List<OnlineOrLive> options = null) => ChangePanel(_orderSelection,options?.Select(e=>(int)e).ToHashSet(),currentStep);
     public void Delay(RecursiveEnabledChoice currentStep, List<DelayType> options = null) => ChangePanel(_delayTypeSelection, options?.Select(e => (int)e).ToHashSet(),currentStep);
@@ -86,6 +99,8 @@ public class Smartphone : MonoBehaviour, IDisplay
 
     private void ChangePanel(GameObject newPanel, HashSet<int> options, RecursiveEnabledChoice currentStep)
     {
+        if (!_isExpanded)
+            return;
         _currentPanel?.SetActive(false);
         _currentPanel = newPanel;
         TMP_Text[] allText = newPanel.GetComponentsInChildren<TMP_Text>();
@@ -98,7 +113,5 @@ public class Smartphone : MonoBehaviour, IDisplay
             //If options are null we consider we wan all options
             parent.GetChild(i).gameObject.SetActive(options==null || options.Contains(i));     
     }
-
-
-    
+  
 }

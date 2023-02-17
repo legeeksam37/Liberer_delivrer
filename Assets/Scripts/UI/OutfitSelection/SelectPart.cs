@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class SelectPart : MonoBehaviour
     private ModularChar modularChar;
     
     private int _currentItem = 1;
+
 
     private void Awake()
     {
@@ -53,5 +55,5 @@ public class SelectPart : MonoBehaviour
         modularChar.ChangeItem(PlayerSkin[_currentItem - 1]);
         
     }
-    
+
 }
