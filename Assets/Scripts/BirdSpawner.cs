@@ -6,7 +6,7 @@ using UnityEngine;
 public class BirdSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] birds;
-    [SerializeField] private float spawnDelay = 1f;
+    private float spawnDelay = 1f;
     private Vector2 min;
     private Vector2 max;
     float currDelay = 0;
@@ -48,6 +48,7 @@ public class BirdSpawner : MonoBehaviour
             spawnDelay = 10 / (float)score;
         currDelay = spawnDelay;
     }
+
     public void RefreshSpawnRate((string message, Result result) tuple)
     {
         RefreshSpawnRate();
