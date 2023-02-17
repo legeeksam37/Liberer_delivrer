@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6029766057226679911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8174583, y: 0.16645789, z: -0.054558285}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40,6 +40,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6818384505557216450}
     m_Modifications:
+    - target: {fileID: 8005558091078172942, guid: c3b15f8e4ab1a6c4b95dcf6e453d9f0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e64df59c1d1b1f498f2a76256b28c76, type: 3}
     - target: {fileID: 8005558091078172943, guid: c3b15f8e4ab1a6c4b95dcf6e453d9f0d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -237,7 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 4944560138919696058}
     - target: {fileID: 7512960246468633471, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
       propertyPath: playerSpeed
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8276883273886363706, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -344,6 +348,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8276883274234282938, guid: cacd7ff86f6cba54591e752aa590174a, type: 3}
   m_PrefabInstance: {fileID: 4944560139884603463}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4756473566636789337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910248468500442109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be6b64f3da44afcb0738cb1c7756756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6410236634653103292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,4 +372,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868dc805e74bbd44ea0b39715f0cb45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabSkin: {fileID: 0}
+  playerPrefabSkin: {fileID: 2279297423725030399, guid: 24f30a2a27fc3d04d9f28dd5ebc66de4, type: 3}

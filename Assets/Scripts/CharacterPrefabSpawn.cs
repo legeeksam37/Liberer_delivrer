@@ -21,7 +21,6 @@ public class CharacterPrefabSpawn : MonoBehaviour
     void SpawnPrefab()
     {
         Instantiate(playerPrefabSkin, transform);
-        Debug.Log("???ds");
     }
     
 }

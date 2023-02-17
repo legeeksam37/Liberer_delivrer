@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     void OnGameStarted()
     {
         _gameStartTime = Time.realtimeSinceStartup;
+        //_controls.enabled = true;
     }
 
     void OnMissionStarted(Mission mission)
@@ -63,13 +64,13 @@ public class Player : MonoBehaviour
         if (string.IsNullOrWhiteSpace(userId))
             throw new Exception("User has not been created.");
         
-        OnFacet<GameDataFacet>.Call(nameof(GameDataFacet.Create), userId, _playerData).Done();
+        OnFacet<GameDataFacet>.Call(nameof(GameDataFacet.Create), userId, _playerData.ScoreTotal, _playerData.MissionChoices, _playerData.MinutesPlayed).Done();
     }
 }
 
 public class PlayerData
 {
     public int ScoreTotal { get; set; }
-    public Dictionary<string, List<string>> MissionChoices { get; set; }
+    public Dictionary<string, List<string>> MissionChoices { get; set; } = new Dictionary<string, List<string>>();
     public float MinutesPlayed { get; set; }
 }

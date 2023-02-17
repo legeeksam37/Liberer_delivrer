@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MissionJeu
   m_EditorClassIdentifier: Assembly-CSharp:ScenarioStructures:Mission
   _rootChoice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
+  _targetedBuilding: 2
   _logo: {fileID: 21300000, guid: ec13685852ba02e41ae12d0085e7d360, type: 3}
   _tree:
     choice: {fileID: 11400000, guid: 4d6328b8867ad1d43a97991137292860, type: 2}
