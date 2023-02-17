@@ -10,11 +10,6 @@ public class ScoreManager : MonoBehaviour
     int _scoreSoc;
 
     public int Score => _scoreEnv + _scoreSoc;
-    
-    void Start()
-    {
-        retrieve();
-    }
 
     void OnEnable()
     {
@@ -37,7 +32,7 @@ public class ScoreManager : MonoBehaviour
         OnFacet<LeaderboardFacet>
             .Call(
                 nameof(LeaderboardFacet.Add),
-                _scoreSoc
+                Score
             )
             .Done();
     }
@@ -47,7 +42,7 @@ public class ScoreManager : MonoBehaviour
         OnFacet<LeaderboardFacet>
             .Call<int>(
                 nameof(LeaderboardFacet.GetPercentileRanking),
-                _scoreSoc
+                Score
             )
             .Then(onCompleted)
             .Done();
@@ -60,12 +55,4 @@ public class ScoreManager : MonoBehaviour
         GetPercentileRanking(percentile => Debug.Log($"Your score is in the top {percentile}% !"));
     }
 #endif
-    
-    private void retrieve(){
-        //get the score form the database
-    }
-
-    public int getScore(){
-        return _scoreSoc;
-    }
 }

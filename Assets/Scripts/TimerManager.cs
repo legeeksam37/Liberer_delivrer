@@ -1,4 +1,5 @@
 using System;
+using ScenarioStructures;
 using UnityEngine;
 
 public class TimerManager : MonoBehaviour
@@ -10,6 +11,12 @@ public class TimerManager : MonoBehaviour
     
     public Action TimerStarted { get; set; }
     public Action TimerOver { get; set; }
+
+    void OnEnable()
+    {
+        GameEvents.MissionStarted += OnMissionStarted;
+        GameEvents.ScenarioEnded += OnScenarioEnded;
+    }
 
     void Update()
     {
@@ -26,7 +33,22 @@ public class TimerManager : MonoBehaviour
         }
     }
 
-    [ContextMenu("Begin")]
+    void OnDisable()
+    {
+        GameEvents.MissionStarted -= OnMissionStarted;
+        GameEvents.ScenarioEnded -= OnScenarioEnded;
+    }
+
+    void OnMissionStarted(Mission mission)
+    {
+        Begin();
+    }
+
+    void OnScenarioEnded((string message, Result result) tuple)
+    {
+        Stop();
+    }
+
     public void Begin()
     {
         Timer = _initialValue;
@@ -35,7 +57,7 @@ public class TimerManager : MonoBehaviour
         TimerStarted?.Invoke();
     }
 
-    public void Pause()
+    public void Stop()
     {
         IsActive = false;
     }
