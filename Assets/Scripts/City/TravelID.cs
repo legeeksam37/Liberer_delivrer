@@ -9,9 +9,12 @@ public class TravelID : IDBase<TravelMethod>
     private Quest _markerPrefab;
     private void Awake()
     {
+    }
+    public void OnMissionStart()
+    {
         _markerPrefab = Instantiate(_markerPrefab, transform);
-        _markerPrefab.Custom(Quest.secondaryColor, .5f * Vector3.one);
-        GameEvents.MissionStarted += (m) => _markerPrefab.callQuest(this);
+        _markerPrefab.Custom(Quest.secondaryColor, .33f * Vector3.one);
+        _markerPrefab.callQuest(this);
     }
     public void ChangeState(bool state)
     {

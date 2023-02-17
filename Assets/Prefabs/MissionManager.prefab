@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5318871842542851553}
   - component: {fileID: 5318871842542851552}
   - component: {fileID: 3517531080162337859}
+  - component: {fileID: 1047794335}
   m_Layer: 0
   m_Name: MissionManager
   m_TagString: Untagged
@@ -75,6 +76,18 @@ MonoBehaviour:
   _walkCutscene: {fileID: 0}
   _carCutscene: {fileID: 0}
   _deliveryCutscene: {fileID: 0}
+--- !u!114 &1047794335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318871842542851555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 666c593d8819a5042ae6d1ebd2ddd9f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &878606749
 PrefabInstance:
   m_ObjectHideFlags: 0

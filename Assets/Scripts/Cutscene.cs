@@ -30,6 +30,7 @@ public class Cutscene : MonoBehaviour
         else
             Debug.LogError("No JoystickControls on player");
         _playableDirector = GetComponent<PlayableDirector>();
+        _canvasGroup.alpha = 0f;
     }
 
     public IEnumerator Play()

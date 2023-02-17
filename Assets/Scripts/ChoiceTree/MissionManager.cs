@@ -60,9 +60,15 @@ public class MissionManager : MonoBehaviour
             case Choicetypes.OnlineOrLive: _display.OnlineOrLive(Mission.Current, Mission.GetOptions<OnlineOrLive>()); break;
             case Choicetypes.TravelMethod:
                 List<TravelMethod> options = Mission.GetOptions<TravelMethod>();
-                foreach (var travel in options.Select((o) => (TravelID)Quest.FindID(o)))
+                foreach (var o in Enum.GetValues(typeof(TravelMethod)))
                 {
-                    travel.ChangeState(false);
+                    var travel = Quest.FindID((TravelMethod)o) as TravelID;
+                    //We skip travel options that are not on map, tipically "walk" which is bu indirectly
+                    if (travel != null)
+                    {
+                        travel.ChangeState(options.Contains(travel.Type));
+                        travel.OnMissionStart();
+                    }
                 }
                 _display.Travel(Mission.Current, options);
 

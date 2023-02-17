@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         var userId = PlayerPrefs.GetString("userEntityId");
 
         if (string.IsNullOrWhiteSpace(userId))
-            throw new Exception("User has not been created.");
+            Debug.LogError("Online user has not been created.");
         
         OnFacet<GameDataFacet>.Call(nameof(GameDataFacet.Create), userId, _playerData).Done();
     }
