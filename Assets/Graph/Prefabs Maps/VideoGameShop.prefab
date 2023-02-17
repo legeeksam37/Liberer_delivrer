@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ee8ee490af514280bf2dc39e0cd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SocialLimit: 0
+  SocialLimit: -4
   UnderLimit: {fileID: 4036807736112701646}
   OverLimit: {fileID: 3122787900397524228}
 --- !u!1001 &7297018124125404481
