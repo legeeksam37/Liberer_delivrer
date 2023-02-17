@@ -900,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: missionToLoad
@@ -1912,7 +1912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: missionToLoad
@@ -4284,7 +4284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: missionToLoad
@@ -4785,7 +4785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: missionToLoad
@@ -7119,7 +7119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: missionToLoad
@@ -8105,7 +8105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: sceneToLoad
@@ -8117,7 +8117,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7342f9b69a9269841aa2b864cb1cc91a, type: 2}
     - target: {fileID: 931267396948116946, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: isFirstMission
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2992836528850296787, guid: eb7f8ab33eb383c45b90d15720b8b9d1, type: 3}
       propertyPath: m_Name

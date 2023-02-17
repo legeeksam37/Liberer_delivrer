@@ -4324,6 +4324,38 @@ PrefabInstance:
       propertyPath: m_ChildCameras.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6542352845484550151, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 089bfc7c4e48da64d9a3e1db8c100705, type: 2}
+    - target: {fileID: 6542352845484550151, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542352845800624002, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfdb9da18c9365f45a8ce4aa84bbb6be, type: 2}
+    - target: {fileID: 6542352845800624002, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542352846485754231, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542352847187745264, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: _timelineAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c4a95006e68263f4a8e573d127c35737, type: 2}
+    - target: {fileID: 6542352847187745264, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542352847516151146, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6818384505557216450, guid: 8867f8c5df2efa44895a53e434fd325d, type: 3}
       propertyPath: m_RootOrder
       value: 2
