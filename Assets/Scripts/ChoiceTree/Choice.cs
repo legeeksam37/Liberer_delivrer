@@ -53,8 +53,10 @@ public class RecursiveEnabledChoice : IEnumerable<RecursiveEnabledChoice>
                     leaf = false;
                 }
             }
+#if UNITY_EDITOR
             if (leaf)
                 _subChoices.Add(new RecursiveEnabledChoice(AssetDatabase.LoadAssetAtPath<FinalNode>("Assets/Scriptables/DefaultMessage.asset")));
+#endif
         }
     }
 

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2459824785584717191}
+  - component: {fileID: 5684515425725694023}
   m_Layer: 0
   m_Name: Library
   m_TagString: Untagged
@@ -33,6 +34,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5684515425725694023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459824785584717184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5ee8ee490af514280bf2dc39e0cd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SocialLimit: -5
+  UnderLimit: {fileID: 5801694497295769056}
+  OverLimit: {fileID: 5801694498273338835}
 --- !u!1001 &2459824785856791546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 1060372978525995082, guid: cb14fe1fd7b9ee2439837035963fe039, type: 3}
       propertyPath: m_Name
       value: LibraryDarkOthers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334322411265199307, guid: cb14fe1fd7b9ee2439837035963fe039, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3215398063475412423, guid: cb14fe1fd7b9ee2439837035963fe039, type: 3}
       propertyPath: m_Name
@@ -105,6 +125,11 @@ PrefabInstance:
 --- !u!4 &4958962835930926071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7418215771520944141, guid: cb14fe1fd7b9ee2439837035963fe039, type: 3}
+  m_PrefabInstance: {fileID: 2459824785856791546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5801694497295769056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8259830364484476442, guid: cb14fe1fd7b9ee2439837035963fe039, type: 3}
   m_PrefabInstance: {fileID: 2459824785856791546}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2459824786969115593
@@ -191,5 +216,10 @@ PrefabInstance:
 --- !u!4 &4958962834895172548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7418215771520944141, guid: def430f6cd4cad24aa3593a98b7e93ef, type: 3}
+  m_PrefabInstance: {fileID: 2459824786969115593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5801694498273338835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8259830364484476442, guid: def430f6cd4cad24aa3593a98b7e93ef, type: 3}
   m_PrefabInstance: {fileID: 2459824786969115593}
   m_PrefabAsset: {fileID: 0}

@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScenarioStructures;
 using UnityEngine;
 
-public class Spot : MonoBehaviour
+public class BuildingSpot : MonoBehaviour
 {
-   // [SerializeField] private int SocialLimit = 0;
+    [SerializeField] private int SocialLimit;
     [SerializeField] private GameObject UnderLimit;
     [SerializeField] private GameObject OverLimit;
     // Start is called before the first frame update
     void Start()
     {
-        CheckScore();   
+        CheckScore();
+        GameEvents.ScenarioEnded += CheckScore;
     }
 
     // Update is called once per frame
@@ -18,15 +20,19 @@ public class Spot : MonoBehaviour
     {
         
     }
+    public void CheckScore((string message, Result result) tuple)
+    {
+        CheckScore();
+    }
 
     public void CheckScore()
     {
-        //if(GM.SocialScore < SocialLimit)
+        if(ScoreManager.Singleton._scoreSoc<SocialLimit)
         {
             UnderLimit.SetActive(true);
             OverLimit.SetActive(false);
         }
-       // else
+        else
         {
             UnderLimit.SetActive(false);
             OverLimit.SetActive(true);

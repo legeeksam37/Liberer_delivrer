@@ -6,13 +6,20 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    int _scoreEnv;
-    int _scoreSoc;
+    [SerializeField] bool update = false;
+    public int _scoreEnv;
+    public int _scoreSoc;
 
-    public int Score => 26;//_scoreEnv + _scoreSoc;
+    public static ScoreManager Singleton;
+    public int Score => _scoreEnv + _scoreSoc;
     
-    void Start()
+    void Awake()
     {
+        if (!Singleton)
+            Singleton = this;
+        else
+            Destroy(this);
+        DontDestroyOnLoad(this);
         retrieve();
     }
 
@@ -25,6 +32,16 @@ public class ScoreManager : MonoBehaviour
     {
         GameEvents.ScenarioEnded -= OnScenarioEnded;
     }
+
+    private void Update()
+    {
+        if(update)
+        {
+            update = false;
+            GameEvents.ScenarioEnded.Invoke((new String("a"), new Result()));
+        }
+    }
+
 
     void OnScenarioEnded((string message, Result result) tuple)
     {
