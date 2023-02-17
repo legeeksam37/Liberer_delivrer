@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Linq;
+using Unisave.Facades;
 using UnityEngine.SceneManagement;
 
 public class ModularChar : MonoBehaviour
@@ -39,7 +40,12 @@ public class ModularChar : MonoBehaviour
         commune = InputCommune.text.Substring(0,InputCommune.text.Length - 1);
         
         MissionManager.GetInstance().movableCharacter.GetComponentInChildren<CharacterPrefabSpawn>().playerPrefabSkin = character;
-        
+
+        OnFacet<UserFacet>
+            .Call<string>(nameof(UserFacet.Create), InputAge.text, commune)
+            .Then(userEntityId => PlayerPrefs.SetString("userEntityId", userEntityId))
+            .Done();
+
         //Switch Menu to missions
         CanvasManager.GetInstance().SwitchCanvas(CanvasType.Missions);
         
