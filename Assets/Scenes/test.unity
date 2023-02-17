@@ -237,7 +237,7 @@ PrefabInstance:
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: _timelineAsset
       value: 
-      objectReference: {fileID: 11400000, guid: c4a95006e68263f4a8e573d127c35737, type: 2}
+      objectReference: {fileID: 11400000, guid: f788234090d1b894bbab36e1235d03a6, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 5
@@ -1768,7 +1768,7 @@ PrefabInstance:
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: _timelineAsset
       value: 
-      objectReference: {fileID: 11400000, guid: c4a95006e68263f4a8e573d127c35737, type: 2}
+      objectReference: {fileID: 11400000, guid: 089bfc7c4e48da64d9a3e1db8c100705, type: 2}
     - target: {fileID: 6542352846750629351, guid: 6646bd5f1096d184db461b8d4cc86812, type: 3}
       propertyPath: <Type>k__BackingField
       value: 2
