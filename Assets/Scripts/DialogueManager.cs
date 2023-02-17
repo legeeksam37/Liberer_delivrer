@@ -4,7 +4,7 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using ScenarioStructures;
 using TMPro;
-
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -29,7 +29,10 @@ public class DialogueManager : MonoBehaviour
 
     public void dialogue((string message, Result) tuple)
     {
-        lines = tuple.message.Split('\n');
+        var result = tuple.Item2;
+        List<string> list = tuple.message.Split('\n').ToList();
+        list.Add("Voici " + result.ScoreEnvironmental + " colee environnementaux, et " + result.ScoreSocial + " colee sociaux");
+        lines = list.ToArray();
         textComponent.text = string.Empty;
         startDialogue();
     }
@@ -69,6 +72,7 @@ public class DialogueManager : MonoBehaviour
                 textComponent.text += c;
                 yield return new WaitForSeconds(textSpeed);
             }
+            textComponent.text += '\n';
             yield return new WaitForSeconds(.5f);
         }
     }
