@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScenarioStructures;
 using UnityEngine;
 
 public class PollutionSpawner : MonoBehaviour
@@ -16,7 +17,7 @@ public class PollutionSpawner : MonoBehaviour
         min = c.bounds.min;
         max = c.bounds.max; 
         RefreshSpawnRate();
-        SpawnPollution();
+        GameEvents.ScenarioEnded += RefreshSpawnRate;
     }
 
     // Update is called once per frame
@@ -40,11 +41,16 @@ public class PollutionSpawner : MonoBehaviour
 
     public void RefreshSpawnRate()
     {
-        float score = -30;
+        int score = ScoreManager.Singleton._scoreEnv;
         if (score >= 0)
             spawnDelay = float.MaxValue;
         else
-            spawnDelay = 10 / -score;
+            spawnDelay = 10 / (float)-score;
         currDelay = spawnDelay;
+    }
+
+    public void RefreshSpawnRate((string message, Result result) tuple)
+    {
+        RefreshSpawnRate();
     }
 }

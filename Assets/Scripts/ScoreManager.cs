@@ -6,13 +6,19 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    int _scoreEnv;
-    int _scoreSoc;
+    public int _scoreEnv;
+    public int _scoreSoc;
 
+    public static ScoreManager Singleton;
     public int Score => _scoreEnv + _scoreSoc;
     
     void Start()
     {
+        if (!Singleton)
+            Singleton = this;
+        else
+            Destroy(this);
+        DontDestroyOnLoad(this);
         retrieve();
     }
 

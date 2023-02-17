@@ -1,4 +1,5 @@
 using System.Collections;
+using ScenarioStructures;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,8 +16,8 @@ public class BirdSpawner : MonoBehaviour
         Collider2D c = GetComponent<Collider2D>();
         min = c.bounds.min;
         max = c.bounds.max;
+        GameEvents.ScenarioEnded += RefreshSpawnRate;
         RefreshSpawnRate();
-        SpawnBird();
     }
 
     // Update is called once per frame
@@ -40,10 +41,15 @@ public class BirdSpawner : MonoBehaviour
 
     public void RefreshSpawnRate()
     {
-        float score = 10;
+        int score = ScoreManager.Singleton._scoreEnv;
         if (score <= 0)
             spawnDelay = float.MaxValue;
         else
-            spawnDelay = 10 / score;
+            spawnDelay = 10 / (float)score;
+        currDelay = spawnDelay;
+    }
+    public void RefreshSpawnRate((string message, Result result) tuple)
+    {
+        RefreshSpawnRate();
     }
 }
