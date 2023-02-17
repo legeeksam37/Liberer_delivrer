@@ -77,6 +77,8 @@ public class DialogueManager : MonoBehaviour
             textComponent.text += '\n';
             yield return new WaitForSeconds(.5f);
         }
+        yield return new WaitForSeconds(2f);
+        ScenesManager.GetInstance().LoadScene(ScenesManager.Scene.Menu);
     }
 
 

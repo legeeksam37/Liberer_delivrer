@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : Singleton<ScenesManager>
 {
+    
     public enum Scene
     {
         HomePage,
