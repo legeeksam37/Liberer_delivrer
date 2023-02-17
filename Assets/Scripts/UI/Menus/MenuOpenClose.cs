@@ -9,12 +9,17 @@ public class MenuOpenClose : MonoBehaviour
 {
     private Animator _animator;
     private Button _button;
+
+    [SerializeField] private bool startClosed = true;
     
     private void Start()
     {
         _animator = GetComponentInParent<Animator>();
         _button = GetComponent<Button>();
         _button.onClick.AddListener(ToggleMenu);
+
+        if (startClosed) return;
+        
         ToggleMenu();
     }
 

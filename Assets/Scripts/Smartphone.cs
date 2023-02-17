@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Smartphone : MonoBehaviour, IDisplay
 {
+    [SerializeField] private CutsceneManager _cutscene;
+    
     [SerializeField] JoystickControls joystick;
 
     [SerializeField] RectTransform _rectTransform;
@@ -24,11 +27,15 @@ public class Smartphone : MonoBehaviour, IDisplay
     Image _imageLogo3;
     [SerializeField] GameObject _logo4;
     Image _imageLogo4;
-
+    
+    private IDisplay _display;
+    
     TMP_Text currentText;
     private GameObject _currentPanel;
     private bool _isExpanded = true;
 
+    private MissionManager _missionManager;
+    
     private void Awake()
     {
         GameEvents.MissionStarted += (m) => ChangeIcon(m.Logo);
@@ -46,17 +53,24 @@ public class Smartphone : MonoBehaviour, IDisplay
         _imageLogo4.sprite = logo;
     }
 
-    void Start()
+    private void OnEnable()
     {
-        MissionManager.GetInstance().OnMissionsStarted += Expand;
-
+        _missionManager = MissionManager.GetInstance();
+        SceneManager.sceneLoaded += (scene, mode) => StartPhone(scene);
     }
 
     private void OnDestroy()
     {
-        MissionManager.GetInstance().OnMissionsStarted -= Expand;
+        _missionManager.OnMissionsStarted -= Expand;
     }
 
+    private void StartPhone(Scene scene)
+    {
+        if (scene.name != "Game") return;
+        SetupPhoneDisplay();
+        Expand();
+    }
+    
     public void Expand()
     {
         _rectTransform.anchoredPosition = new Vector3(280f, 250f);
@@ -96,7 +110,75 @@ public class Smartphone : MonoBehaviour, IDisplay
         GameEvents.OnlineOrLiveSelected?.Invoke((OnlineOrLive)onlineOrLive);
     }
     #endregion
+    private void HandleBuildingReached(BuildingID obj)
+    {
+        if (_missionManager.mission.TargetedBuilding == obj.Type)
+        {
+            HandleEventRaised((int)TravelMethod.Walk);
+            _cutscene.TravelCutscene(TravelMethod.Walk);
+        }
+    }
+    private void HandleTravelReached(TravelID obj)
+    {
+        HandleEventRaised((int)obj.Type);
+    }
+    void SetupPhoneDisplay()
+    {
+        //Find an IDisplay implementaiton in scene and use it
+        FindObjectsOfType<MonoBehaviour>().FirstOrDefault(go => go.TryGetComponent<IDisplay>(out _display));
+        Debug.Log(_display);
+        GameEvents.WithdrawalTypeSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.DelayTypeSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.TravelMethodSelected += (e) => HandleEventRaised((int)e);
+        GameEvents.OnlineOrLiveSelected += HandleOnlineOrLive;
+        GameEvents.ScenarioEnded += (sr) => Debug.Log("Colee says : " + sr.message + " with result : " + sr.result);
+        GameEvents.BuildingReached += HandleBuildingReached;
+        GameEvents.TravelReached += HandleTravelReached;
+        UpdateDisplayByCurrentState();
+    }
+    private void HandleOnlineOrLive(OnlineOrLive e)
+    {
+        switch (e)
+        {
+            case global::OnlineOrLive.Live:
+                GameEvents.GameStarted?.Invoke();
+                _display.Collapse();
+                break;
+            default:
+                break;
+        }
+        HandleEventRaised((int)e);
+    }
+    private void UpdateDisplayByCurrentState()
+    {
+        var choice = _missionManager.mission.Current.choice as Choice;
+        switch (choice.Type)
+        {
+            case Choicetypes.OnlineOrLive: _display.OnlineOrLive(_missionManager.mission.Current, _missionManager.mission.GetOptions<OnlineOrLive>()); break;
+            case Choicetypes.TravelMethod: _display.Travel(_missionManager.mission.Current, _missionManager.mission.GetOptions<TravelMethod>()); break;
+            case Choicetypes.WithdrawalType: _display.WithDrawal(_missionManager.mission.Current, _missionManager.mission.GetOptions<WithdrawalType>()); break;
+            case Choicetypes.DelayType: _display.Delay(_missionManager.mission.Current, _missionManager.mission.GetOptions<DelayType>()); break;
+        }
+    }
 
+    
+    private void HandleEventRaised(int index)
+    {
+        Debug.Log("We don't operate any checks on the type on type of enum reicved, we consider we always get the correct one and process");
+        if (_missionManager.mission.ProcessSequenceAbsolute(index))
+            UpdateDisplayByCurrentState();
+        else
+        {
+            var final = _missionManager.mission.Current.choice as FinalNode;
+            if (final != null)
+            {
+                _display.Collapse();
+                GameEvents.ScenarioEnded?.Invoke((final.Message, final.Result));
+            }
+            else
+                Debug.Log("Error happend in scenario processing, check upper messages");
+        }
+    }
     private void ChangePanel(GameObject newPanel, HashSet<int> options, RecursiveEnabledChoice currentStep)
     {
         if (!_isExpanded)
